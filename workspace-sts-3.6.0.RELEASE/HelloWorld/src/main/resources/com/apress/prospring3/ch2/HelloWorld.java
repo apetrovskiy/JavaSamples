@@ -1,5 +1,8 @@
 package com.apress.prospring3.ch2;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class HelloWorld {
 
 	public static void main(String[] args) {
@@ -22,9 +25,15 @@ public class HelloWorld {
 		mr.render();
 		*/
 		// 4
+		/*
 		MessageRenderer mr = MessageSupportFactory.getInstance().getMessageRenderer();
 		MessageProvider mp = MessageSupportFactory.getInstance().getMessageProvider();
 		mr.setMessageProvider(mp);
+		mr.render();
+		*/
+		// 5
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("META-INF/spring/app-context.xml");
+		MessageRenderer mr = ctx.getBean("renderer", MessageRenderer.class);
 		mr.render();
 	}
 

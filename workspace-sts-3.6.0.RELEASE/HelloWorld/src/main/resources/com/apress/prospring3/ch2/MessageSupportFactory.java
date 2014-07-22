@@ -13,7 +13,8 @@ public class MessageSupportFactory {
 		props = new Properties();
 		try {
 			// props.load(new FileInputStream("/ch2/src/conf/msf.properties"));
-			props.load(new FileInputStream("C:\\Users\\Alexander\\Documents\\workspace-sts-3.6.0.RELEASE\\HelloWorld\\src\\conf\\msf.properties"));
+			// props.load(new FileInputStream("C:\\Users\\Alexander\\Documents\\workspace-sts-3.6.0.RELEASE\\HelloWorld\\src\\conf\\msf.properties"));
+			props.load(new FileInputStream("C:\\Projects\\Java\\workspace-sts-3.6.0.RELEASE\\HelloWorld\\src\\conf\\msf.properties"));
 			
 			String rendererClass = props.getProperty("renderer.class");
 			String providerClass = props.getProperty("provider.class");
