@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Se2test/Selenium2Example&apos; to &apos;Selenium2Example.java&apos;" description="Rename resource &apos;Selenium2Example&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Selenium2Example" name="Selenium2Example.java" stamp="1381440363937" updateReferences="true"/>
+</session>
