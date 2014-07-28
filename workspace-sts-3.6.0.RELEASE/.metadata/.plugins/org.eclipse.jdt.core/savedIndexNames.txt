@@ -1,1 +1,5 @@
 INDEX VERSION 1.127+C:\Projects\Java\workspace-sts-3.6.0.RELEASE\.metadata\.plugins\org.eclipse.jdt.core
+<<<<<<< HEAD
+=======
+2380175872.index
+>>>>>>> 22f90ae53fbd0fe8cc9b8ac6fc503f082227a011

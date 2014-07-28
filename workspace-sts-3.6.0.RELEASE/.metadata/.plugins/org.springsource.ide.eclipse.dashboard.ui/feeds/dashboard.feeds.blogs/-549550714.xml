@@ -5,6 +5,7 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
+<<<<<<< HEAD
   <updated>2014-07-25T03:06:00Z</updated>
   <entry>
     <title>Pivotal Toronto Meetup: Production Grade Applications with Spring Boot</title>
@@ -211,6 +212,9 @@ spring-app/
 
 &lt;p&gt;For more of this, don't forget &lt;a href="http://springone2gx.com/"&gt;SpringOne 2GX 2014 in Dallas, TX&lt;/a&gt; - Rossen and I will cover this subject in a &lt;a href="https://2014.event.springone2gx.com/schedule/sessions/resource_handling_in_spring_mvc_4_1.html"&gt;dedicated session&lt;/a&gt;.&lt;/p&gt;</content>
   </entry>
+=======
+  <updated>2014-07-23T02:26:26Z</updated>
+>>>>>>> 22f90ae53fbd0fe8cc9b8ac6fc503f082227a011
   <entry>
     <title>This Week in Spring - July 22nd, 2014</title>
     <link rel="alternate" href="https://spring.io/blog/2014/07/23/this-week-in-spring-july-22nd-2014" />
@@ -921,7 +925,7 @@ Therefore 3.6.1 is scheduled to ship on time for SpringOne2GX 2014 in early Sept
 &lt;a href="http://twitter.com/ankinson"&gt;Andy Wilkinson&lt;/a&gt; has just announced   &lt;a href="http://spring.io/blog/2014/07/08/spring-boot-1-1-4-released"&gt;Spring Boot 1.1.4 release&lt;/a&gt;. The new release includes many bug-fixes and small new features, including support for the first stable preview release of Tomcat 8.   &lt;/li&gt;
 &lt;li&gt;Andy &lt;em&gt;also&lt;/em&gt; just announced the first &lt;a href="http://spring.io/blog/2014/07/08/spring-io-platform-1-0-1-released"&gt;maintenance release to Spring IO&lt;/a&gt; which updates versions across the platform to include Spring AMQP 1.3.5, Spring Boot 1.1.4, Spring Batch 3.0.1, Spring for Apache Hadoop 2.0.1, and Spring Framework 4.0.6. Nice job, Andy!&lt;/li&gt;
 &lt;li&gt;Thomas Risberg has just &lt;a href="http://spring.io/blog/2014/07/08/spring-for-apache-hadoop-2-0-1-released"&gt;announced Spring for Apache Hadoop 2.0.1&lt;/a&gt; which revs the dependency versions, including Hadoop 2.4.1, Spring framework 4.0.6.RELEASE, Spring Batch to 3.0.1.RELEASE,  Spring Boot to 1.1.4.RELEASE. &lt;/li&gt;
-&lt;li&gt;St?phane Nicoll  has just announced that &lt;a href="http://spring.io/blog/2014/07/08/spring-framework-4-0-6-released"&gt;Spring framework 4.0.6 is now available&lt;/a&gt;.   This release includes about 50 bugfixes.&lt;/li&gt;
+&lt;li&gt;Stéphane Nicoll  has just announced that &lt;a href="http://spring.io/blog/2014/07/08/spring-framework-4-0-6-released"&gt;Spring framework 4.0.6 is now available&lt;/a&gt;.   This release includes about 50 bugfixes.&lt;/li&gt;
 &lt;li&gt;Spring Social lead Craig Walls has just announced that &lt;a href="http://spring.io/blog/2014/07/03/spring-social-facebook-2-0-0-m1-released"&gt;Spring Social Facebook 2.0.0.M1 is now available&lt;/a&gt;. This release supports the new  Facebook v2.0.0 Graph API, which introduces some breaking, obligatory, changes (thanks, Facebook!).&lt;/li&gt;
 &lt;li&gt;Groovy project lead &lt;a href="http://twitter.com/glaforge"&gt;Guillaume LaForge&lt;/a&gt; has announced &lt;a href="http://beta.groovy-lang.org"&gt;the beta of the new Groovy website&lt;/a&gt;  and is soliciting feedback from the community at large.&lt;/li&gt;
 &lt;li&gt;From the trenches: Join Casey Doolittle and Phil Dutson on July 15th for a webinar about a crazy project, and how they had to &lt;a href="http://spring.io/blog/2014/06/10/webinar-building-a-shopping-cart-in-24-hours-using-spring"&gt;Build a Shopping Cart in 24 Hours using Spring&lt;/a&gt;.&lt;/li&gt;
@@ -1037,7 +1041,7 @@ Therefore 3.6.1 is scheduled to ship on time for SpringOne2GX 2014 in early Sept
     <link rel="alternate" href="https://spring.io/blog/2014/07/08/spring-framework-4-0-6-released" />
     <category term="releases" label="Releases" />
     <author>
-      <name>St?phane Nicoll</name>
+      <name>Stéphane Nicoll</name>
     </author>
     <id>tag:spring.io,2014-07-08:1668</id>
     <updated>2014-07-08T08:18:00Z</updated>
@@ -1068,5 +1072,58 @@ Therefore 3.6.1 is scheduled to ship on time for SpringOne2GX 2014 in early Sept
 
 &lt;p&gt;&lt;/p&gt;&lt;iframe width="560" height="315" src="//www.youtube.com/embed/reYgWdrwfyQ" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
   </entry>
+<<<<<<< HEAD
+=======
+  <entry>
+    <title>SpringOne2GX 2013 Replay: Performance - tuning the Spring Petclinic sample application</title>
+    <link rel="alternate" href="https://spring.io/blog/2014/07/03/springone2gx-2013-replay-performance-tuning-the-spring-petclinic-sample-application" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2014-07-03:1665</id>
+    <updated>2014-07-03T15:22:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2013 in Santa Clara, CA.&lt;/p&gt;
+
+&lt;p&gt;Speaker: Julien Dubios &lt;/p&gt;
+
+&lt;p&gt;This talk is a live version of my blog posts on performance-tuning the Spring Petclinic application: &lt;a href="http://blog.ippon.fr/tag/spring-petclinic/"&gt;http://blog.ippon.fr/tag/spring-petclinic/&lt;/a&gt; We will talk about JVM locks, Web application performance best practices, JDBC vs JPA, and caching We will see how to use effectively tools such as JMeter, Yourkit and Intellij IDEA to quickly solve performance issues We will also explain the methodology used, so you can follow the same steps on your own applications In this session we will talk about :     &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Stress tests&lt;/li&gt;
+  &lt;li&gt; Memory leaks&lt;/li&gt;
+  &lt;li&gt; Garbage Collection&lt;/li&gt;
+  &lt;li&gt; Profiling tools&lt;/li&gt;
+  &lt;li&gt; Application Server tuning     &lt;/li&gt;
+  &lt;li&gt;JVM tuning     &lt;/li&gt;
+  &lt;li&gt;Locks     &lt;/li&gt;
+  &lt;li&gt;JDBC vs JPA &lt;/li&gt;
+  &lt;li&gt;Lazy loading&lt;/li&gt;
+  &lt;li&gt; Caching&lt;/li&gt;
+  &lt;li&gt; And much more ! &lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Learn more about Spring at &lt;a href="http://projects.spring.io/spring-framework"&gt;http://projects.spring.io/spring-framework&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width="560" height="315" src="//www.youtube.com/embed/oR_7EtCgc1M" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Social Facebook 2.0.0.M1 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2014/07/03/spring-social-facebook-2-0-0-m1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Craig Walls</name>
+    </author>
+    <id>tag:spring.io,2014-07-03:1663</id>
+    <updated>2014-07-03T12:43:00Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
+
+&lt;p&gt;I'm pleased to announce the first milestone release of Spring Social Facebook 2.0.0. The primary focus of this release was to update the API binding to target version 2.0 of Facebook's Graph API. &lt;/p&gt;
+
+&lt;p&gt;Note that due to breaking changes in Facebook's Graph API, there were necessarily some breaking changes in this version of Spring Social Facebook. Fortunately, however, Facebook has promised a two-year stability guarantee for all versions of their API, so such breaking changes should be able to be handled more gracefully going forward.&lt;/p&gt;
+
+&lt;p&gt;Facebook is requiring all applications registered after April 30, 2014 to use v2.0 of the Graph API (older applications are allowed to use either v1.0 or v2.0 until April 30, 2015). Therefore, if you are building a new Facebook-enabled application with Spring Social, you'll likely want to look at this release, as there are some operations in Spring Social Facebook 1.1.x's API binding that will not work.&lt;/p&gt;
+
+&lt;p&gt;Although each method in the API binding was tested directly against Facebook Graph API v2.0, it's very possible that something was overlooked. I invite the Spring Social community to try out this release and provide feedback in the form of &lt;a href="https://jira.spring.io/browse/SOCIALFB"&gt;improvement and bug issues&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+>>>>>>> 22f90ae53fbd0fe8cc9b8ac6fc503f082227a011
 </feed>
 
