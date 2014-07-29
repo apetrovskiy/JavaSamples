@@ -1,8 +1,0 @@
-//com.springsource.config.ui.prefs.activePageIndex\:/HelloWorld/src/main/resources/META-INF/spring/app-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
-<<<<<<< HEAD
-//com.springsource.config.ui.prefs.activePageIndex\:/SpringDependencyInjectionXmlTest/src/main/resources/META-INF/spring/app-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
-=======
-//com.springsource.config.ui.prefs.activePageIndex\:/SpringDepInjectionTest/src/main/resources/META-INF/spring/app-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
-//com.springsource.config.ui.prefs.activePageIndex\:/SpringDepInjectionTest/src/main/resources/org/probe/springdepinjectiontest/app-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
->>>>>>> c877696a7ddb18e2f714fbc97d5dd1a36f3048c4
-eclipse.preferences.version=1
