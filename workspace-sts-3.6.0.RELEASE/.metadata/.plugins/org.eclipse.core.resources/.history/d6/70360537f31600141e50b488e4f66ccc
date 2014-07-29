@@ -88,7 +88,7 @@
 	</bean>
 	
 	<bean id="classWithNull" class="org.probe.springdepinjectiontest.ClassWithNullProperty">
-		<property name="someData"><null/></property>
+		<property name="SomeData"><null/></property>
 	</bean>
 	
 </beans>
