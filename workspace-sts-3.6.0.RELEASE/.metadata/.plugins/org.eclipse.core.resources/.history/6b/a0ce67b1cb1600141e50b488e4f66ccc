@@ -1,0 +1,10 @@
+package org.probe.springdepinjectiontest;
+
+public class Sonnet29 implements Poem {
+
+	public void recite() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

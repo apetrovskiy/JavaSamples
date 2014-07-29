@@ -1,0 +1,22 @@
+package org.probe.springdepinjectiontest;
+
+public class Juggler implements Performer {
+
+	public void perform() throws PerformanceException {
+		// TODO Auto-generated method stub
+		private int beanBags = 3;
+		
+		public Juggler() {
+			
+		}
+		
+		public Juggler(int beanBags) {
+			this.beanBags = beanBags;
+		}
+		
+		public void perform() throws PerformanceException {
+			System.out.println("Juggling " + beanBags + " beanbags");
+		}
+	}
+
+}

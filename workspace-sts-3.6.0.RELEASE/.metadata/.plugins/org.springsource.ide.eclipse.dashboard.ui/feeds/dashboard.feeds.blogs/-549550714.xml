@@ -5,8 +5,178 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-<<<<<<< HEAD
-  <updated>2014-07-25T03:06:00Z</updated>
+  <updated>2014-07-28T16:54:15Z</updated>
+  <entry>
+    <title>Spring Batch Admin 1.3.0.RELEASE Is Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2014/07/28/spring-batch-admin-1-3-0-release-is-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Michael Minella</name>
+    </author>
+    <id>tag:spring.io,2014-07-28:1714</id>
+    <updated>2014-07-28T16:54:15Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce that Spring Batch Admin 1.3.0.RELEASE is now available via Maven Central, Github and the SpringSource download repository.  This release provides updates to Spring Batch Admin to make it compatible with Spring Batch 2.2.x and beyond.  In addition to the minor functional updates, this release also provides an overall update to third party dependencies.  As noted previously, this will be the last major version with the spring-batch-integration module included as it has been moved to Spring Batch as of Spring Batch 3.0.  As always, we look forward to your feedback in the comments, &lt;a href="http://jira.spring.io/browse/BATCHADM"&gt;Jira&lt;/a&gt;, &lt;a href="http://stackoverflow.com/questions/tagged/spring-batch-admin"&gt;StackOverflow&lt;/a&gt;, and in person at &lt;a href="http://springone2gx.com"&gt;SpringOne&lt;/a&gt;!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Framework 4.1 -- Spring MVC Improvements</title>
+    <link rel="alternate" href="https://spring.io/blog/2014/07/28/spring-framework-4-1-spring-mvc-improvements" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Rossen Stoyanchev</name>
+    </author>
+    <id>tag:spring.io,2014-07-28:1712</id>
+    <updated>2014-07-28T15:10:05Z</updated>
+    <content type="html">&lt;p&gt;Recently Juergen Hoeller
+&lt;a href="https://spring.io/blog/2014/07/21/spring-framework-4-1-release-candidate-available"&gt;announced the availability&lt;/a&gt;
+of the first of two 4.1 release candidates.
+Brian Clozel followed up with a post on the 
+&lt;a href="https://spring.io/blog/2014/07/24/spring-framework-4-1-handling-static-web-resources"&gt;static web resources handling&lt;/a&gt; enhancements.
+Previously Stephane Nicoll blogged about
+&lt;a href="https://spring.io/blog/2014/06/16/further-cache-improvements-in-spring-4-1"&gt;cache&lt;/a&gt; and
+&lt;a href="https://spring.io/blog/2014/04/30/spring-4-1-s-upcoming-jms-improvements"&gt;JMS&lt;/a&gt; related improvements.
+The goal of this post is to summarize Spring MVC improvements.&lt;/p&gt;
+
+&lt;p&gt;The JDK 1.8 &lt;code&gt;java.util.Optional&lt;/code&gt; is now supported for &lt;code&gt;@RequestParam&lt;/code&gt; and
+&lt;code&gt;@MatrixVariable&lt;/code&gt; controller method arguments while &lt;code&gt;ListenableFuture&lt;/code&gt; is supported as a
+return value alternative to &lt;code&gt;DeferredResult&lt;/code&gt; where an underlying
+service (or perhaps a call to &lt;code&gt;AsyncRestTemplate&lt;/code&gt;) already returns ListenableFuture.&lt;/p&gt;
+
+&lt;p&gt;Jackson's &lt;code&gt;@JsonView&lt;/code&gt; is supported directly on  &lt;code&gt;@ResponseBody&lt;/code&gt; and &lt;code&gt;ResponseEntity&lt;/code&gt;
+controller methods for serializing different amounts of detail for the same POJO,
+e.g. summary vs detail page. This is also supported with &lt;code&gt;View&lt;/code&gt;-based rendering
+by adding the serialization view type as a model attribute under a special key.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/JSONP"&gt;JSONP&lt;/a&gt; is now supported with Jackson.
+For response body methods declare an &lt;code&gt;@ControllerAdvice&lt;/code&gt; as shown below.
+For &lt;code&gt;View&lt;/code&gt;-based rendering simply configure the JSONP query parameter name(s)
+on &lt;code&gt;MappingJackson2JsonView&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class="highlight highlight-java"&gt;&lt;pre&gt;&lt;span class="nd"&gt;@ControllerAdvice&lt;/span&gt;
+&lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;JsonpAdvice&lt;/span&gt; &lt;span class="kd"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;AbstractJsonpResponseBodyAdvice&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;JsonpAdvice&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"callback"&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that &lt;code&gt;@ControllerAdvice&lt;/code&gt; was introduced in 3.2 for &lt;code&gt;@ExceptionHandler&lt;/code&gt;,
+&lt;code&gt;@ModelAttribute&lt;/code&gt;, and &lt;code&gt;@InitBinder&lt;/code&gt; methods shared across all or a subset of
+controllers. &lt;code&gt;ResponseEntityExceptionHandler&lt;/code&gt; is one example for global
+exception handling by writing error details to the body of the
+response. In 4.1 an &lt;code&gt;@ControllerAdvice&lt;/code&gt; can also implement
+&lt;code&gt;ResponseBodyAdvice&lt;/code&gt; in which case it will be called after the controller method
+returns but before the response is written and therefore committed. This has a number
+of useful applications with @JsonView the JSONP already serving as two examples
+built on it.&lt;/p&gt;
+
+&lt;p&gt;Two new &lt;code&gt;HttpMessageConverter&lt;/code&gt; types:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href="http://code.google.com/p/google-gson/"&gt;Gson&lt;/a&gt; -- lighter footprint
+than Jackson; has already been in use in Spring Android.&lt;/li&gt;
+&lt;li&gt;
+&lt;a href="https://developers.google.com/protocol-buffers/"&gt;Google Protocol Buffers&lt;/a&gt;
+(just missed RC1 but already in master for 4.1 RC2)
+-- efficient and effective as an inter-service
+communication data protocol within an enterprise but can also be exposed as
+JSON and XML for browsers. This comes through a contribution from
+&lt;a href="http://www.slideshare.net/mokeefe/javaone-2009-ts5276-restful-protocol-buffers"&gt;Alex Antonov&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;code&gt;MvcUriComponentsBuilder&lt;/code&gt; was introduced in 4.0 as a way of building links to
+controller methods through controller method invocation (similar to mock testing).
+In 4.1 views such as JSPs can also build links to controllers by referring to its
+mapping by name. A default name is assigned to every request mapping. For example
+&lt;code&gt;FooController&lt;/code&gt; with method &lt;code&gt;handleFoo&lt;/code&gt; is assigned "FC#handleFoo" by default but
+the naming strategy is customizable and can be also be set explicitly through the
+new &lt;code&gt;name&lt;/code&gt; attribute on &lt;code&gt;@RequestMapping&lt;/code&gt;. A new &lt;code&gt;mvcUrl&lt;/code&gt; Spring JSP tag makes
+this easy to use in JSP pages. The same can be done for any other view technology.&lt;/p&gt;
+
+&lt;p&gt;The familiar &lt;code&gt;ResponseEntity&lt;/code&gt; now has a builder-style API that guides controller
+methods towards the preparation of server-side responses, e.g. &lt;code&gt;ResponseEntity.ok()&lt;/code&gt;.
+For the client side there is a new &lt;code&gt;RequestEntity&lt;/code&gt; that guides towards the
+preparation of client-side HTTP requests.&lt;/p&gt;
+
+&lt;p&gt;MVC Java config and XML namespace:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;View resolver configuration -- if you've had to configure view resolution with
+content negotiation you'll likely appreciate this one. See the
+&lt;a href="http://docs.spring.io/spring-framework/docs/4.1.0.RC1//spring-framework-reference/html/mvc.html#mvc-config-view-resolvers"&gt;updated documentation&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Enhanced "view controllers" -- in addition to mapping URLs directly to view names
+without the need for controller logic, view controllers now have built-in support
+for redirecting and setting the response status. An application can use this to
+configure redirect URLs, render 404 responses with a view, send "no content"
+responses, etc. Some use cases
+&lt;a href="https://jira.spring.io/browse/SPR-11543?focusedCommentId=100308&amp;amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-100308"&gt;listed here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Path matching -- tese frequently used customizations are now built-in
+and have also been backported to 4.0. See the
+&lt;a href="http://docs.spring.io/spring-framework/docs/4.1.0.RC1//spring-framework-reference/html/mvc.html#mvc-config-path-matching"&gt;updated documentation&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Speaking of view resolution in 4.1 we've added support for view rendering through
+&lt;a href="http://beta.groovy-lang.org/docs/groovy-2.3.2/html/documentation/markup-template-engine.html"&gt;Groovy markup templates&lt;/a&gt;
+available in Groovy 2.3. If you've been waiting for DRY markup, along the lines of
+HAML (Ruby on Rails), this one is for you.&lt;/p&gt;
+
+&lt;p&gt;Spring MVC Test related:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;JSON responses can be asserted with
+&lt;a href="https://github.com/skyscreamer/JSONassert"&gt;JSON Assert&lt;/a&gt; as an extra option to
+using JSONPath much like it has been possible to do for XML with XMLUnit.&lt;/li&gt;
+&lt;li&gt;MockMvcBuilder "recipies" can now be created with the help of &lt;code&gt;MockMvcConfigurer&lt;/code&gt;.
+This was added to make it easy to apply Spring Security setup but can be used to
+encapsulate common setup for any 3rd party framework or within a project.&lt;/li&gt;
+&lt;li&gt;
+&lt;code&gt;MockRestServiceServer&lt;/code&gt; now supports the &lt;code&gt;AsyncRestTemplate&lt;/code&gt; for client-side testing.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;The &lt;a href="http://docs.spring.io/spring-framework/docs/4.1.0.RC1//spring-framework-reference/html/mvc.html#mvc-config-path-matching"&gt;Spring MVC Test HtmlUnit&lt;/a&gt;
+extension (separate project) has also been progressing steadily with an M1 milestone.
+If this is of interest do check out the project's home page.&lt;/p&gt;
+
+&lt;p&gt;Spring Frawork 4.1 is just around the corner (end of August) and so is
+&lt;a href="http://springone2gx.com/"&gt;SpringOne 2GX 2014&lt;/a&gt; in early September in Dallas, TX.
+Take a close look at these improvements to see if they meet your needs or if
+they need further improvement. Do come to this year's SpringOne where we have
+a great lineup for the Web and JavaScript track.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Data Dijkstra SR2 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2014/07/28/spring-data-dijkstra-sr2-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Oliver Gierke</name>
+    </author>
+    <id>tag:spring.io,2014-07-28:1707</id>
+    <updated>2014-07-28T11:57:23Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the Spring Data team I am pleased to announce the availability of the second service release of the Dijkstra release train. It includes &lt;a href="https://jira.spring.io/issues/?filter=14748"&gt;49 fixes&lt;/a&gt; overall for the following modules:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Spring Data Commons 1.8.2 - &lt;a href="http://repo.spring.io/libs-release/org/springframework/data/spring-data-commons/1.8.2.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.8.2.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.8.2.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.8.2.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Spring Data JPA 1.6.2 - &lt;a href="http://repo.spring.io/libs-release/org/springframework/data/spring-data-jpa/1.6.2.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.6.2.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.6.2.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.6.2.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Spring Data MongoDB 1.5.2 - &lt;a href="http://repo.spring.io/libs-release/org/springframework/data/spring-data-mongodb/1.5.2.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.5.2.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.5.2.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.5.2.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Spring Data Neo4j 3.1.2 - &lt;a href="http://repo.spring.io/libs-release/org/springframework/data/spring-data-neo4j/3.1.2.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/3.1.2.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/3.1.2.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/3.1.2.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Spring Data Solr 1.2.2 - &lt;a href="http://repo.spring.io/libs-release/org/springframework/data/spring-data-solr/1.2.2.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/1.2.2.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/1.2.2.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/1.2.2.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Spring Data Couchbase 1.1.2 - &lt;a href="http://repo.spring.io/libs-release/org/springframework/data/spring-data-couchbase/1.1.2.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/1.1.2.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/1.1.2.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/1.1.2.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Spring Data Cassandra 1.0.2 - &lt;a href="http://repo.spring.io/libs-release/org/springframework/data/spring-data-cassandra/1.0.2.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.0.2.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.0.2.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.0.2.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Spring Data Elasticsearch 1.0.2 - &lt;a href="http://repo.spring.io/libs-release/org/springframework/data/spring-data-elasticsearch/1.0.2.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/1.0.2.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/1.0.2.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/1.0.2.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Spring Data Gemfire 1.4.2 - &lt;a href="http://repo.spring.io/libs-release/org/springframework/data/spring-data-gemfire/1.4.2.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.4.2.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.4.2.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.4.2.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Spring Data Redis 1.3.2 - &lt;a href="http://repo.spring.io/libs-release/org/springframework/data/spring-data-redis/1.3.2.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.3.2.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.3.2.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.3.2.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Spring Data REST 2.1.2 - &lt;a href="http://repo.spring.io/libs-release/org/springframework/data/spring-data-rest-webmvc/2.1.2.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.1.2.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.1.2.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.1.2.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;The release is a recommended upgrade for all Dijkstra users as it contains a few important bug fixes. The next release coming will be the first release candidate of the upcoming release train Evans.&lt;/p&gt;
+
+&lt;p&gt;If you want to learn more about Spring Data, be sure to attend this year's SpringOne conference. The schedule contains a lot of data-related talks to introduce you to the latest features we're going to ship with Evans. Early bird tickets still available, so be quick to register.&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Pivotal Toronto Meetup: Production Grade Applications with Spring Boot</title>
     <link rel="alternate" href="https://spring.io/blog/2014/07/25/pivotal-toronto-meetup-production-grade-applications-with-spring-boot" />
@@ -212,9 +382,6 @@ spring-app/
 
 &lt;p&gt;For more of this, don't forget &lt;a href="http://springone2gx.com/"&gt;SpringOne 2GX 2014 in Dallas, TX&lt;/a&gt; - Rossen and I will cover this subject in a &lt;a href="https://2014.event.springone2gx.com/schedule/sessions/resource_handling_in_spring_mvc_4_1.html"&gt;dedicated session&lt;/a&gt;.&lt;/p&gt;</content>
   </entry>
-=======
-  <updated>2014-07-23T02:26:26Z</updated>
->>>>>>> 22f90ae53fbd0fe8cc9b8ac6fc503f082227a011
   <entry>
     <title>This Week in Spring - July 22nd, 2014</title>
     <link rel="alternate" href="https://spring.io/blog/2014/07/23/this-week-in-spring-july-22nd-2014" />
@@ -925,7 +1092,7 @@ Therefore 3.6.1 is scheduled to ship on time for SpringOne2GX 2014 in early Sept
 &lt;a href="http://twitter.com/ankinson"&gt;Andy Wilkinson&lt;/a&gt; has just announced   &lt;a href="http://spring.io/blog/2014/07/08/spring-boot-1-1-4-released"&gt;Spring Boot 1.1.4 release&lt;/a&gt;. The new release includes many bug-fixes and small new features, including support for the first stable preview release of Tomcat 8.   &lt;/li&gt;
 &lt;li&gt;Andy &lt;em&gt;also&lt;/em&gt; just announced the first &lt;a href="http://spring.io/blog/2014/07/08/spring-io-platform-1-0-1-released"&gt;maintenance release to Spring IO&lt;/a&gt; which updates versions across the platform to include Spring AMQP 1.3.5, Spring Boot 1.1.4, Spring Batch 3.0.1, Spring for Apache Hadoop 2.0.1, and Spring Framework 4.0.6. Nice job, Andy!&lt;/li&gt;
 &lt;li&gt;Thomas Risberg has just &lt;a href="http://spring.io/blog/2014/07/08/spring-for-apache-hadoop-2-0-1-released"&gt;announced Spring for Apache Hadoop 2.0.1&lt;/a&gt; which revs the dependency versions, including Hadoop 2.4.1, Spring framework 4.0.6.RELEASE, Spring Batch to 3.0.1.RELEASE,  Spring Boot to 1.1.4.RELEASE. &lt;/li&gt;
-&lt;li&gt;Stéphane Nicoll  has just announced that &lt;a href="http://spring.io/blog/2014/07/08/spring-framework-4-0-6-released"&gt;Spring framework 4.0.6 is now available&lt;/a&gt;.   This release includes about 50 bugfixes.&lt;/li&gt;
+&lt;li&gt;St?phane Nicoll  has just announced that &lt;a href="http://spring.io/blog/2014/07/08/spring-framework-4-0-6-released"&gt;Spring framework 4.0.6 is now available&lt;/a&gt;.   This release includes about 50 bugfixes.&lt;/li&gt;
 &lt;li&gt;Spring Social lead Craig Walls has just announced that &lt;a href="http://spring.io/blog/2014/07/03/spring-social-facebook-2-0-0-m1-released"&gt;Spring Social Facebook 2.0.0.M1 is now available&lt;/a&gt;. This release supports the new  Facebook v2.0.0 Graph API, which introduces some breaking, obligatory, changes (thanks, Facebook!).&lt;/li&gt;
 &lt;li&gt;Groovy project lead &lt;a href="http://twitter.com/glaforge"&gt;Guillaume LaForge&lt;/a&gt; has announced &lt;a href="http://beta.groovy-lang.org"&gt;the beta of the new Groovy website&lt;/a&gt;  and is soliciting feedback from the community at large.&lt;/li&gt;
 &lt;li&gt;From the trenches: Join Casey Doolittle and Phil Dutson on July 15th for a webinar about a crazy project, and how they had to &lt;a href="http://spring.io/blog/2014/06/10/webinar-building-a-shopping-cart-in-24-hours-using-spring"&gt;Build a Shopping Cart in 24 Hours using Spring&lt;/a&gt;.&lt;/li&gt;
@@ -1025,105 +1192,5 @@ Therefore 3.6.1 is scheduled to ship on time for SpringOne2GX 2014 in early Sept
 
 &lt;p&gt;&lt;a href="http://projects.spring.io/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/1.1.4.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
-  <entry>
-    <title>Spring for Apache Hadoop 2.0.1 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2014/07/08/spring-for-apache-hadoop-2-0-1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Thomas Risberg</name>
-    </author>
-    <id>tag:spring.io,2014-07-08:1671</id>
-    <updated>2014-07-08T09:52:00Z</updated>
-    <content type="html">&lt;p&gt;We are pleased to announce that Spring for Apache Hadoop 2.0.1 has just been released and is now available from &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.springframework.data%22%20%22hadoop%22"&gt;maven central&lt;/a&gt; and &lt;a href="http://repo.spring.io/release/org/springframework/data/spring-data-hadoop/"&gt;repo.spring.io&lt;/a&gt;. This release updates some dependency versions. The Apache Hadoop 2.4 support (hadoop24) is updated to use version 2.4.1. The Spring Framework version is updated to 4.0.6.RELEASE, Spring Batch updated to 3.0.1.RELEASE and Spring Boot updated to 1.1.4.RELEASE.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Framework 4.0.6 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2014/07/08/spring-framework-4-0-6-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Stéphane Nicoll</name>
-    </author>
-    <id>tag:spring.io,2014-07-08:1668</id>
-    <updated>2014-07-08T08:18:00Z</updated>
-    <content type="html">&lt;p&gt;We are pleased to announce that Spring Framework 4.0.6 has just been released and is now available from &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.springframework%22"&gt;maven central&lt;/a&gt; and &lt;a href="http://repo.spring.io/release/org/springframework/"&gt;repo.spring.io&lt;/a&gt;. This is a bugfix and minor enhancement release in the 4.0 series. This release includes nearly 50 bug fixes and improvements and we recommend that all users upgrade.&lt;/p&gt;
-
-&lt;p&gt;For a complete list of changes, please refer to &lt;a href="https://jira.spring.io/browse/SPR/fixforversion/14629"&gt;JIRA&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne2GX 2013 Replay: Tooling for Spring's next generation</title>
-    <link rel="alternate" href="https://spring.io/blog/2014/07/03/springone2gx-2013-replay-tooling-for-spring-s-next-generation" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2014-07-03:1666</id>
-    <updated>2014-07-03T15:29:00Z</updated>
-    <content type="html">&lt;p&gt;Tooling for Spring's next generation &lt;/p&gt;
-
-&lt;p&gt;Recorded at SpringOne2GX 2013 in Santa Clara, CA &lt;/p&gt;
-
-&lt;p&gt;Speakers: Andy Clement and Martin Lippert &lt;/p&gt;
-
-&lt;p&gt;The Spring Tool Suite (STS) is constantly evolving to keep pace with developments in Spring as well as the larger world of enterprise application development. This talk focuses on Eclipse-based tooling for the latest features throughout the Spring ecosystem. With plenty of live demos, we'll show you how to get productive quickly with Spring and STS. We''ll start with reviewing areas including XML-free Spring development and then look at early support for specific Spring's next generation features. We'll also demo the Eclipse support for Java 8 (also AspectJ support for Java 8) and spend some time looking at how this enhances your Spring development experience. In addition to the pure Java-based Spring programming, we will also cover the integration of the Groovy language tooling and show you how to program Spring apps in Groovy using the Spring Tool Suite. We will then dive into the details of the tooling to demonstrate a number of hidden gems that help you improve your productivity every day, like the built-in validations and best practices, quick-fixes, auto-completions, and automated refactorings. Last, but not least, we will review some of the performance improvements made recently in Spring Tool Suite. &lt;/p&gt;
-
-&lt;p&gt;Learn more about Spring Tool Suite at &lt;a href="http://spring.io/tools"&gt;http://spring.io/tools&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Learn more about Spring at &lt;a href="http://projects.spring.io/spring-framework"&gt;http://projects.spring.io/spring-framework&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;&lt;iframe width="560" height="315" src="//www.youtube.com/embed/reYgWdrwfyQ" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-<<<<<<< HEAD
-=======
-  <entry>
-    <title>SpringOne2GX 2013 Replay: Performance - tuning the Spring Petclinic sample application</title>
-    <link rel="alternate" href="https://spring.io/blog/2014/07/03/springone2gx-2013-replay-performance-tuning-the-spring-petclinic-sample-application" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2014-07-03:1665</id>
-    <updated>2014-07-03T15:22:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2013 in Santa Clara, CA.&lt;/p&gt;
-
-&lt;p&gt;Speaker: Julien Dubios &lt;/p&gt;
-
-&lt;p&gt;This talk is a live version of my blog posts on performance-tuning the Spring Petclinic application: &lt;a href="http://blog.ippon.fr/tag/spring-petclinic/"&gt;http://blog.ippon.fr/tag/spring-petclinic/&lt;/a&gt; We will talk about JVM locks, Web application performance best practices, JDBC vs JPA, and caching We will see how to use effectively tools such as JMeter, Yourkit and Intellij IDEA to quickly solve performance issues We will also explain the methodology used, so you can follow the same steps on your own applications In this session we will talk about :     &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Stress tests&lt;/li&gt;
-  &lt;li&gt; Memory leaks&lt;/li&gt;
-  &lt;li&gt; Garbage Collection&lt;/li&gt;
-  &lt;li&gt; Profiling tools&lt;/li&gt;
-  &lt;li&gt; Application Server tuning     &lt;/li&gt;
-  &lt;li&gt;JVM tuning     &lt;/li&gt;
-  &lt;li&gt;Locks     &lt;/li&gt;
-  &lt;li&gt;JDBC vs JPA &lt;/li&gt;
-  &lt;li&gt;Lazy loading&lt;/li&gt;
-  &lt;li&gt; Caching&lt;/li&gt;
-  &lt;li&gt; And much more ! &lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;Learn more about Spring at &lt;a href="http://projects.spring.io/spring-framework"&gt;http://projects.spring.io/spring-framework&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe width="560" height="315" src="//www.youtube.com/embed/oR_7EtCgc1M" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Social Facebook 2.0.0.M1 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2014/07/03/spring-social-facebook-2-0-0-m1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Craig Walls</name>
-    </author>
-    <id>tag:spring.io,2014-07-03:1663</id>
-    <updated>2014-07-03T12:43:00Z</updated>
-    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
-
-&lt;p&gt;I'm pleased to announce the first milestone release of Spring Social Facebook 2.0.0. The primary focus of this release was to update the API binding to target version 2.0 of Facebook's Graph API. &lt;/p&gt;
-
-&lt;p&gt;Note that due to breaking changes in Facebook's Graph API, there were necessarily some breaking changes in this version of Spring Social Facebook. Fortunately, however, Facebook has promised a two-year stability guarantee for all versions of their API, so such breaking changes should be able to be handled more gracefully going forward.&lt;/p&gt;
-
-&lt;p&gt;Facebook is requiring all applications registered after April 30, 2014 to use v2.0 of the Graph API (older applications are allowed to use either v1.0 or v2.0 until April 30, 2015). Therefore, if you are building a new Facebook-enabled application with Spring Social, you'll likely want to look at this release, as there are some operations in Spring Social Facebook 1.1.x's API binding that will not work.&lt;/p&gt;
-
-&lt;p&gt;Although each method in the API binding was tested directly against Facebook Graph API v2.0, it's very possible that something was overlooked. I invite the Spring Social community to try out this release and provide feedback in the form of &lt;a href="https://jira.spring.io/browse/SOCIALFB"&gt;improvement and bug issues&lt;/a&gt;.&lt;/p&gt;</content>
-  </entry>
->>>>>>> 22f90ae53fbd0fe8cc9b8ac6fc503f082227a011
 </feed>
 

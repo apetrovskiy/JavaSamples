@@ -1,0 +1,10 @@
+package org.probe.springdepinjectiontest;
+
+public class Saxophone implements Instrument {
+
+	public void play() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
