@@ -17,6 +17,9 @@ public class Starter {
 		
 		performer = (Performer)ctx.getBean("kenny2");
 		performer.perform();
+		
+		performer = (Performer)ctx.getBean("hank");
+		performer.perform();
 	}
 
 }

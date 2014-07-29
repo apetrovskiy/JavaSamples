@@ -59,6 +59,32 @@
 		p:song = "Jingle Bells"
 		p:instrument-ref = "saxophone" />
 	
+	<!--  this works <bean id="hank" class="org.probe.springdepinjectiontest.OneManBand">
+		<property name="instruments">
+			<list>
+				<ref bean="piano" />
+				<ref bean="saxophone" />
+			</list>
+		</property>
+	</bean> -->
 	
+	<!--  this works <bean id="hank" class="org.probe.springdepinjectiontest.OneManBand">
+		<property name="instruments">
+			<map>
+				<entry key="PIANO" value-ref="piano" />
+				<entry key="SAXOPHONE" value-ref="saxophone" />
+			</map>
+		</property>
+	</bean> -->
+	
+	<bean id="hank" class="org.probe.springdepinjectiontest.OneManBand">
+		<property name="instruments">
+			<props>
+				<prop key="GUITAR">STRUM STRUM STRUM</prop>
+				<prop key="CYMBAL">CRASH CRASH CRASH</prop>
+				<prop key="HARMONICA">HUM HUM HUM</prop>
+			</props>
+		</property>
+	</bean>
 	
 </beans>
