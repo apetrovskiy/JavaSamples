@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
+<<<<<<< HEAD
 <aop-project name="SpringDependencyInjectionXmlTest"/>
+=======
+<aop-project name="SpringDepInjectionTest"/>
+>>>>>>> c877696a7ddb18e2f714fbc97d5dd1a36f3048c4
 <aop-project name="HelloWorld"/>
 </aop-reference-model>

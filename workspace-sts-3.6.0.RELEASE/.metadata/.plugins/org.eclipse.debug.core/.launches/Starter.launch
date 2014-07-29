@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<<<<<<< HEAD
+<listEntry value="/SpringDepInjectionTest/src/main/resources/org/probe/springdepinjectiontest/Starter.java"/>
+=======
 <listEntry value="/SpringDependencyInjectionXmlTest/src/main/resources/or/probing/springdependencyinjectionxmltest/Starter.java"/>
+>>>>>>> 2ffa421b4b83bdc0b2ca00c278f781cb2c5762b6
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+<<<<<<< HEAD
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.probe.springdepinjectiontest.Starter"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="SpringDepInjectionTest"/>
+=======
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="or.probing.springdependencyinjectionxmltest.Starter"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="SpringDependencyInjectionXmlTest"/>
+>>>>>>> 2ffa421b4b83bdc0b2ca00c278f781cb2c5762b6
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
 </launchConfiguration>
