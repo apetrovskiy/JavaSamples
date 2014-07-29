@@ -9,7 +9,10 @@
 <fullyQualifiedTypeName name="com.apress.prospring3.ch2.MessageProvider"/>
 <fullyQualifiedTypeName name="com.apress.prospring3.ch2.MessageSupportFactory"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="com.apress.prospring3.ch2.MessageRenderer"/>
+<fullyQualifiedTypeName name="or.probing.springdependencyinjectionxmltest.Juggler"/>
+<fullyQualifiedTypeName name="or.probing.springdependencyinjectionxmltest.PerformanceException"/>
 <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
-<fullyQualifiedTypeName name="com.apress.prospring3.ch2.MessageRenderer"/>
+<fullyQualifiedTypeName name="or.probing.springdependencyinjectionxmltest.Performer"/>
 </qualifiedTypeNameHistroy>
