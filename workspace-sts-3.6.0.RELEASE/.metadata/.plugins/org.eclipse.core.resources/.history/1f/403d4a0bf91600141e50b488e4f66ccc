@@ -97,9 +97,4 @@
 		<property name="instrument" value="#{piano}" />
 	</bean>
 	
-	<bean id="carl" class="org.probe.springdepinjectiontest.Instrumentalist">
-		<property name="song" value="#{kenny2.song}" />
-		<property name="instrument" value="#{piano}" />
-	</bean>
-	
 </beans>
