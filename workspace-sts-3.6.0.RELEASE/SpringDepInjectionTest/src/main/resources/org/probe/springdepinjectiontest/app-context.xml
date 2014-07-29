@@ -55,10 +55,51 @@
 		</property>
 	</bean>
 	
-	<bean id="kenny2" class="org.probe.springdepinjectiontest.Instrumentalist"
+	<bean id="kenny03" class="org.probe.springdepinjectiontest.Instrumentalist"
 		p:song = "Jingle Bells"
 		p:instrument-ref = "saxophone" />
 	
+	<!--  this works <bean id="hank" class="org.probe.springdepinjectiontest.OneManBand">
+		<property name="instruments">
+			<list>
+				<ref bean="piano" />
+				<ref bean="saxophone" />
+			</list>
+		</property>
+	</bean> -->
 	
+	<!--  this works <bean id="hank" class="org.probe.springdepinjectiontest.OneManBand">
+		<property name="instruments">
+			<map>
+				<entry key="PIANO" value-ref="piano" />
+				<entry key="SAXOPHONE" value-ref="saxophone" />
+			</map>
+		</property>
+	</bean> -->
+	
+	<bean id="hank" class="org.probe.springdepinjectiontest.OneManBand">
+		<property name="instruments">
+			<props>
+				<prop key="GUITAR">STRUM STRUM STRUM</prop>
+				<prop key="CYMBAL">CRASH CRASH CRASH</prop>
+				<prop key="HARMONICA">HUM HUM HUM</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="classWithNull" class="org.probe.springdepinjectiontest.ClassWithNullProperty">
+		<property name="someData"><null/></property>
+	</bean>
+	
+	<bean id="kenny2" class="org.probe.springdepinjectiontest.Instrumentalist">
+		<property name="song" value="Jingle Bells" />
+		<!--  this works <property name="instrument" ref="saxophone" /> -->
+		<property name="instrument" value="#{piano}" />
+	</bean>
+	
+	<bean id="carl" class="org.probe.springdepinjectiontest.Instrumentalist">
+		<property name="song" value="#{kenny2.song}" />
+		<property name="instrument" value="#{piano}" />
+	</bean>
 	
 </beans>

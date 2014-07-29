@@ -1,5 +1,0 @@
-package org.probe.springdepinjectiontest;
-
-public interface Instrument {
-
-}
