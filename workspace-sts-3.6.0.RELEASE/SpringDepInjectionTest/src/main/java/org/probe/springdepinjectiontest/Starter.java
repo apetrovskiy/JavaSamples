@@ -23,6 +23,9 @@ public class Starter {
 		
 		performer = (Performer)ctx.getBean("carl");
 		performer.perform();
+		
+		SpringTest01 springTest01 = (SpringTest01)ctx.getBean("testPi");
+		System.out.println(springTest01.getPi());
 	}
 
 }

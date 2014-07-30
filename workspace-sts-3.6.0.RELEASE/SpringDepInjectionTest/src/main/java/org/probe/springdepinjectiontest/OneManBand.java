@@ -32,7 +32,7 @@ public class OneManBand implements Performer {
 	
 	public void perform() {
 		for (String key : instruments.stringPropertyNames()) {
-			System.out.print(key + " : " + instruments.getProperty(key));
+			System.out.println(key + " : " + instruments.getProperty(key));
 		}
 	}
 	

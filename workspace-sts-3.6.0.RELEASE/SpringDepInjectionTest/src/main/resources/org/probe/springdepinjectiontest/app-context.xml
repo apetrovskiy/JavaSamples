@@ -102,4 +102,8 @@
 		<property name="instrument" value="#{piano}" />
 	</bean>
 	
+	<bean id="testPi" class="org.probe.springdepinjectiontest.SpringTest01">
+		<property name="Pi" value="#{T(java.lang.Math).PI * 3}" />
+	</bean>
+	
 </beans>
