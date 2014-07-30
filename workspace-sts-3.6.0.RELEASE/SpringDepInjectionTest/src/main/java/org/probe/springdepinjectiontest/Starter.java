@@ -3,7 +3,7 @@ package org.probe.springdepinjectiontest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Main {
+public class Starter {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -24,8 +24,8 @@ public class Main {
 		performer = (Performer)ctx.getBean("carl");
 		performer.perform();
 		
-		TestSpel01 testSpel01 = (TestSpel01)ctx.getBean("testPi");
-		System.out.println(testSpel01.getPi());
+		SpringTest01 springTest01 = (SpringTest01)ctx.getBean("testPi");
+		System.out.println(springTest01.getPi());
 	}
 
 }
