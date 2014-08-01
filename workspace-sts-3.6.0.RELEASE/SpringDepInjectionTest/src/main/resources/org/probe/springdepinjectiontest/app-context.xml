@@ -106,4 +106,28 @@
 		<property name="Pi" value="#{T(java.lang.Math).PI * 3}" />
 	</bean>
 	
+	<!-- <bean id="cities" class="org.probe.springdepinjectiontest.Cities">
+		<property name="citiesList">
+			<util:list id="cities" list-class="java.util.List">
+				<bean class="org.probe.springdepinjectiontest.City"
+					p:name="Chicago" p:state="IL" p:population="2853114" />
+				<bean class="org.probe.springdepinjectiontest.City"
+					p:name="Atlanta" p:state="GA" p:population="537958" />
+				<bean class="org.probe.springdepinjectiontest.City"
+					p:name="Dallas" p:state="TX" p:population="1279910" />
+				<bean class="org.probe.springdepinjectiontest.City"
+					p:name="Houston" p:state="TX" p:population="2242193" />
+				<bean class="org.probe.springdepinjectiontest.City"
+					p:name="Odessa" p:state="TX" p:population="90943" />
+				<bean class="org.probe.springdepinjectiontest.City"
+					p:name="El Paso" p:state="TX" p:population="613190" />
+				<bean class="org.probe.springdepinjectiontest.City"
+					p:name="Jal" p:state="NM" p:population="1996" />
+				<bean class="org.probe.springdepinjectiontest.City"
+					p:name="Las Cruces" p:state="NM" p:population="91865" />
+			</util:list>
+		</property>
+	</bean> -->
+	
+	
 </beans>
