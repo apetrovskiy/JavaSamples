@@ -8,6 +8,8 @@
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
 		<config>src/main/resources/xmlBeanFactory.xml</config>
+		<config>src/main/resources/META-INF/spring/app-context-xml.xml</config>
+		<config>src/main/resources/META-INF/spring/app-context-annotation.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
