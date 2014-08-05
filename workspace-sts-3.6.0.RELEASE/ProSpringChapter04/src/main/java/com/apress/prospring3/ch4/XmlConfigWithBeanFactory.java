@@ -5,7 +5,7 @@ import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.core.io.FileSystemResource;
 
 public class XmlConfigWithBeanFactory {
-
+	/*
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
@@ -17,5 +17,5 @@ public class XmlConfigWithBeanFactory {
 		Oracle oracle = factory.getBean("oracle", Oracle.class);
 		System.out.println(oracle.defineMeaningOfLife());
 	}
-
+	*/
 }
