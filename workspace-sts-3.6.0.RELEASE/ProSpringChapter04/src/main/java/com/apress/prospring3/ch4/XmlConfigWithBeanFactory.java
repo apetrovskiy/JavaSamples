@@ -1,8 +1,10 @@
 package com.apress.prospring3.ch4;
 
+/*
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.core.io.FileSystemResource;
+*/
 
 public class XmlConfigWithBeanFactory {
 	/*
