@@ -17,5 +17,4 @@ public class XmlConfigWithBeanFactory {
 		Oracle oracle = factory.getBean("oracle", Oracle.class);
 		System.out.println(oracle.defineMeaningOfLife());
 	}
-
 }
