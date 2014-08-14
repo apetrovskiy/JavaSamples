@@ -8,6 +8,9 @@
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
 		<config>src/main/resources/xmlBeanFactory.xml</config>
+		<config>src/main/resources/META-INF/spring/app-context-xml.xml</config>
+		<config>src/main/resources/META-INF/spring/app-context-annotation.xml</config>
+		<config>src/main/resources/META-INF/spring/probe.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
@@ -17,6 +20,7 @@
 			<allowBeanDefinitionOverriding>true</allowBeanDefinitionOverriding>
 			<incomplete>false</incomplete>
 			<configs>
+				<config>src/main/resources/META-INF/spring/probe.xml</config>
 			</configs>
 			<profiles>
 			</profiles>
