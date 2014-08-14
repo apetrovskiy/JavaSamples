@@ -16,5 +16,7 @@
 	<context:component-scan base-package="com.apress.prospring3.ch4.annotation">
 		<!--  <context:exclude-filter type="assignable" expression="com.example.NotAService" /> -->
 	</context:component-scan>
-
+	
+	<!-- <bean id="message" class="java.lang.String" c:_0="This is a configurable message (via context)"/> -->
+	
 </beans>
