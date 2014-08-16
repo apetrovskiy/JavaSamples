@@ -33,4 +33,17 @@
 			value="This is a configurable message (also xml)">
 		</constructor-arg>
 	</bean>
+	
+	<bean id="constructorConfusion" class="com.apress.prospring3.ch4.xml.ConstructorConfusion">
+		<constructor-arg value="90" type="int" />
+	</bean>
+	
+	<bean id="injectSimple"
+		class="com.apress.prospring3.ch4.xml.InjectSimple">
+	<property name="name" value="John Smith"></property>
+	<property name="age" value="35"></property>
+	<property name="height" value="1.78"></property>
+	<property name="programmer" value="true"></property>
+	<property name="ageInSeconds" value="1103760000"></property>
+	</bean>
 </beans>
