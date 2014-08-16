@@ -84,6 +84,19 @@ public class StarterChapter04 {
 		com.apress.prospring3.ch4.annotation.InjectSimple simple2 = (com.apress.prospring3.ch4.annotation.InjectSimple)ctx006.getBean("injectSimple");
 		System.out.println(simple2);
 		
+		// SpEL XML
+		GenericXmlApplicationContext ctx007 = new GenericXmlApplicationContext();
+		ctx007.load("classpath:META-INF/spring/app-context-xml.xml");
+		ctx007.refresh();
+		com.apress.prospring3.ch4.xml.InjectSimpleSpel simpleSpel01 = (com.apress.prospring3.ch4.xml.InjectSimpleSpel)ctx007.getBean("injectSimpleSpel");
+		System.out.println(simpleSpel01);
+		
+		// SpEL annotation
+		GenericXmlApplicationContext ctx008 = new GenericXmlApplicationContext();
+		ctx008.load("classpath:META-INF/spring/app-context-annotation.xml");
+		ctx008.refresh();
+		com.apress.prospring3.ch4.annotation.InjectSimpleSpel simpleSpel02 = (com.apress.prospring3.ch4.annotation.InjectSimpleSpel)ctx008.getBean("injectSimpleSpel");
+		System.out.println(simpleSpel02);
 		
 		System.out.println("that's all");
 	}
