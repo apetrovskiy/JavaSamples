@@ -98,6 +98,28 @@ public class Starter_ProSpring_Chapter04 {
 		com.apress.prospring3.ch4.annotation.InjectSimpleSpel simpleSpel02 = (com.apress.prospring3.ch4.annotation.InjectSimpleSpel)ctx008.getBean("injectSimpleSpel");
 		System.out.println(simpleSpel02);
 		
+		// inject ref XML
+		GenericXmlApplicationContext ctx009 = new GenericXmlApplicationContext();
+		ctx009.load("classpath:META-INF/spring/app-context-xml.xml");
+		ctx009.refresh();
+		com.apress.prospring3.ch4.xml.InjectRef injectRef01 = (com.apress.prospring3.ch4.xml.InjectRef)ctx009.getBean("injectRef");
+		System.out.println(injectRef01);
+		
+		// nested ApplicationContext
+		GenericXmlApplicationContext parentContext = new GenericXmlApplicationContext();
+		parentContext.load("classpath:parent.xml");
+		parentContext.refresh();
+		GenericXmlApplicationContext childContext = new GenericXmlApplicationContext();
+		childContext.load("classpath:app-context-xml.xml");
+		childContext.setParent(parentContext);
+		childContext.refresh();
+		// SimpleTarget target1 = (SimpleTarget)childContext.getBean("target1");
+		SimpleTarget target2 = (SimpleTarget)childContext.getBean("target2");
+		// SimpleTarget target3 = (SimpleTarget)childContext.getBean("target3");
+		// System.out.println(target1.getVal());
+		System.out.println(target2.getVal());
+		// System.out.println(target3.getVal());
+		
 		System.out.println("that's all");
 	}
 

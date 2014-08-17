@@ -59,4 +59,38 @@
 		<property name="isProgrammer" value="#{injectSimpleConfig.programmer}"></property>
 		<property name="ageInSeconds" value="#{injectSimpleConfig.ageInSeconds}"></property>
 	</bean>
+	
+	<bean id="oracle" name="wiseworm" class="com.apress.prospring3.ch4.BookwormOracle"/>
+	<!-- <bean id="injectRef" class="com.apress.prospring3.ch4.xml.InjectRef">
+		<property name="oracle">
+			<ref local="oracle"/>
+		</property>
+	</bean> -->
+	<bean id="injectRef" class="com.apress.prospring3.ch4.xml.InjectRef">
+		<property name="oracle">
+			<ref bean="wiseworm"/>
+		</property>
+	</bean>
+	
+	<!-- <bean id="target1" class="com.apress.prospring3.ch4.SimpleTarget">
+		<property name="val">
+			<ref bean="injectBeanParent"/>
+		</property>
+	</bean> -->
+	<bean id="target2" class="com.apress.prospring3.ch4.SimpleTarget">
+		<property name="val">
+			<ref bean="injectBean"/>
+		</property>
+	</bean>
+	<!-- <bean id="target3" class="com.apress.prospring3.ch4.SimpleTarget">
+		<property name="val">
+			<ref parent="injectBean"/>
+		</property>
+	</bean> -->
+	<bean id="injectBean" class="java.lang.String">
+		<constructor-arg>
+			<value>Bean In Child</value>
+		</constructor-arg>
+	</bean>
+	
 </beans>
