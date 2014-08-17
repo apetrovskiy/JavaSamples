@@ -14,7 +14,7 @@ import com.apress.prospring3.ch4.annotation.ConstructorConfusion;
 // import com.apress.prospring3.ch4.xml.ConstructorConfusion;
 import com.apress.prospring3.ch4.xml.*;
 
-public class StarterChapter04 {
+public class Starter_ProSpring_Chapter04 {
 
 	public static void main(String[] args) {
 		// BeanFactory

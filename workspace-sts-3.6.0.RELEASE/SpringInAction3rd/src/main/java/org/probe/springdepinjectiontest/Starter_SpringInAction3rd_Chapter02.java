@@ -3,7 +3,7 @@ package org.probe.springdepinjectiontest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Starter {
+public class Starter_SpringInAction3rd_Chapter02 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
