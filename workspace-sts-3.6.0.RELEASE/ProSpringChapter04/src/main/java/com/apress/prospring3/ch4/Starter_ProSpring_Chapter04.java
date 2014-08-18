@@ -166,6 +166,22 @@ public class Starter_ProSpring_Chapter04 {
 		// MethodReplacementExample.displayInfo(replacementTarget);
 		MethodReplacementExample.displayInfo(standardTarget);
 		
+		// names and aliases of beans
+		GenericXmlApplicationContext ctx015 = new GenericXmlApplicationContext();
+		ctx015.load("classpath:META-INF/spring/app-context-xml.xml");
+		ctx015.refresh();
+		String s01 = (String)ctx015.getBean("name1");
+		String s02 = (String)ctx015.getBean("name2");
+		String s03 = (String)ctx015.getBean("name3");
+		String s04 = (String)ctx015.getBean("name4");
+		String s05 = (String)ctx015.getBean("name5");
+		String s06 = (String)ctx015.getBean("name6");
+		System.out.println((s01 == s02));
+		System.out.println((s02 == s03));
+		System.out.println((s03 == s04));
+		System.out.println((s04 == s05));
+		System.out.println((s05 == s06));
+		
 		System.out.println("that's all");
 	}
 

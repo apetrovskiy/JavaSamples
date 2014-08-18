@@ -121,4 +121,7 @@
 		</property>
 	</bean>
 	
+	<bean id="name1" name="name2 name3,name4;name5" class="java.lang.String"/>
+	<alias name="name1" alias="name6"/>
+	
 </beans>
