@@ -10,7 +10,15 @@ import org.springframework.core.io.FileSystemResource;
 
 
 
+
+
+
+
 import com.apress.prospring3.ch4.annotation.ConstructorConfusion;
+import com.apress.prospring3.ch4.mi.DemoBean;
+import com.apress.prospring3.ch4.mi.LookupDemo;
+import com.apress.prospring3.ch4.mi.MethodReplacementExample;
+import com.apress.prospring3.ch4.mi.ReplacementTarget;
 // import com.apress.prospring3.ch4.xml.ConstructorConfusion;
 import com.apress.prospring3.ch4.xml.*;
 
@@ -141,6 +149,23 @@ public class Starter_ProSpring_Chapter04 {
 		com.apress.prospring3.ch4.annotation.CollectionInjection instance02 = (com.apress.prospring3.ch4.annotation.CollectionInjection)ctx012.getBean("injectCollection");
 		instance02.displayInfo();
 		*/
+		// method lookup
+		GenericXmlApplicationContext ctx013 = new GenericXmlApplicationContext();
+		ctx013.load("classpath:META-INF/spring/lookup.xml");
+		// DemoBean abstractBean = (DemoBean)ctx013.getBean("abstractLookupBean");
+		DemoBean standardBean = (DemoBean)ctx013.getBean("standardLookupBean");
+		LookupDemo.displayInfo(standardBean);
+		// LookupDemo.displayInfo(abstractBean);
+		
+		// method replacement
+		GenericXmlApplicationContext ctx014 = new GenericXmlApplicationContext();
+		ctx014.load("classpath:META-INF/spring/lookup.xml");
+		// ctx014.refresh();
+		// ReplacementTarget replacementTarget = (ReplacementTarget)ctx014.getBean("replacementTarget");
+		ReplacementTarget standardTarget = (ReplacementTarget)ctx014.getBean("standardTarget");
+		// MethodReplacementExample.displayInfo(replacementTarget);
+		MethodReplacementExample.displayInfo(standardTarget);
+		
 		System.out.println("that's all");
 	}
 
