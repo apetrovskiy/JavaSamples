@@ -16,5 +16,8 @@
 <item elementID="=ProSpringChapter04" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ProSpringChapter02" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1408351615945_4" label="JavaCore" name="JavaCore">
+<item elementID="=Vol01Chapter07_000Frame" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1406955171539_0" label="Window Working Set" name="Aggregate for window 1406955171538"/>
 </workingSetManager>
