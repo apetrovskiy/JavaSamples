@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
-<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1407268878173_2" label="SampleApplications" name="SampleApplications">
-<item elementID="=gs-scheduling-tasks-initial" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=gs-rest-service-complete" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=gs-batch-processing-initial" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=gs-rest-service-initial" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=gs-scheduling-tasks-complete" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=gs-consuming-rest-complete" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=gs-batch-processing-complete" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/RemoteSystemsTempFiles" type="4"/>
-<item elementID="=gs-consuming-rest-initial" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1407268878173_2" label="SampleApplications" name="SampleApplications"/>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1407268956823_3" label="SpringBooks" name="SpringBooks">
-<item elementID="=SpringInAction3rdChapter02" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ProSpringChapter04" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ProSpringChapter02" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=SpringInAction3rdChapter02" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1408351615945_4" label="JavaCore" name="JavaCore">
 <item elementID="=Vol01Chapter07_000Frame" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1406955171539_0" label="Window Working Set" name="Aggregate for window 1406955171538"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1408358427089_5" label="Window Working Set" name="Aggregate for window 1406916945878"/>
 </workingSetManager>

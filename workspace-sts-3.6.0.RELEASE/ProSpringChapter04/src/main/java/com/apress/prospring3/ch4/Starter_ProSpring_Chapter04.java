@@ -44,11 +44,13 @@ public class Starter_ProSpring_Chapter04 {
 		// ctx2 = new ClassPathXmlApplicationContext("META-INF/spring/app-context-annotation.xml");
 		GenericXmlApplicationContext ctx002 = new GenericXmlApplicationContext();
 		ctx002.load("classpath:META-INF/spring/app-context-annotation.xml");
+		
 		// ctx2.load("classpath:META-INF/spring/app-context-xml.xml");
 		ctx002.refresh();
 		
 		mp = ctx002.getBean("messageProvider", MessageProvider.class);
 		System.out.println(mp.getMessage());
+		
 		mr = ctx002.getBean("messageRenderer", MessageRenderer.class);
 		// mr.setMessageProvider(mp);
 		mr.render();
@@ -60,7 +62,6 @@ public class Starter_ProSpring_Chapter04 {
 		ctx003.refresh();
 		com.apress.prospring3.ch4.xml.ConstructorConfusion cc1 = (com.apress.prospring3.ch4.xml.ConstructorConfusion)ctx003.getBean("constructorConfusion");
 		System.out.println(cc1);
-		
 		
 		// again annotation
 		GenericXmlApplicationContext ctx004 = new GenericXmlApplicationContext();

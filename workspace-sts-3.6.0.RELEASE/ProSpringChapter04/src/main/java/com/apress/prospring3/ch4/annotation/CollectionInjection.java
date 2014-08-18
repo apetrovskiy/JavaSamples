@@ -8,7 +8,7 @@ import java.util.Set;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
-
+/*
 @Service("injectCollection")
 public class CollectionInjection {
 	@Resource(name="map")
@@ -51,3 +51,4 @@ public class CollectionInjection {
 			System.out.println("Value: " + obj);
 	}
 }
+*/
