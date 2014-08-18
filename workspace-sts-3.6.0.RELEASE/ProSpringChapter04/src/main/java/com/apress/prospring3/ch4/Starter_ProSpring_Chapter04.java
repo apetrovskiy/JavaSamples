@@ -107,10 +107,18 @@ public class Starter_ProSpring_Chapter04 {
 		
 		// nested ApplicationContext
 		GenericXmlApplicationContext parentContext = new GenericXmlApplicationContext();
-		parentContext.load("classpath:parent.xml");
+		// parentContext.load("classpath:parent.xml");
+		parentContext.load("classpath:META-INF/spring/parent.xml");
 		parentContext.refresh();
+		
+		String s1 = (String)parentContext.getBean("injectBean");
+		System.out.println(s1);
+		String s2 = (String)parentContext.getBean("injectBeanParent");
+		System.out.println(s2);
+		
 		GenericXmlApplicationContext childContext = new GenericXmlApplicationContext();
-		childContext.load("classpath:app-context-xml.xml");
+		// childContext.load("classpath:app-context-xml.xml");
+		childContext.load("classpath:META-INF/spring/app-context-xml.xml");
 		childContext.setParent(parentContext);
 		childContext.refresh();
 		// SimpleTarget target1 = (SimpleTarget)childContext.getBean("target1");
@@ -120,6 +128,18 @@ public class Starter_ProSpring_Chapter04 {
 		System.out.println(target2.getVal());
 		// System.out.println(target3.getVal());
 		
+		GenericXmlApplicationContext ctx011 = new GenericXmlApplicationContext();
+		ctx011.load("classpath:META-INF/spring/app-context-xml.xml");
+		ctx011.refresh();
+		com.apress.prospring3.ch4.xml.CollectionInjection instance01 = (com.apress.prospring3.ch4.xml.CollectionInjection)ctx011.getBean("injectCollection");
+		instance01.displayInfo();
+		/*
+		GenericXmlApplicationContext ctx012 = new GenericXmlApplicationContext();
+		ctx012.load("classpath:META-INF/spring/app-context-annotation.xml");
+		ctx012.refresh();
+		com.apress.prospring3.ch4.annotation.CollectionInjection instance02 = (com.apress.prospring3.ch4.annotation.CollectionInjection)ctx012.getBean("injectCollection");
+		instance02.displayInfo();
+		*/
 		System.out.println("that's all");
 	}
 

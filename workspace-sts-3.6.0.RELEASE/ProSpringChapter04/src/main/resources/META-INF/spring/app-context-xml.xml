@@ -93,4 +93,32 @@
 		</constructor-arg>
 	</bean>
 	
+	<bean id="injectCollection" class="com.apress.prospring3.ch4.xml.CollectionInjection">
+		<property name="map">
+			<map>
+				<entry key="someValue">
+					<value>Hello World!</value>
+				</entry>
+			</map>
+		</property>
+		<property name="props">
+			<props>
+				<prop key="firstName">Clarence</prop>
+				<prop key="secondName">Ho</prop>
+			</props>
+		</property>
+		<property name="set">
+			<set>
+				<value>Hello World!</value>
+				<ref local="oracle"/>
+			</set>
+		</property>
+		<property name="list">
+			<list>
+				<value>Hello World!</value>
+				<ref local="oracle"/>
+			</list>
+		</property>
+	</bean>
+	
 </beans>
