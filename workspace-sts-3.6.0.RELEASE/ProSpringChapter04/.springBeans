@@ -13,6 +13,7 @@
 		<config>src/main/resources/META-INF/spring/probe.xml</config>
 		<config>src/main/resources/META-INF/spring/parent.xml</config>
 		<config>src/main/resources/META-INF/spring/lookup.xml</config>
+		<config>src/main/resources/META-INF/spring/autowiring.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

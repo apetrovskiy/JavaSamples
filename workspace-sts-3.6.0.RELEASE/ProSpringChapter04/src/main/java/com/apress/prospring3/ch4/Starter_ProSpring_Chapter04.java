@@ -14,7 +14,11 @@ import org.springframework.core.io.FileSystemResource;
 
 
 
+
+
 import com.apress.prospring3.ch4.annotation.ConstructorConfusion;
+import com.apress.prospring3.ch4.autowiring.Target;
+import com.apress.prospring3.ch4.inheritance.SimpleBean;
 import com.apress.prospring3.ch4.mi.DemoBean;
 import com.apress.prospring3.ch4.mi.LookupDemo;
 import com.apress.prospring3.ch4.mi.MethodReplacementExample;
@@ -181,6 +185,38 @@ public class Starter_ProSpring_Chapter04 {
 		System.out.println((s03 == s04));
 		System.out.println((s04 == s05));
 		System.out.println((s05 == s06));
+		
+		// prototype vs singleton
+		GenericXmlApplicationContext ctx016 = new GenericXmlApplicationContext();
+		ctx016.load("classpath:META-INF/spring/app-context-xml.xml");
+		ctx016.refresh();
+		String s001 = (String)ctx016.getBean("nonSingleton");
+		String s002 = (String)ctx016.getBean("nonSingleton");
+		System.out.println("Identity Equal?: " + (s001 == s002));
+		System.out.println("Value Equal?: " + s001.equals(s002));
+		System.out.println(s001);
+		System.out.println(s002);
+		
+		// autowiring
+		GenericXmlApplicationContext ctx017 = new GenericXmlApplicationContext();
+		ctx017.load("classpath:META-INF/spring/autowiring.xml");
+		ctx017.refresh();
+		Target t = null;
+		System.out.println("Using byName:\n");
+		t = (Target)ctx017.getBean("targetByName");
+		System.out.println("\nUsing byType:\n");
+		t = (Target)ctx017.getBean("targetByType");
+		System.out.println("\nUsing constructor:\n");
+		t = (Target)ctx017.getBean("targetConstructor");
+		
+		// bean inheritance
+		GenericXmlApplicationContext ctx018 = new GenericXmlApplicationContext();
+		ctx018.load("classpath:META-INF/spring/app-context-xml.xml");
+		SimpleBean parent = (SimpleBean)ctx018.getBean("inheritParent");
+		SimpleBean child = (SimpleBean)ctx018.getBean("inheritChild");
+		System.out.println("Parent:\n" + parent);
+		System.out.println("Child:\n" + child);
+		
 		
 		System.out.println("that's all");
 	}
