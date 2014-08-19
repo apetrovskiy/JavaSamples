@@ -217,7 +217,6 @@ public class Starter_ProSpring_Chapter04 {
 		System.out.println("Parent:\n" + parent);
 		System.out.println("Child:\n" + child);
 		
-		
 		System.out.println("that's all");
 	}
 
