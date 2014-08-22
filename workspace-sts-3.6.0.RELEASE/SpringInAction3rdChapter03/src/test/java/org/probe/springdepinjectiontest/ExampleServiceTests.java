@@ -1,7 +1,6 @@
-/*
-package com.apress.prospring3.ch5;
+package org.probe.springdepinjectiontest;
 
-import com.apress.prospring3.ch5.ExampleService;
+import org.probe.springdepinjectiontest.ExampleService;
 import junit.framework.TestCase;
 
 public class ExampleServiceTests extends TestCase {
@@ -13,4 +12,3 @@ public class ExampleServiceTests extends TestCase {
 	}
 
 }
-*/
