@@ -1,9 +1,8 @@
-/*
-package com.apress.prospring3.ch5;
+package org.probe.springdepinjectiontest;
 
 import static org.junit.Assert.assertNotNull;
 
-import com.apress.prospring3.ch5.Service;
+import org.probe.springdepinjectiontest.Service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,4 +23,3 @@ public class ExampleConfigurationTests {
 	}
 	
 }
-*/
