@@ -3,9 +3,6 @@
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1407268878173_2" label="SampleApplications" name="SampleApplications"/>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1407268956823_3" label="SpringBooks" name="SpringBooks">
 <item elementID="=SpringInAction3rdChapter02" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=ProSpring3Chapter04" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=ProSpring3Chapter02" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=ProSpring3Chapter05" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1408351615945_4" label="JavaCore" name="JavaCore">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Vol01Chapter07_000Frame" type="4"/>
