@@ -8,6 +8,8 @@
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
 		<config>src/main/resources/META-INF/spring/lifecycle/initMethod.xml</config>
+		<config>src/main/resources/META-INF/spring/lifecycle/disposeMethod.xml</config>
+		<config>src/main/resources/META-INF/spring/lifecycle/disposeInterface.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
