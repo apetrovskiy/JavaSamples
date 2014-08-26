@@ -10,6 +10,8 @@
 		<config>src/main/resources/META-INF/spring/lifecycle/initMethod.xml</config>
 		<config>src/main/resources/META-INF/spring/lifecycle/disposeMethod.xml</config>
 		<config>src/main/resources/META-INF/spring/lifecycle/disposeInterface.xml</config>
+		<config>src/main/resources/META-INF/spring/lifecycle/disposeJsr250.xml</config>
+		<config>src/main/resources/META-INF/spring/interaction/logging.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

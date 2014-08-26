@@ -7,9 +7,9 @@
 	
 	<context:annotation-config/>
 	
-	<bean id="destructiveBean006" class="com.apress.prospring3.ch5.lifecycle.DestructiveBeanWithInterface">
+	<bean id="destructiveBean007" class="com.apress.prospring3.ch5.lifecycle.DestructiveBeanWithJsr250">
 		<property name="filePath">
-			<value>c:\1\test.txt</value>
+			<value>C:\1\test.txt</value>
 		</property>
 	</bean>
 

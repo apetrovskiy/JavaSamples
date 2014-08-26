@@ -46,8 +46,6 @@
 		</property>
 	</bean> -->
 	
-	<context:annotation-config>
-		<context:annotation-driven></context:annotation-driven>
-	</context:annotation-config>
+	<context:annotation-config/>
 	
 </beans>
