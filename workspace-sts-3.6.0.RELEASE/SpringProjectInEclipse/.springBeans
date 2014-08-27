@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beansProjectDescription>
 	<version>1</version>
-	<pluginVersion><![CDATA[3.6.0.201407080615-RELEASE]]></pluginVersion>
+	<pluginVersion><![CDATA[2.2.7.200909012107-CI-R3397-B453]]></pluginVersion>
 	<configSuffixes>
 		<configSuffix><![CDATA[xml]]></configSuffix>
 	</configSuffixes>
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
-		<config>src/main/resources/META-INF/spring/lifecycle/initMethod.xml</config>
-		<config>src/main/resources/META-INF/spring/lifecycle/disposeMethod.xml</config>
-		<config>src/main/resources/META-INF/spring/lifecycle/disposeInterface.xml</config>
-		<config>src/main/resources/META-INF/spring/factory/factory.xml</config>
 	</configs>
-	<autoconfigs>
-	</autoconfigs>
 	<configSets>
 		<configSet>
 			<name><![CDATA[test]]></name>
@@ -21,8 +15,6 @@
 			<incomplete>false</incomplete>
 			<configs>
 			</configs>
-			<profiles>
-			</profiles>
 		</configSet>
 	</configSets>
 </beansProjectDescription>

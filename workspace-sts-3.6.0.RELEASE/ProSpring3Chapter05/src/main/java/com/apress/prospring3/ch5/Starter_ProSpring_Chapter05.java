@@ -2,6 +2,7 @@ package com.apress.prospring3.ch5;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
 
+import com.apress.prospring3.ch5.factory.MessageDigester;
 import com.apress.prospring3.ch5.interaction.LoggingBean;
 import com.apress.prospring3.ch5.lifecycle.DestructiveBean;
 import com.apress.prospring3.ch5.lifecycle.DestructiveBeanWithInterface;
@@ -87,6 +88,13 @@ public class Starter_ProSpring_Chapter05 {
 		ctx010.load("classpath:META-INF/spring/interaction/shutdownHook.xml");
 		ctx010.refresh();
 		DestructiveBeanWithInterface bean010 = (DestructiveBeanWithInterface)ctx010.getBean("destructiveBean");
+		
+		GenericXmlApplicationContext ctx011 = new GenericXmlApplicationContext();
+		// ctx011.load("classpath:lifecycle/disposeInterface.xml");
+		ctx011.load("classpath:META-INF/spring/factory/factory.xml");
+		ctx011.refresh();
+		MessageDigester digester = (MessageDigester)ctx011.getBean("digester");
+		digester.digest("Hello World!");
 		
 		System.out.println("that's all!");
 	}
