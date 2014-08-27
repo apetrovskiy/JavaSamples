@@ -28,6 +28,7 @@ public class Starter_ProSpring_Chapter06 {
 		proxyFactory002.setTarget(target002);
 		MessageWriter proxiedTarget002 = (MessageWriter)proxyFactory002.getProxy();
 		proxiedTarget002.writeMessage();
+		System.out.println("");
 		
 		// secure access to before advice
 		SecurityManager securityManager = new SecurityManager();
