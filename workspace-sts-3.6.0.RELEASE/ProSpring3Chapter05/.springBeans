@@ -12,6 +12,7 @@
 		<config>src/main/resources/META-INF/spring/lifecycle/disposeInterface.xml</config>
 		<config>src/main/resources/META-INF/spring/lifecycle/disposeJsr250.xml</config>
 		<config>src/main/resources/META-INF/spring/interaction/logging.xml</config>
+		<config>src/main/resources/META-INF/spring/interaction/shutdownHook.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

@@ -82,6 +82,12 @@ public class Starter_ProSpring_Chapter05 {
 		LoggingBean bean009 = (LoggingBean)ctx009.getBean("loggingBean");
 		bean009.someOperation();
 		
+		GenericXmlApplicationContext ctx010 = new GenericXmlApplicationContext();
+		// ctx010.load("classpath:lifecycle/disposeInterface.xml");
+		ctx010.load("classpath:META-INF/spring/interaction/shutdownHook.xml");
+		ctx010.refresh();
+		DestructiveBeanWithInterface bean010 = (DestructiveBeanWithInterface)ctx010.getBean("destructiveBean");
+		
 		System.out.println("that's all!");
 	}
 
