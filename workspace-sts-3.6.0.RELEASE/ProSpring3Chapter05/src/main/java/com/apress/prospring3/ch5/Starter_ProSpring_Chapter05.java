@@ -1,7 +1,10 @@
 package com.apress.prospring3.ch5;
 
+import java.security.MessageDigest;
+
 import org.springframework.context.support.GenericXmlApplicationContext;
 
+import com.apress.prospring3.ch5.factory.MessageDigestFactoryBean;
 import com.apress.prospring3.ch5.factory.MessageDigester;
 import com.apress.prospring3.ch5.interaction.LoggingBean;
 import com.apress.prospring3.ch5.lifecycle.DestructiveBean;
@@ -61,7 +64,7 @@ public class Starter_ProSpring_Chapter05 {
 		System.out.println("Called destroy()");
 		
 		GenericXmlApplicationContext ctx007 = new GenericXmlApplicationContext();
-		// ctx007.load("classpath:lifecycle/disposeInterface.xml");
+		// ctx007.load("classpath:lifecycle/disposeJsr250.xml");
 		ctx007.load("classpath:META-INF/spring/lifecycle/disposeJsr250.xml");
 		ctx007.refresh();
 		DestructiveBeanWithJsr250 bean007 = (DestructiveBeanWithJsr250)ctx007.getBean("destructiveBean007");
@@ -77,24 +80,44 @@ public class Starter_ProSpring_Chapter05 {
 		DestructiveBeanWithInterface bean008 = (DestructiveBeanWithInterface)ctx008.getBean("destructiveBean006");
 		
 		GenericXmlApplicationContext ctx009 = new GenericXmlApplicationContext();
-		// ctx009.load("classpath:lifecycle/disposeInterface.xml");
+		// ctx009.load("classpath:interaction/logging.xml");
 		ctx009.load("classpath:META-INF/spring/interaction/logging.xml");
 		ctx009.refresh();
 		LoggingBean bean009 = (LoggingBean)ctx009.getBean("loggingBean");
 		bean009.someOperation();
 		
 		GenericXmlApplicationContext ctx010 = new GenericXmlApplicationContext();
-		// ctx010.load("classpath:lifecycle/disposeInterface.xml");
+		// ctx010.load("classpath:interaction/shutdownHook.xml");
 		ctx010.load("classpath:META-INF/spring/interaction/shutdownHook.xml");
 		ctx010.refresh();
 		DestructiveBeanWithInterface bean010 = (DestructiveBeanWithInterface)ctx010.getBean("destructiveBean");
 		
 		GenericXmlApplicationContext ctx011 = new GenericXmlApplicationContext();
-		// ctx011.load("classpath:lifecycle/disposeInterface.xml");
+		// ctx011.load("classpath:factory/factory.xml");
 		ctx011.load("classpath:META-INF/spring/factory/factory.xml");
 		ctx011.refresh();
-		MessageDigester digester = (MessageDigester)ctx011.getBean("digester");
-		digester.digest("Hello World!");
+		MessageDigester digester011 = (MessageDigester)ctx011.getBean("digester");
+		digester011.digest("Hello World!");
+		
+		GenericXmlApplicationContext ctx012 = new GenericXmlApplicationContext();
+		// ctx012.load("classpath:factory/factory.xml");
+		ctx012.load("classpath:META-INF/spring/factory/factory.xml");
+		ctx012.refresh();
+		MessageDigest digest012 = (MessageDigest)ctx012.getBean("shaDigest");
+		MessageDigestFactoryBean factoryBean = (MessageDigestFactoryBean)ctx012.getBean("&shaDigest");
+		try {
+			MessageDigest shaDigest = factoryBean.getObject();
+			System.out.println(shaDigest.digest("Hello world".getBytes()));
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		
+		GenericXmlApplicationContext ctx013 = new GenericXmlApplicationContext();
+		// ctx013.load("classpath:factory/factoryMethod.xml");
+		ctx013.load("classpath:META-INF/spring/factory/factoryMethod.xml");
+		ctx013.refresh();
+		MessageDigester digester013 = (MessageDigester)ctx013.getBean("digester");
+		digester013.digest("Hello World!");
 		
 		System.out.println("that's all!");
 	}
