@@ -6,7 +6,7 @@ import org.springframework.context.annotation. AnnotationConfigApplicationContex
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan
+// @ComponentScan
 public class Application {
     @Bean
     MessageService helloWorldMessageService() {
