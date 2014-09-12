@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ProSpring3Chapter02
+Bundle-SymbolicName: ProSpring3Chapter02
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.apress.prospring3.ch2
