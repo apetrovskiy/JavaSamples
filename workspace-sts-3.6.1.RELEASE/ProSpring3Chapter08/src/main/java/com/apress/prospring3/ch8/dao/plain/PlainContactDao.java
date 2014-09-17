@@ -22,7 +22,10 @@ public class PlainContactDao implements ContactDao {
 	}
 	
 	private Connection getConnection() throws SQLException {
-		return DriverManager.getConnection("jdbc:mysql://localhost:3306/prospring3_ch8", "prospring3", "prospring3");
+		// return DriverManager.getConnection("jdbc:mysql://localhost:3306/prospring3_ch8", "prospring3", "prospring3");
+		// return DriverManager.getConnection("jdbc:postgresql://localhost:5434/shuran's", "shuran", "=1qwerty");
+		// return DriverManager.getConnection("jdbc:mysql://localhost:3306/shuran_schema", "shuran", "=1qwerty");
+		return DriverManager.getConnection("jdbc:mysql://localhost:3306/shuran_schema", "root", "");
 	}
 	
 	private void closeConenction(Connection connection) {
