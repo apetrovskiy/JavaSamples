@@ -22,10 +22,8 @@ public class PlainContactDao implements ContactDao {
 	}
 	
 	private Connection getConnection() throws SQLException {
-		// return DriverManager.getConnection("jdbc:mysql://localhost:3306/prospring3_ch8", "prospring3", "prospring3");
-		// return DriverManager.getConnection("jdbc:postgresql://localhost:5434/shuran's", "shuran", "=1qwerty");
-		// return DriverManager.getConnection("jdbc:mysql://localhost:3306/shuran_schema", "shuran", "=1qwerty");
 		return DriverManager.getConnection("jdbc:mysql://localhost:3306/shuran_schema", "root", "");
+		// return DriverManager.getConnection("jdbc:postgresql://localhost:5432/test01", "postgres", "postgres");
 	}
 	
 	private void closeConenction(Connection connection) {
@@ -39,12 +37,11 @@ public class PlainContactDao implements ContactDao {
 	}
 	
 	public List<Contact> findAll() {
-		// TODO Auto-generated method stub
 		List<Contact> result = new ArrayList<Contact>();
 		Connection connection = null;
 		try {
 			connection = getConnection();
-			PreparedStatement statement = connection.prepareStatement("select * from contact");
+			PreparedStatement statement = connection.prepareStatement("select * from CONTACT");
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				Contact contact = new Contact();
@@ -62,17 +59,15 @@ public class PlainContactDao implements ContactDao {
 	}
 
 	public List<Contact> findByFirstName(String firstName) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	public void insert(Contact contact) {
-		// TODO Auto-generated method stub
 		Connection connection = null;
 		try {
 			connection = getConnection();
 			PreparedStatement statement = connection.prepareStatement(
-					"insert into Contact (first_name, last_name, birth_date) values (?, ?, ?)",
+					"insert into CONTACT (first_name, last_name, birth_date) values (?, ?, ?)",
 					Statement.RETURN_GENERATED_KEYS);
 			statement.setString(1, contact.getFirstName());
 			statement.setString(2, contact.getLastName());
@@ -91,16 +86,14 @@ public class PlainContactDao implements ContactDao {
 	}
 
 	public void update(Contact contact) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public void delete(Long contactId) {
-		// TODO Auto-generated method stub
 		Connection connection = null;
 		try {
 			connection = getConnection();
-			PreparedStatement statement = connection.prepareStatement("delete from contact where id=?");
+			PreparedStatement statement = connection.prepareStatement("delete from CONTACT where id=?");
 			statement.setLong(1, contactId);
 			statement.execute();
 		} catch (SQLException ex) {
