@@ -2,6 +2,7 @@ package com.apress.prospring3.ch8.domain;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.List;
 
 public class Contact implements Serializable {
 	private Long id;
