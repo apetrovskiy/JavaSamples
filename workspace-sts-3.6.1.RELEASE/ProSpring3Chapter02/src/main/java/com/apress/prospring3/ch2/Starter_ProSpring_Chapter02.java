@@ -3,7 +3,7 @@ package com.apress.prospring3.ch2;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Starter_ProSpring_Chapter03 {
+public class Starter_ProSpring_Chapter02 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
