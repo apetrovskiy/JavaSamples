@@ -1,0 +1,2 @@
+select * from shuran_schema.CONTACT;
+select * from shuran_schema.CONTACT_TEL_DETAIL;
