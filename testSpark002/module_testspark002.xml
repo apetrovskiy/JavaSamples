@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_testspark002" default="compile.module.testspark002">
+  <dirname property="module.testspark002.basedir" file="${ant.file.module_testspark002}"/>
+  
+  <property name="module.jdk.home.testspark002" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.testspark002" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.testspark002" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.testspark002" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="testspark002.output.dir" value="${module.testspark002.basedir}/target/classes"/>
+  <property name="testspark002.testoutput.dir" value="${module.testspark002.basedir}/target/test-classes"/>
+  
+  <path id="testspark002.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="testspark002.module.production.classpath">
+    <path refid="${module.jdk.classpath.testspark002}"/>
+    <path refid="library.maven:_com.sparkjava:spark-core:2.3.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.7.12.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-simple:1.7.12.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-server:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.1.0.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-http:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-util:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-io:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-webapp:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-xml:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-servlet:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-security:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-server:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-common:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-client:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-servlet:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-api:9.3.2.v20150730.classpath"/>
+  </path>
+  
+  <path id="testspark002.runtime.production.module.classpath">
+    <pathelement location="${testspark002.output.dir}"/>
+    <path refid="library.maven:_com.sparkjava:spark-core:2.3.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.7.12.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-simple:1.7.12.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-server:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.1.0.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-http:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-util:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-io:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-webapp:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-xml:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-servlet:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-security:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-server:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-common:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-client:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-servlet:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-api:9.3.2.v20150730.classpath"/>
+  </path>
+  
+  <path id="testspark002.module.classpath">
+    <path refid="${module.jdk.classpath.testspark002}"/>
+    <pathelement location="${testspark002.output.dir}"/>
+    <path refid="library.maven:_com.sparkjava:spark-core:2.3.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.7.12.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-simple:1.7.12.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-server:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.1.0.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-http:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-util:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-io:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-webapp:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-xml:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-servlet:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-security:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-server:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-common:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-client:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-servlet:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-api:9.3.2.v20150730.classpath"/>
+  </path>
+  
+  <path id="testspark002.runtime.module.classpath">
+    <pathelement location="${testspark002.testoutput.dir}"/>
+    <pathelement location="${testspark002.output.dir}"/>
+    <path refid="library.maven:_com.sparkjava:spark-core:2.3.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.7.12.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-simple:1.7.12.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-server:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.1.0.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-http:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-util:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-io:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-webapp:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-xml:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-servlet:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty:jetty-security:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-server:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-common:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-client:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-servlet:9.3.2.v20150730.classpath"/>
+    <path refid="library.maven:_org.eclipse.jetty.websocket:websocket-api:9.3.2.v20150730.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.testspark002">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.testspark002">
+    <patternset refid="excluded.from.module.testspark002"/>
+  </patternset>
+  
+  <path id="testspark002.module.sourcepath">
+    <dirset dir="${module.testspark002.basedir}">
+      <include name="src/main/java"/>
+      <include name="src/main/resources"/>
+    </dirset>
+  </path>
+  
+  <path id="testspark002.module.test.sourcepath">
+    <dirset dir="${module.testspark002.basedir}">
+      <include name="src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.testspark002" depends="compile.module.testspark002.production,compile.module.testspark002.tests" description="Compile module testSpark002"/>
+  
+  <target name="compile.module.testspark002.production" depends="register.custom.compilers" description="Compile module testSpark002; production classes">
+    <mkdir dir="${testspark002.output.dir}"/>
+    <javac2 destdir="${testspark002.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.testspark002}/javac">
+      <compilerarg line="${compiler.args.testspark002}"/>
+      <bootclasspath refid="testspark002.module.bootclasspath"/>
+      <classpath refid="testspark002.module.production.classpath"/>
+      <src refid="testspark002.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.testspark002"/>
+    </javac2>
+    
+    <copy todir="${testspark002.output.dir}">
+      <fileset dir="${module.testspark002.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.testspark002.basedir}/src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.testspark002.tests" depends="register.custom.compilers,compile.module.testspark002.production" description="compile module testSpark002; test classes" unless="skip.tests">
+    <mkdir dir="${testspark002.testoutput.dir}"/>
+    <javac2 destdir="${testspark002.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.testspark002}/javac">
+      <compilerarg line="${compiler.args.testspark002}"/>
+      <bootclasspath refid="testspark002.module.bootclasspath"/>
+      <classpath refid="testspark002.module.classpath"/>
+      <src refid="testspark002.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.testspark002"/>
+    </javac2>
+    
+    <copy todir="${testspark002.testoutput.dir}">
+      <fileset dir="${module.testspark002.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.testspark002" description="cleanup module">
+    <delete dir="${testspark002.output.dir}"/>
+    <delete dir="${testspark002.testoutput.dir}"/>
+  </target>
+</project>
