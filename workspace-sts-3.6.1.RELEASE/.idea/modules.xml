@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CoreJavaBook/CoreJavaBook.iml" filepath="$PROJECT_DIR$/CoreJavaBook/CoreJavaBook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HelloWorldCheatSheet/HelloWorldCheatSheet.iml" filepath="$PROJECT_DIR$/HelloWorldCheatSheet/HelloWorldCheatSheet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Vol01Chapter07_001Frame/Vol01Chapter07_001Frame.iml" filepath="$PROJECT_DIR$/Vol01Chapter07_001Frame/Vol01Chapter07_001Frame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpring3Chapter02/src/main/main.iml" filepath="$PROJECT_DIR$/ProSpring3Chapter02/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpring3Chapter08/src/main/main1.iml" filepath="$PROJECT_DIR$/ProSpring3Chapter08/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringProjectInEclipse/src/main/main10.iml" filepath="$PROJECT_DIR$/SpringProjectInEclipse/src/main/main10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringInAction3rdChapter03/src/main/main2.iml" filepath="$PROJECT_DIR$/SpringInAction3rdChapter03/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntroToSpringChapter01Second/src/main/main3.iml" filepath="$PROJECT_DIR$/IntroToSpringChapter01Second/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringUnit/src/main/main4.iml" filepath="$PROJECT_DIR$/SpringUnit/src/main/main4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntroToSpringChapter01First/src/main/main5.iml" filepath="$PROJECT_DIR$/IntroToSpringChapter01First/src/main/main5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpring3Chapter05/src/main/main6.iml" filepath="$PROJECT_DIR$/ProSpring3Chapter05/src/main/main6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringInAction3rdChapter02/src/main/main7.iml" filepath="$PROJECT_DIR$/SpringInAction3rdChapter02/src/main/main7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpring3Chapter04/src/main/main8.iml" filepath="$PROJECT_DIR$/ProSpring3Chapter04/src/main/main8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpring3Chapter06/src/main/main9.iml" filepath="$PROJECT_DIR$/ProSpring3Chapter06/src/main/main9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringInAction3rdChapter02/target/target.iml" filepath="$PROJECT_DIR$/SpringInAction3rdChapter02/target/target.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringInAction3rdChapter02/src/test/test.iml" filepath="$PROJECT_DIR$/SpringInAction3rdChapter02/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringUnit/src/test/test1.iml" filepath="$PROJECT_DIR$/SpringUnit/src/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringInAction3rdChapter03/src/test/test2.iml" filepath="$PROJECT_DIR$/SpringInAction3rdChapter03/src/test/test2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoreJavaBook/v1ch02/v1ch02.iml" filepath="$PROJECT_DIR$/CoreJavaBook/v1ch02/v1ch02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoreJavaBook/v1ch03/v1ch03.iml" filepath="$PROJECT_DIR$/CoreJavaBook/v1ch03/v1ch03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoreJavaBook/v1ch04/v1ch04.iml" filepath="$PROJECT_DIR$/CoreJavaBook/v1ch04/v1ch04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoreJavaBook/v2ch11/v2ch11.iml" filepath="$PROJECT_DIR$/CoreJavaBook/v2ch11/v2ch11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoreJavaBook/v2ch12/v2ch12.iml" filepath="$PROJECT_DIR$/CoreJavaBook/v2ch12/v2ch12.iml" />
+    </modules>
+  </component>
+</project>
