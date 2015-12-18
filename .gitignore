@@ -112,3 +112,6 @@ UpgradeLog*.XML
 /testRestTemplateNb/nbproject/private/
 /testJava8/nbproject/private/
 /testJava8/build/
+/testJunitFromJ8book0005/nbproject/private/
+/testJunitFromJ8book0005/build/
+/testJunitFromJ8book0005/dist/
