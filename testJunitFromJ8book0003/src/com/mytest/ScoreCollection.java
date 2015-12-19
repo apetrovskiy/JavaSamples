@@ -13,8 +13,11 @@ public class ScoreCollection {
         scores.add(scoreable);
     }
 
-    public int arithmeticMean() {
-        int total = scores.stream().mapToInt(Scoreable::getScore).sum();
-        return total / scores.size();
+    // public int arithmeticMean() {
+    public double arithmeticMean() {
+        // int total = scores.stream().mapToInt(Scoreable::getScore).sum();
+        double total = scores.stream().mapToInt(Scoreable::getScore).sum();
+        // return total / scores.size();
+        return 0 == total ? 0 : total / scores.size();
     }
 }

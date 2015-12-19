@@ -18,9 +18,38 @@ public class ScoreCollectionTest {
         collection.add(() -> 7);
 
         // Act
-        int actualResult = collection.arithmeticMean();
+        // int actualResult = collection.arithmeticMean();
+        double actualResult = collection.arithmeticMean();
 
         // Assert
-        assertThat(actualResult, equalTo(6));
+        assertThat(actualResult, equalTo(6.0));
+    }
+
+    @Test
+    public void checkNoDataResult() {
+        // Arrange
+        ScoreCollection collection = new ScoreCollection();
+
+        // Act
+        // int actualResult = collection.arithmeticMean();
+        double actualResult = collection.arithmeticMean();
+
+        // Assert
+        // assertThat(actualResult, equalTo(0));
+        assertThat(actualResult, equalTo(0.0));
+    }
+
+    @Test
+    public void getNonIntegerResult() {
+        // Arrange
+        ScoreCollection collection = new ScoreCollection();
+        collection.add(() -> 6);
+        collection.add(() -> 7);
+
+        // Act
+        double actualResult = collection.arithmeticMean();
+
+        // Assert
+        assertThat(actualResult, equalTo(6.5));
     }
 }
