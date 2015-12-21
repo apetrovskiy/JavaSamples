@@ -1,3 +1,8 @@
+import com.mytest.Answer;
+import com.mytest.Criteria;
+import com.mytest.Criterion;
+import com.mytest.Weight;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,8 +33,20 @@ public class Profile {
         boolean anyMatches = false;
         for (Criterion criterion: criteria) {
             Answer answer = answers.get(
-
-            )
+                    criterion.getAnswer().getQuestionText());
+            boolean match =
+                    criterion.getWeight() == Weight.DontCare ||
+                            answer.match(criterion.getAnswer());
+            if (!match && criterion.getWeight() == Weight.MustMatch) {
+                kill = true;
+            }
+            if (match) {
+                score += criterion.getWeight().getValue();
+            }
+            anyMatches |= match;
         }
+        if (kill)
+            return false;
+        return anyMatches;
     }
 }
