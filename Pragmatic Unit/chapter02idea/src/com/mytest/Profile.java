@@ -1,3 +1,5 @@
+package com.mytest;
+
 import com.mytest.Answer;
 import com.mytest.Criteria;
 import com.mytest.Criterion;
