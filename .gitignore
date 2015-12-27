@@ -121,3 +121,5 @@ UpgradeLog*.XML
 /probeProjects/untitled2/target/
 /probeProjects/ Se2test/target/
 /Pragmatic Unit/chapter02beans/build/
+/PowerMock/chapter01/nbproject/private/
+/PowerMock/chapter01_/nbproject/private/
