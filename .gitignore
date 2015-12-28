@@ -108,7 +108,7 @@ Backup*/
 UpgradeLog*.XML
 /JavaCoreVol01Ch04Listing02/nbproject/private/
 /JavaCoreVol01Ch04Listing02/build/
-.metadata
+# .metadata
 /testRestTemplateNb/nbproject/private/
 /testJava8/nbproject/private/
 /testJava8/build/
