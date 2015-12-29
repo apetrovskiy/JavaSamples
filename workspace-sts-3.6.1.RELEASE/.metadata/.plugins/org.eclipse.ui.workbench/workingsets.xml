@@ -23,9 +23,9 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/testSpark004" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1451316134064_5" label="Books" name="Books">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/PowerMockChapter01mars" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Learning Java 4th" type="4"/>
 <item elementID="=LearningJava4thChapter01" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=PowerMockChapter01mars" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Learning Java 4th" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1410541289285_0" label="Window Working Set" name="Aggregate for window 1410541289285"/>
 <mruList name="Books"/>
