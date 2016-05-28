@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 // import java.util.function;
 
-public class TestJava8 {
+public class TestJ {
 
     /**
      * @param args the command line arguments
@@ -35,7 +35,8 @@ public class TestJava8 {
         list.add("bbb");
         list.add("ccc");
         list.forEach(s -> System.out.println(s));
-        
+        // list.forEach(System.out.println);
+        list.forEach(s -> System.out.println("sss"));
         
     }
     

@@ -5,5 +5,6 @@
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1448912501677_4" label="Spark" name="Spark"/>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1451316134064_5" label="Books" name="Books"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1410541289285_0" label="Window Working Set" name="Aggregate for window 1410541289285"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1452019920136_6" label="Window Working Set" name="Aggregate for window 1451344101200"/>
 <mruList name="Books"/>
 </workingSetManager>
