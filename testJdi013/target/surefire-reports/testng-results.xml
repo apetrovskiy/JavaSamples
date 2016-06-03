@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[1 Init test run]]>
+    </line>
+    <line>
+      <![CDATA[1 Open page 'Home Page' by url http://news.bbc.co.uk/ for HomePage 'Home Page' (.homePage; No Locators)]]>
+    </line>
+    <line>
+      <![CDATA[1 Done]]>
+    </line>
+    <line>
+      <![CDATA[1 Starting tests]]>
+    </line>
+    <line>
+      <![CDATA[1 Open page 'Home Page' by url http://news.bbc.co.uk/ for HomePage 'Home Page' (.homePage; No Locators)]]>
+    </line>
+    <line>
+      <![CDATA[1 Done]]>
+    </line>
+    <line>
+      <![CDATA[1 Test run finished. 
+Total test run time: 00:00:09.651]]>
+    </line>
+  </reporter-output>
+  <suite name="com.test.mytest.testjdi013.HomePageTest" duration-ms="1780" started-at="2016-05-26T14:31:56Z" finished-at="2016-05-26T14:31:57Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="1780" started-at="2016-05-26T14:31:56Z" finished-at="2016-05-26T14:31:57Z">
+      <class name="com.test.mytest.testjdi013.HomePageTest">
+        <test-method status="PASS" signature="jdiSetUp()[pri:0, instance:com.test.mytest.testjdi013.HomePageTest@42d3bd8b]" name="jdiSetUp" is-config="true" duration-ms="1385" started-at="2016-05-26T17:31:46Z" finished-at="2016-05-26T17:31:48Z">
+          <reporter-output>
+            <line>
+              <![CDATA[1 Init test run]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- jdiSetUp -->
+        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.test.mytest.testjdi013.HomePageTest@42d3bd8b]" name="suiteSetUp" is-config="true" duration-ms="7839" started-at="2016-05-26T17:31:48Z" depends-on-methods="com.epam.jdi.uitests.web.testng.testRunner.TestNGBase.jdiSetUp" finished-at="2016-05-26T17:31:56Z">
+          <reporter-output>
+            <line>
+              <![CDATA[1 Open page 'Home Page' by url http://news.bbc.co.uk/ for HomePage 'Home Page' (.homePage; No Locators)]]>
+            </line>
+            <line>
+              <![CDATA[1 Done]]>
+            </line>
+            <line>
+              <![CDATA[1 Starting tests]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- suiteSetUp -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.test.mytest.testjdi013.HomePageTest@42d3bd8b]" name="setUpClass" is-config="true" duration-ms="0" started-at="2016-05-26T17:31:56Z" finished-at="2016-05-26T17:31:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:com.test.mytest.testjdi013.HomePageTest@42d3bd8b]" name="setUpMethod" is-config="true" duration-ms="0" started-at="2016-05-26T17:31:56Z" finished-at="2016-05-26T17:31:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="test01()[pri:0, instance:com.test.mytest.testjdi013.HomePageTest@42d3bd8b]" name="test01" duration-ms="1770" started-at="2016-05-26T17:31:56Z" finished-at="2016-05-26T17:31:57Z">
+          <reporter-output>
+            <line>
+              <![CDATA[1 Open page 'Home Page' by url http://news.bbc.co.uk/ for HomePage 'Home Page' (.homePage; No Locators)]]>
+            </line>
+            <line>
+              <![CDATA[1 Done]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- test01 -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:com.test.mytest.testjdi013.HomePageTest@42d3bd8b]" name="tearDownMethod" is-config="true" duration-ms="1" started-at="2016-05-26T17:31:57Z" finished-at="2016-05-26T17:31:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.test.mytest.testjdi013.HomePageTest@42d3bd8b]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2016-05-26T17:31:57Z" finished-at="2016-05-26T17:31:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.mytest.testjdi013.HomePageTest@42d3bd8b]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-05-26T17:31:57Z" finished-at="2016-05-26T17:31:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="jdiTearDown()[pri:0, instance:com.test.mytest.testjdi013.HomePageTest@42d3bd8b]" name="jdiTearDown" is-config="true" duration-ms="1129" started-at="2016-05-26T17:31:57Z" finished-at="2016-05-26T17:31:59Z">
+          <reporter-output>
+            <line>
+              <![CDATA[1 Test run finished. 
+Total test run time: 00:00:09.651]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- jdiTearDown -->
+      </class> <!-- com.test.mytest.testjdi013.HomePageTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- com.test.mytest.testjdi013.HomePageTest -->
+</testng-results>
