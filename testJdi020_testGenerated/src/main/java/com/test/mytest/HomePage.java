@@ -10,1649 +10,707 @@ import org.openqa.selenium.support.FindBy;
  * Created by Alexander_Petrovskiy on 6/3/2016.
  */
 public class HomePage extends WebPage {
-// http://www.fifa.com/
+// https://www.mongodb.com/cloud
 
-    @FindBy(className="navbar-toggle navbar-site-toggle")
-    public ILink linkTogglenavigation;
+    @FindBy(className="nav-panel-top__a")
+    public ILink linkDocs;
 
-    @FindBy(className="navbar-brand")
+    @FindBy(className="nav-panel-top__a")
+    public ILink linkOpenSource;
+
+    @FindBy(className="nav-panel-top__a")
+    public ILink linkUniversity;
+
+    @FindBy(xpath="//div[@class='react-root']/div/nav/div/ul/div/a")
     public ILink linkNoName;
 
-    @FindBy(linkText="About FIFA")
-    public ILink linkAboutFIFA;
+    @FindBy(className="flex flex--center-all flex--wrap nav-panel-top__contact")
+    public IButton buttonFlexflexcenterallflexwrapnavpaneltopcontact;
 
-    @FindBy(linkText="Development")
-    public ILink linkDevelopment;
+    @FindBy(className="input nav-panel-top__input")
+    public ITextField textFieldInputnavpaneltopinput;
 
-    @FindBy(linkText="Governance")
-    public ILink linkGovernance;
+    @FindBy(className="flex flex--center-all flex--wrap nav-panel-top__search")
+    public IButton buttonFlexflexcenterallflexwrapnavpaneltopsearch;
 
-    @FindBy(linkText="Sustainability")
-    public ILink linkSustainability;
+    @FindBy(className="nav-panel-top__a")
+    public ILink linkDownload;
 
-    @FindBy(linkText=" ")
-    public ILink linkNoName1;
+    @FindBy(className="                btn-small btn-fill btn-fill--light-green                margin--left-xs nav-panel-top__download              ")
+    public IButton buttonDownload;
 
-    @FindBy(linkText=" ")
-    public ILink linkNoName2;
+    @FindBy(className="flex flex--center-y")
+    public ILink linkForGiantIdeas;
 
-    @FindBy(linkText=" ")
-    public ILink linkNoName3;
+    @FindBy(className="nav-panel-middle__logo-img")
+    public IImage imageNavpanelmiddlelogoimg;
 
-    @FindBy(className="siteh-tc-label")
-    public ILink linkNoName4;
+    @FindBy(className="nav-panel-middle__tagline")
+    public ITextArea textAreaForGiantIdeas;
 
-    @FindBy(className="siteh-tc-screenname hidden")
-    public ILink linkSitehtcscreennamehidden;
+    @FindBy(className="font--white")
+    public ILink linkreacttext52Solutionsreacttext;
 
-    @FindBy(className="siteh-tc-avatar")
-    public IImage imageSitehtcavatar;
+    @FindBy(className="font--white")
+    public ILink linkreacttext55Cloudreacttext;
 
-    @FindBy(linkText="FIFA World Cupв„ў")
-    public ILink linkFIFAWorldCup;
+    @FindBy(className="font--white")
+    public ILink linkreacttext58Customersreacttext;
 
-    @FindBy(linkText="FIFA Tournaments")
-    public ILink linkFIFATournaments;
+    @FindBy(className="font--white")
+    public ILink linkreacttext61Resourcesreacttext;
 
-    @FindBy(linkText="Live Scores")
-    public ILink linkLiveScores;
+    @FindBy(className="font--white")
+    public ILink linkreacttext64AboutUsreacttext;
 
-    @FindBy(linkText="FIFA Ranking")
-    public ILink linkFIFARanking;
+    @FindBy(partialLinkText="  ")
+    public IButton buttonNoName;
 
-    @FindBy(linkText="Women's Football")
-    public ILink linkWomensFootball;
+    @FindBy(className="nav-cta__header")
+    public ILabel labelTryItNow;
 
-    @FindBy(linkText="Media")
-    public ILink linkMedia;
+    @FindBy(className="nav-cta__a")
+    public ILink linkMongoDB32;
 
-    @FindBy(linkText="Associations")
-    public ILink linkAssociations;
+    @FindBy(className="nav-cta__a")
+    public ILink linkDownloadCenter;
 
-    @FindBy(linkText="We use \"cookies\" to collect information. Click here to read more.")
-    public ITextArea textAreaWeusecookiestocollectinformationClickheretoreadmore;
+    @FindBy(linkText="Products")
+    public ILink linkProducts;
 
-    @FindBy(linkText="Click here to read more.")
-    public ILink linkClickheretoreadmore;
+    @FindBy(linkText="MongoDB Enterprise Advanced")
+    public ILink linkMongoDBEnterpriseAdvanced;
 
-    @FindBy(className="logolev0")
-    public IImage imageLogolev0;
+    @FindBy(linkText="MongoDB Professional")
+    public ILink linkMongoDBProfessional;
 
-    @FindBy(linkText="Home Page")
-    public ILink linkHomePage;
+    @FindBy(linkText="Development Support")
+    public ILink linkDevelopmentSupport;
 
-    @FindBy(linkText="English")
-    public ILink linkEnglish;
+    @FindBy(linkText="Ops Manager")
+    public ILink linkOpsManager;
 
-    @FindBy(linkText="Deutsch")
-    public ILink linkDeutsch;
+    @FindBy(linkText="Cloud Manager")
+    public ILink linkCloudManager;
 
-    @FindBy(linkText="FranГ§ais")
-    public ILink linkFranais;
+    @FindBy(linkText="Compass")
+    public ILink linkCompass;
 
-    @FindBy(linkText="EspaГ±ol")
-    public ILink linkEspaol;
+    @FindBy(linkText="Connector for BI")
+    public ILink linkConnectorforBI;
 
-    @FindBy(linkText="PortuguГЄs")
-    public ILink linkPortugus;
+    @FindBy(linkText="Services")
+    public ILink linkServices;
 
-    @FindBy(linkText="Ш№Ш±ШЁЩЉ")
-    public ILink linkNoName5;
+    @FindBy(linkText="Consulting")
+    public ILink linkConsulting;
 
-    @FindBy(linkText="Р СѓСЃСЃРєРёР№")
-    public ILink linkNoName6;
+    @FindBy(linkText="Training")
+    public ILink linkTraining;
 
-    @FindBy(linkText="ж—Ґжњ¬иЄћ")
-    public ILink linkNoName7;
+    @FindBy(linkText="Cloud")
+    public ILink linkCloud;
 
-    @FindBy(linkText="Korean")
-    public ILink linkKorean;
+    @FindBy(className="nav-cta__header")
+    public ILabel labelTryItNow1;
 
-    @FindBy(linkText="News")
-    public ILink linkNews;
+    @FindBy(className="nav-cta__a")
+    public ILink linkMongoDB321;
 
-    @FindBy(linkText="Photos")
-    public ILink linkPhotos;
+    @FindBy(className="nav-cta__a")
+    public ILink linkDownloadCenter1;
 
-    @FindBy(linkText="Videos")
-    public ILink linkVideos;
+    @FindBy(linkText="Success Stories")
+    public ILink linkSuccessStories;
 
-    @FindBy(linkText="FIFA World Cupв„ў")
-    public ILink linkFIFAWorldCup1;
+    @FindBy(linkText="Government")
+    public ILink linkGovernment;
 
-    @FindBy(linkText="FIFA Tournaments")
-    public ILink linkFIFATournaments1;
+    @FindBy(linkText="Retail")
+    public ILink linkRetail;
 
-    @FindBy(linkText="Women's Football")
-    public ILink linkWomensFootball1;
+    @FindBy(linkText="High Tech")
+    public ILink linkHighTech;
 
-    @FindBy(linkText="FIFA Ranking")
-    public ILink linkFIFARanking1;
+    @FindBy(linkText="Financial Services")
+    public ILink linkFinancialServices;
 
-    @FindBy(linkText="Live Scores")
-    public ILink linkLiveScores1;
+    @FindBy(linkText="All industries")
+    public ILink linkAllindustries;
 
-    @FindBy(linkText="FIFA Ballon d'Or")
-    public ILink linkFIFABallondOr;
+    @FindBy(linkText="Use Cases")
+    public ILink linkUseCases;
 
-    @FindBy(linkText="Associations")
-    public ILink linkAssociations1;
+    @FindBy(linkText="Single View")
+    public ILink linkSingleView;
 
-    @FindBy(linkText="Media")
-    public ILink linkMedia1;
+    @FindBy(linkText="Internet of Things")
+    public ILink linkInternetofThings;
 
-    @FindBy(linkText="About FIFA")
-    public ILink linkAboutFIFA1;
+    @FindBy(linkText="Mobile")
+    public ILink linkMobile;
 
-    @FindBy(linkText="Development")
-    public ILink linkDevelopment1;
+    @FindBy(linkText="Real-Time Analytics")
+    public ILink linkRealTimeAnalytics;
 
-    @FindBy(linkText="Governance")
-    public ILink linkGovernance1;
+    @FindBy(linkText="Personalization")
+    public ILink linkPersonalization;
 
-    @FindBy(linkText="Sustainability")
-    public ILink linkSustainability1;
+    @FindBy(linkText="Content Management")
+    public ILink linkContentManagement;
 
-    @FindBy(className="subject")
-    public ILabel labelCopaAmerica2016Centenario;
+    @FindBy(linkText="Catalog")
+    public ILink linkCatalog;
 
-    @FindBy(className="subject")
-    public ILabel labelUEFAEURO2016;
+    @FindBy(className="nav-cta__header")
+    public ILabel labelTryItNow2;
 
-    @FindBy(className="subject")
-    public ILabel labelEuroBeachSoccerLeague2016;
+    @FindBy(className="nav-cta__a")
+    public ILink linkMongoDB322;
 
-    @FindBy(className="subject")
-    public ILabel labelOrganisingCommitteefortheOlympicFootballTournaments;
+    @FindBy(className="nav-cta__a")
+    public ILink linkDownloadCenter2;
 
-    @FindBy(className="subject")
-    public ILabel labelOCFutsalCommittee;
+    @FindBy(linkText="Resource Center")
+    public ILink linkResourceCenter;
 
-    @FindBy(className="subject")
-    public ILabel labelMedicalCommittee;
+    @FindBy(linkText="Webinars")
+    public ILink linkWebinars;
 
-    @FindBy(linkText="Full calendar")
-    public ILink linkFullcalendar;
+    @FindBy(linkText="Presentations")
+    public ILink linkPresentations;
 
-    @FindBy(xpath="//div[@id='wrap']/div[@class='siteh-subpanel-wrapper']/div[@id='siteh-store-subpanel']/div[@class='siteh-content-area']/div[@class='siteh-store-items']/div[@class='siteh-store-area']/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a")
-    public ILink linkNoName8;
+    @FindBy(linkText="White Papers")
+    public ILink linkWhitePapers;
 
-    @FindBy(xpath="//div[@id='wrap']/div[@class='siteh-subpanel-wrapper']/div[@id='siteh-store-subpanel']/div[@class='siteh-content-area']/div[@class='siteh-store-items']/div[@class='siteh-store-area']/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a/img")
+    @FindBy(linkText="Datasheets")
+    public ILink linkDatasheets;
+
+    @FindBy(linkText="Events")
+    public ILink linkEvents;
+
+    @FindBy(linkText="Documentation")
+    public ILink linkDocumentation;
+
+    @FindBy(linkText="What is MongoDB")
+    public ILink linkWhatisMongoDB;
+
+    @FindBy(linkText="Architecture")
+    public ILink linkArchitecture;
+
+    @FindBy(linkText="Scalability")
+    public ILink linkScalability;
+
+    @FindBy(linkText="NoSQL Database Explained")
+    public ILink linkNoSQLDatabaseExplained;
+
+    @FindBy(className="nav-cta__header")
+    public ILabel labelStayintheknow;
+
+    @FindBy(className="nav-cta__a")
+    public ILink linkSignupforournewsletter;
+
+    @FindBy(linkText="Our Company")
+    public ILink linkOurCompany;
+
+    @FindBy(linkText="Leadership")
+    public ILink linkLeadership;
+
+    @FindBy(linkText="Investors")
+    public ILink linkInvestors;
+
+    @FindBy(linkText="Office Locations")
+    public ILink linkOfficeLocations;
+
+    @FindBy(linkText="Contact Us")
+    public ILink linkContactUs;
+
+    @FindBy(linkText="Blog")
+    public ILink linkBlog;
+
+    @FindBy(linkText="Partners")
+    public ILink linkPartners;
+
+    @FindBy(linkText="Press Room")
+    public ILink linkPressRoom;
+
+    @FindBy(linkText="Careers")
+    public ILink linkCareers;
+
+    @FindBy(linkText="Work at MongoDB")
+    public ILink linkWorkatMongoDB;
+
+    @FindBy(linkText="Student Opportunities")
+    public ILink linkStudentOpportunities;
+
+    @FindBy(className="header__h1 velocity-animating")
+    public ILabel labelMongoDBCloudManager;
+
+    @FindBy(className="header__p velocity-animating")
+    public ITextArea textAreaTheeasiestwaytorunMongoDBinthecloudCloudManagersavesyoutimemoneyandhelpsyouprotectyourcustomerexperiencebyeliminatingtheguessworkfromrunningMongoDB;
+
+    @FindBy(linkText="Start your 30-day free trial")
+    public ILink linkStartyour30dayfreetrial;
+
+    @FindBy(className="btn-fill btn-fill--light-green margin--xs")
+    public IButton buttonStartyour30dayfreetrial;
+
+    @FindBy(linkText="Log in")
+    public ILink linkLogin;
+
+    @FindBy(className="btn-hollow btn-hollow--light-green margin--xs")
+    public IButton buttonLogin;
+
+    @FindBy(className="font--center")
+    public ILabel labelFullPerformanceVisibilitywithComprehensiveMonitoring;
+
+    @FindBy(className="block--full-x")
+    public IImage imageBlockfullx;
+
+    @FindBy(linkText="Your application performance depends on your database. Get the insights you need to ensure smooth operations and a great experience for your end users. Receive custom alerts and make critical decisions fast. Integrate Cloud Manager monitoring into your favorite monitoring dashboards.")
+    public ITextArea textAreaYourapplicationperformancedependsonyourdatabaseGettheinsightsyouneedtoensuresmoothoperationsandagreatexperienceforyourendusersReceivecustomalertsandmakecriticaldecisionsfastIntegrateCloudManagermonitoringintoyourfavoritemonitoringdashboards;
+
+    @FindBy(linkText="The details you need to see the big picture")
+    public ITextArea textAreaThedetailsyouneedtoseethebigpicture;
+
+    @FindBy(linkText="View over 100 database metrics that could impact the experience of your users. Track key performance indicators across dozens of charts. Cloud Manager is the most comprehensive monitoring tool for MongoDB.")
+    public ITextArea textAreaViewover100databasemetricsthatcouldimpacttheexperienceofyourusersTrackkeyperformanceindicatorsacrossdozensofchartsCloudManageristhemostcomprehensivemonitoringtoolforMongoDB;
+
+    @FindBy(linkText="Customized alerts delivered how you want")
+    public ITextArea textAreaCustomizedalertsdeliveredhowyouwant;
+
+    @FindBy(linkText="Create custom alerts that trigger when key metrics are out of range so incidents donвЂ™t become emergencies. Have your alerts sent to you via email, sms, HipChat, PagerDuty, and more - you choose the channel.")
+    public ITextArea textAreaCreatecustomalertsthattriggerwhenkeymetricsareoutofrangesoincidentsdontbecomeemergenciesHaveyouralertssenttoyouviaemailsmsHipChatPagerDutyandmoreyouchoosethechannel;
+
+    @FindBy(linkText="A unified view of your operations")
+    public ITextArea textAreaAunifiedviewofyouroperations;
+
+    @FindBy(linkText="Leverage our RESTful API or our packaged integrations with leading APM platforms like New Relic to monitor MongoDB alongside the rest of your application infrastructure, all from a single pane of glass.")
+    public ITextArea textAreaLeverageourRESTfulAPIorourpackagedintegrationswithleadingAPMplatformslikeNewRelictomonitorMongoDBalongsidetherestofyourapplicationinfrastructureallfromasinglepaneofglass;
+
+    @FindBy(className="margin--vertical-xs")
+    public IImage imageMarginverticalxs;
+
+    @FindBy(className="block-quote")
+    public ITextArea textAreaNopainallgainAtRecordedFutureweuseCloudManagertoassessthehealthofour20TBMongoDBdeploymentCloudManagerisagreatwaytovisualisethestatusofoursystemsandavaluabletoolwhentroubleshootingissues;
+
+    @FindBy(linkText="Start your 30-day free trial")
+    public ILink linkStartyour30dayfreetrial1;
+
+    @FindBy(className="btn btn-hollow margin--vertical-sm")
+    public IButton buttonStartyour30dayfreetrial1;
+
+    @FindBy(linkText="Enabling Fast and Simple Query Optimization")
+    public ILabel labelEnablingFastandSimpleQueryOptimization;
+
+    @FindBy(linkText="Cloud Manager allows you to seamlessly identify and address slow-running queries with the Visual Query Profiler, index suggestions, and automated index roll-outs.")
+    public ITextArea textAreaCloudManagerallowsyoutoseamlesslyidentifyandaddressslowrunningquerieswiththeVisualQueryProfilerindexsuggestionsandautomatedindexrollouts;
+
+    @FindBy(className="block--full-x")
+    public IImage imageBlockfullx1;
+
+    @FindBy(linkText="A better way to analyze queries")
+    public ILabel labelAbetterwaytoanalyzequeries;
+
+    @FindBy(linkText="The Visual Query Profiler, which displays how query and write latency varies over time, provides a quick and convenient way for operations teams and DBAs to analyze queries. Activate the profiler with a single click, then sit back as it consolidates and displays metrics from every node in a single screen.")
+    public ITextArea textAreaTheVisualQueryProfilerwhichdisplayshowqueryandwritelatencyvariesovertimeprovidesaquickandconvenientwayforoperationsteamsandDBAstoanalyzequeriesActivatetheprofilerwithasingleclickthensitbackasitconsolidatesanddisplaysmetricsfromeverynodeinasinglescreen;
+
+    @FindBy(linkText="A better way to improve performance")
+    public ILabel labelAbetterwaytoimproveperformance;
+
+    @FindBy(linkText="The Visual Query Profile analyzes the data it collects and presents you with recommendations for new indexes that can be created to improve query performance. Cloud Manager can then automate the roll-out of new indexes across your production system according to database best practices, allowing you to easily optimize your deployment with minimal effort and risk.")
+    public ITextArea textAreaTheVisualQueryProfileanalyzesthedataitcollectsandpresentsyouwithrecommendationsfornewindexesthatcanbecreatedtoimprovequeryperformanceCloudManagercanthenautomatetherolloutofnewindexesacrossyourproductionsystemaccordingtodatabasebestpracticesallowingyoutoeasilyoptimizeyourdeploymentwithminimaleffortandrisk;
+
+    @FindBy(className="margin--vertical-xs")
+    public IImage imageMarginverticalxs1;
+
+    @FindBy(className="block-quote")
+    public ITextArea textAreaTheoperationalefficiencywegetwithMongoDBiskeyWeareabletorunourentireMongoDBestatewithjustmyselfandoccasionalhelpfrommycolleagueCloudManagercoupledwithproactivesupportiscentraltoachievingthistypeofefficiency;
+
+    @FindBy(linkText="More Efficient Ops with Automated Database Management")
+    public ILabel labelMoreEfficientOpswithAutomatedDatabaseManagement;
+
+    @FindBy(linkText="Database management doesn't have to be a hassle. Cloud Manager lets you deploy, upgrade, and grow your databases with ease and zero downtime. Reduce tedious manual steps to just a click of a button.")
+    public ITextArea textAreaDatabasemanagementdoesnthavetobeahassleCloudManagerletsyoudeployupgradeandgrowyourdatabaseswitheaseandzerodowntimeReducetediousmanualstepstojustaclickofabutton;
+
+    @FindBy(className="block--full-x")
+    public IImage imageBlockfullx2;
+
+    @FindBy(linkText="Reduce human error. Save time and money.")
+    public ILabel labelReducehumanerrorSavetimeandmoney;
+
+    @FindBy(linkText="Cloud Manager orchestrates critical operational tasks you currently perform manually across the servers in your MongoDB deployment. It prevents downtime during upgrades and reconfigurations, protects you from human error with built-in operational best practices, and allows you to be 10x-20x more efficient in managing your databases.")
+    public ITextArea textAreaCloudManagerorchestratescriticaloperationaltasksyoucurrentlyperformmanuallyacrosstheserversinyourMongoDBdeploymentItpreventsdowntimeduringupgradesandreconfigurationsprotectsyoufromhumanerrorwithbuiltinoperationalbestpracticesandallowsyoutobe10x20xmoreefficientinmanagingyourdatabases;
+
+    @FindBy(linkText="Optimized for Amazon Web Services")
+    public ILabel labelOptimizedforAmazonWebServices;
+
+    @FindBy(linkText="Cloud Manager can automatically provision virtual machines on AWS with an optimal configuration for MongoDB at the time you deploy, making it even easier to get started.")
+    public ITextArea textAreaCloudManagercanautomaticallyprovisionvirtualmachinesonAWSwithanoptimalconfigurationforMongoDBatthetimeyoudeploymakingiteveneasiertogetstarted;
+
+    @FindBy(className="margin--vertical-xs")
+    public IImage imageMarginverticalxs2;
+
+    @FindBy(className="block-quote")
+    public ITextArea textAreaEveryoneshouldbeusingCloudManagerItseasytosetupandrunandgivesreallygoodinsightintorunningyourMongoDBimplementation;
+
+    @FindBy(linkText="Start your 30-day free trial")
+    public ILink linkStartyour30dayfreetrial2;
+
+    @FindBy(className="btn btn-hollow margin--vertical-sm")
+    public IButton buttonStartyour30dayfreetrial2;
+
+    @FindBy(linkText="Gain Peace of Mind with Fully-Managed Backup")
+    public ILabel labelGainPeaceofMindwithFullyManagedBackup;
+
+    @FindBy(linkText="Disaster can strike at any time. Cloud Manager is disaster recovery simplified. No more custom scripting, no limitations. Join the thousands of companies that rely on Cloud Manager as part of a comprehensive disaster recovery strategy.")
+    public ITextArea textAreaDisastercanstrikeatanytimeCloudManagerisdisasterrecoverysimplifiedNomorecustomscriptingnolimitationsJointhethousandsofcompaniesthatrelyonCloudManageraspartofacomprehensivedisasterrecoverystrategy;
+
+    @FindBy(className="block--full-x")
+    public IImage imageBlockfullx3;
+
+    @FindBy(linkText="A hands-off approach to protecting your data and your business")
+    public ILabel labelAhandsoffapproachtoprotectingyourdataandyourbusiness;
+
+    @FindBy(linkText="Cloud Manager provides a fully managed backup service to protect your data and your business. You get dedicated MongoDB engineers that monitor your backup 24 hrs a day, 365 days a year. Let us worry about protecting your data so you can focus on your business.")
+    public ITextArea textAreaCloudManagerprovidesafullymanagedbackupservicetoprotectyourdataandyourbusinessYougetdedicatedMongoDBengineersthatmonitoryourbackup24hrsaday365daysayearLetusworryaboutprotectingyourdatasoyoucanfocusonyourbusiness;
+
+    @FindBy(linkText="The most complete MongoDB backup solution")
+    public ILabel labelThemostcompleteMongoDBbackupsolution;
+
+    @FindBy(linkText="Cloud Manager is the only solution that offers continuous, real-time backup for MongoDB with point-in-time recovery of replica sets and cluster-wide snapshots of sharded clusters. Snapshots can be sent via SCP directly to your server, or a custom URL can be generated to download them. You can rebuild entire running clusters, just from your backups. Fast and seamless recovery. Fast and seamless provisioning of new dev and test environments.")
+    public ITextArea textAreaCloudManageristheonlysolutionthatofferscontinuousrealtimebackupforMongoDBwithpointintimerecoveryofreplicasetsandclusterwidesnapshotsofshardedclustersSnapshotscanbesentviaSCPdirectlytoyourserveroracustomURLcanbegeneratedtodownloadthemYoucanrebuildentirerunningclustersjustfromyourbackupsFastandseamlessrecoveryFastandseamlessprovisioningofnewdevandtestenvironments;
+
+    @FindBy(className="margin--vertical-xs")
+    public IImage imageMarginverticalxs3;
+
+    @FindBy(className="block-quote")
+    public ITextArea textAreaHavingabackupserviceengineeredforMongoDBhasalotofadvantagesCloudManagerbackupgivesussmoothintegrationwithmonitoringasbglightgreyasexcellentgranularityofrestorablesnapshotswithlittleoverhead;
+
+    @FindBy(linkText="Start your 30-day free trial")
+    public ILink linkStartyour30dayfreetrial3;
+
+    @FindBy(className="btn btn-hollow margin--vertical-sm")
+    public IButton buttonStartyour30dayfreetrial3;
+
+    @FindBy(className="block--full")
+    public ILabel labelTrustedbycompaniesaroundtheglobe;
+
+    @FindBy(className="customer-featured")
+    public ILink linkCustomerfeatured;
+
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/a[@class='customer-featured']/div/img")
     public IImage imageNoName;
 
-    @FindBy(linkText="Germany 2016 Home Soccer Jersey w/ Winners Badge")
-    public ILabel labelGermany2016HomeSoccerJerseywWinnersBadge;
+    @FindBy(className="customer-featured")
+    public ILink linkCustomerfeatured1;
 
-    @FindBy(linkText="Germany 2016 Home Soccer Jersey w/ Winners Badge")
-    public ILink linkGermany2016HomeSoccerJerseywWinnersBadge;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@class='siteh-subpanel-wrapper']/div[@id='siteh-store-subpanel']/div[@class='siteh-content-area']/div[@class='siteh-store-items']/div[@class='siteh-store-area']/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a")
-    public ILink linkNoName9;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@class='siteh-subpanel-wrapper']/div[@id='siteh-store-subpanel']/div[@class='siteh-content-area']/div[@class='siteh-store-items']/div[@class='siteh-store-area']/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a/img")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/a[@class='customer-featured']/div/img")
     public IImage imageNoName1;
 
-    @FindBy(linkText="Germany 2016 Youth Away Soccer Jersey w/ Winners Badge")
-    public ILabel labelGermany2016YouthAwaySoccerJerseywWinnersBadge;
+    @FindBy(className="customer-featured")
+    public ILink linkCustomerfeatured2;
 
-    @FindBy(linkText="Germany 2016 Youth Away Soccer Jersey w/ Winners Badge")
-    public ILink linkGermany2016YouthAwaySoccerJerseywWinnersBadge;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@class='siteh-subpanel-wrapper']/div[@id='siteh-store-subpanel']/div[@class='siteh-content-area']/div[@class='siteh-store-items']/div[@class='siteh-store-area']/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a")
-    public ILink linkNoName10;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@class='siteh-subpanel-wrapper']/div[@id='siteh-store-subpanel']/div[@class='siteh-content-area']/div[@class='siteh-store-items']/div[@class='siteh-store-area']/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a/img")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/a[@class='customer-featured']/div/img")
     public IImage imageNoName2;
 
-    @FindBy(linkText="Germany 2016 Women's Home Soccer Jersey w/ Winners Badge")
-    public ILabel labelGermany2016WomensHomeSoccerJerseywWinnersBadge;
-
-    @FindBy(linkText="Germany 2016 Women's Home Soccer Jersey w/ Winners Badge")
-    public ILink linkGermany2016WomensHomeSoccerJerseywWinnersBadge;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@class='siteh-subpanel-wrapper']/div[@id='siteh-store-subpanel']/div[@class='siteh-content-area']/div[@class='siteh-store-items']/div[@class='siteh-store-area']/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a")
-    public ILink linkNoName11;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@class='siteh-subpanel-wrapper']/div[@id='siteh-store-subpanel']/div[@class='siteh-content-area']/div[@class='siteh-store-items']/div[@class='siteh-store-area']/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a/img")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName3;
 
-    @FindBy(linkText="Germany 2016 LS Home Keeper Jersey w/ Winners Badge")
-    public ILabel labelGermany2016LSHomeKeeperJerseywWinnersBadge;
-
-    @FindBy(linkText="Germany 2016 LS Home Keeper Jersey w/ Winners Badge")
-    public ILink linkGermany2016LSHomeKeeperJerseywWinnersBadge;
-
-    @FindBy(linkText="Shop Now")
-    public ILink linkShopNow;
-
-    @FindBy(linkText=" ")
-    public ILink linkNoName12;
-
-    @FindBy(id="siteh-checkbox-wholesite")
-    public ICheckBox checkBoxSitehcheckboxwholesite;
-
-    @FindBy(linkText=" fifa.wholesite")
-    public ILabel labelfifawholesite;
-
-    @FindBy(id="q")
-    public ITextField textFieldQ;
-
-    @FindBy(id="siteh-btn-search")
-    public IButton buttonSitehbtnsearch;
-
-    @FindBy(className="btn btn-link")
-    public IButton buttonAdvancedSearch;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelCelebratetheCopaAmericaandEUROwithFIFAPredictor;
-
-    @FindBy(linkText="Celebrate the Copa America and EURO with FIFA Predictor")
-    public ILink linkCelebratetheCopaAmericaandEUROwithFIFAPredictor;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName13;
-
-    @FindBy(className="i-sqr-2 dcm-lazy-lazy")
-    public IImage imageIsqr2dcmlazylazy;
-
-    @FindBy(linkText="Enhance your experience of the continental tournaments with our monthly&nbsp;FIFA Predictor&nbsp;game.&nbsp;")
-    public ITextArea textAreaEnhanceyourexperienceofthecontinentaltournamentswithourmonthlynbspFIFAPredictornbspgamenbsp;
-
-    @FindBy(linkText="FIFA Predictor")
-    public ILink linkFIFAPredictor;
-
-    @FindBy(linkText="Register")
-    public ILink linkRegister;
-
-    @FindBy(linkText="Social")
-    public ILabel labelSocial;
-
-    @FindBy(className="siteh-socialfb hidden")
-    public ILabel labelYourelogginginwithFacebook;
-
-    @FindBy(className="siteh-socialtw hidden")
-    public ILabel labelYourelogginginwithTwitter;
-
-    @FindBy(className="siteh-socialgg hidden")
-    public ILabel labelYourelogginginwithGoogle;
-
-    @FindBy(className="sociallink-undo")
-    public ILink linkUndo;
-
-    @FindBy(linkText="fifa.memberlogin")
-    public ILabel labelFifamemberlogin;
-
-    @FindBy(className="siteh-linkto-fifaaccount hidden")
-    public ILabel labelLinkyourFIFAcomaccount;
-
-    @FindBy(id="cookie_domain")
-    public ITextField textFieldCookiedomain;
-
-    @FindBy(id="watermark_reset")
-    public ITextField textFieldWatermarkreset;
-
-    @FindBy(id="cp_email")
-    public ITextField textFieldCemail;
-
-    @FindBy(id="cp_password")
-    public ITextField textFieldCpassword;
-
-    @FindBy(id="redirect_uri")
-    public ITextField textFieldRedirecturi;
-
-    @FindBy(id="c_rememberMe")
-    public ICheckBox checkBoxCrememberMe;
-
-    @FindBy(className="checkbox-only-style")
-    public ILabel labelNoName;
-
-    @FindBy(className="checkbox-side-label")
-    public ILabel labelStayloggedin;
-
-    @FindBy(linkText="If You Forget Your Password...")
-    public ILink linkIfYouForgetYourPassword;
-
-    @FindBy(className="btn btn-default login-signin-btn")
-    public IButton buttonBtnbtndefaultloginsigninbtn;
-
-    @FindBy(name="client_id")
-    public ITextField textFieldClientid;
-
-    @FindBy(id="redirect_uri")
-    public ITextField textFieldRedirecturi1;
-
-    @FindBy(name="provider")
-    public ITextField textFieldProvider;
-
-    @FindBy(id="siteh-button-fb-login")
-    public IButton buttonSitehbuttonfblogin;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@class='siteh-subpanel-wrapper']/div[@id='siteh-tc-subpanel']/div[@class='siteh-content-area']/div[@class='siteh-tc-notlogged']/div[@class='siteh-tc-login']/div/div/button[@id='siteh-button-fb-login']/img")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName4;
 
-    @FindBy(name="client_id")
-    public ITextField textFieldClientid1;
-
-    @FindBy(id="redirect_uri")
-    public ITextField textFieldRedirecturi2;
-
-    @FindBy(name="provider")
-    public ITextField textFieldProvider1;
-
-    @FindBy(id="siteh-button-tw-login")
-    public IButton buttonSitehbuttontwlogin;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@class='siteh-subpanel-wrapper']/div[@id='siteh-tc-subpanel']/div[@class='siteh-content-area']/div[@class='siteh-tc-notlogged']/div[@class='siteh-tc-login']/div/div/button[@id='siteh-button-tw-login']/img")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName5;
 
-    @FindBy(name="client_id")
-    public ITextField textFieldClientid2;
-
-    @FindBy(id="redirect_uri")
-    public ITextField textFieldRedirecturi3;
-
-    @FindBy(name="provider")
-    public ITextField textFieldProvider2;
-
-    @FindBy(id="siteh-button-gg-login")
-    public IButton buttonSitehbuttongglogin;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@class='siteh-subpanel-wrapper']/div[@id='siteh-tc-subpanel']/div[@class='siteh-content-area']/div[@class='siteh-tc-notlogged']/div[@class='siteh-tc-login']/div/div/button[@id='siteh-button-gg-login']/img")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName6;
 
-    @FindBy(className="dcm-title")
-    public ILabel labelCelebratetheCopaAmericaandEUROwithFIFAPredictor1;
-
-    @FindBy(linkText="Celebrate the Copa America and EURO with FIFA Predictor")
-    public ILink linkCelebratetheCopaAmericaandEUROwithFIFAPredictor1;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName14;
-
-    @FindBy(className="i-sqr-1 dcm-lazy-lazy")
-    public IImage imageIsqr1dcmlazylazy;
-
-    @FindBy(linkText="FIFA.com Club News")
-    public ILink linkFIFAcomClubNews;
-
-    @FindBy(className="tc-activities-img")
-    public ILink linkTcactivitiesimg;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@class='siteh-subpanel-wrapper']/div[@id='siteh-tc-subpanel']/div[@class='siteh-content-area']/div/div[@class='siteh-tc-activities']/ul[@class='siteh-tc-activities-list']/li/a[@class='tc-activities-img']/img")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName7;
 
-    @FindBy(linkText="FIFA Predictor")
-    public ILink linkFIFAPredictor1;
-
-    @FindBy(className="tc-activities-img")
-    public ILink linkTcactivitiesimg1;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@class='siteh-subpanel-wrapper']/div[@id='siteh-tc-subpanel']/div[@class='siteh-content-area']/div/div[@class='siteh-tc-activities']/ul[@class='siteh-tc-activities-list']/li/a[@class='tc-activities-img']/img")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName8;
 
-    @FindBy(linkText="FIFA Ultimate Trivia")
-    public ILink linkFIFAUltimateTrivia;
-
-    @FindBy(linkText="Discover")
-    public ILink linkDiscover;
-
-    @FindBy(className="siteh-tc-avatar")
-    public IImage imageSitehtcavatar1;
-
-    @FindBy(id="siteh-tc-userinfo-screenname")
-    public ILabel labelSitehtcuserinfoscreenname;
-
-    @FindBy(className="siteh-tc-userinfo-edit chevron")
-    public ILink linkEdit;
-
-    @FindBy(className="chevron")
-    public ILink linkComments;
-
-    @FindBy(className="socialModule-label")
-    public ILabel labelConnect;
-
-    @FindBy(name="client_id")
-    public ITextField textFieldClientid3;
-
-    @FindBy(id="redirect_uri")
-    public ITextField textFieldRedirecturi4;
-
-    @FindBy(name="provider")
-    public ITextField textFieldProvider3;
-
-    @FindBy(id="siteh-button-fb-link")
-    public IButton buttonSitehbuttonfblink;
-
-    @FindBy(name="client_id")
-    public ITextField textFieldClientid4;
-
-    @FindBy(id="redirect_uri")
-    public ITextField textFieldRedirecturi5;
-
-    @FindBy(name="provider")
-    public ITextField textFieldProvider4;
-
-    @FindBy(id="siteh-button-tw-link")
-    public IButton buttonSitehbuttontwlink;
-
-    @FindBy(name="client_id")
-    public ITextField textFieldClientid5;
-
-    @FindBy(id="redirect_uri")
-    public ITextField textFieldRedirecturi6;
-
-    @FindBy(name="provider")
-    public ITextField textFieldProvider5;
-
-    @FindBy(id="siteh-button-gg-link")
-    public IButton buttonSitehbuttongglink;
-
-    @FindBy(linkText="Review the Club Rules")
-    public ILink linkReviewtheClubRules;
-
-    @FindBy(linkText="contact form")
-    public ILink linkContactform;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName15;
-
-    @FindBy(className="i-lnd-12")
-    public IImage imageIlnd12;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelLIVEEURO2016asithappens;
-
-    @FindBy(linkText="LIVE: EURO 2016, as it happens")
-    public ILink linkLIVEEURO2016asithappens;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName16;
-
-    @FindBy(className="i-lnd-4")
-    public IImage imageIlnd4;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelShocksshotsandasupersub;
-
-    @FindBy(linkText="Shocks, shots and a super sub")
-    public ILink linkShocksshotsandasupersub;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName17;
-
-    @FindBy(className="i-lnd-4")
-    public IImage imageIlnd41;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelKharbinWewanttoputasmileonSyrianfaces;
-
-    @FindBy(linkText="Kharbin: We want to put a smile on Syrian faces")
-    public ILink linkKharbinWewanttoputasmileonSyrianfaces;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName18;
-
-    @FindBy(className="i-lnd-4")
-    public IImage imageIlnd42;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelOutsidersholdfirmondayofsurprises;
-
-    @FindBy(linkText="Outsiders hold firm on day of surprises")
-    public ILink linkOutsidersholdfirmondayofsurprises;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName19;
-
-    @FindBy(className="i-lnd-4")
-    public IImage imageIlnd43;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelArgentinastayperfectChileintolasteight;
-
-    @FindBy(linkText="Argentina stay perfect, Chile into last eight")
-    public ILink linkArgentinastayperfectChileintolasteight;
-
-    @FindBy(className="dcm-newsitemlink")
-    public ILink linkgoogleoffindexFIFAFutsalWorldCupgoogleonindexTalismaninplaceforMozambique;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelTalismaninplaceforMozambique;
-
-    @FindBy(className="dcm-newsitemlink")
-    public ILink linkgoogleoffindexBrazilgoogleonindexDungasackedasBrazilboss;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelDungasackedasBrazilboss;
-
-    @FindBy(className="dcm-newsitemlink")
-    public ILink linkgoogleoffindexWomensFootballgoogleonindexBoulleaushareshersocialnetworkingsecrets;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelBoulleaushareshersocialnetworkingsecrets;
-
-    @FindBy(linkText="All News")
-    public ILink linkAllNews;
-
-    @FindBy(linkText="All Photos")
-    public ILink linkAllPhotos;
-
-    @FindBy(linkText="All Videos")
-    public ILink linkAllVideos;
-
-    @FindBy(className="title")
-    public ILabel labelFIFACongress2016;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName20;
-
-    @FindBy(className="i-lnd-4")
-    public IImage imageIlnd44;
-
-    @FindBy(linkText="The 66th FIFA Congress took place in Mexico City on 12 and 13 May 2016. You can now look back at the decisions taken, including the historic appointment of FIFA's new General Secretary, Fatma Samoura.")
-    public ITextArea textAreaThe66thFIFACongresstookplaceinMexicoCityon12and13May2016YoucannowlookbackatthedecisionstakenincludingthehistoricappointmentofFIFAsnewGeneralSecretaryFatmaSamoura;
-
-    @FindBy(linkText="FIFA Congress 2016")
-    public ILink linkFIFACongress2016;
-
-    @FindBy(className="title")
-    public ILabel labelFIFABallondOr2015;
-
-    @FindBy(className="i-lnd-4 dcm-lazy-lazy")
-    public IImage imageIlnd4dcmlazylazy;
-
-    @FindBy(linkText="Relive the entire dayвЂ™s events surrounding the FIFA.Ballon d'Or 2015&nbsp;direct from Zurich's Kongresshaus with&nbsp;FIFA.com's exclusive Live Blog!")
-    public ITextArea textAreaRelivetheentiredayseventssurroundingtheFIFABallondOr2015nbspdirectfromZurichsKongresshauswithnbspFIFAcomsexclusiveLiveBlog;
-
-    @FindBy(linkText="Relive the Ballon d'Or Gala")
-    public ILink linkRelivetheBallondOrGala;
-
-    @FindBy(linkText="FIFA Ballon d'Or 2015")
-    public ILink linkFIFABallondOr2015;
-
-    @FindBy(linkText=" ")
-    public ILink linkNoName21;
-
-    @FindBy(linkText=" ")
-    public ILink linkNoName22;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelFIFABallondOr;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div[@class='bo-hpfifa-row']/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='picture-wrap']/img")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName9;
 
-    @FindBy(css="[title='FIFA Ballon d'Or']")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName10;
 
-    @FindBy(linkText="Lionel MESSI")
-    public ILabel labelLionelMESSI;
-
-    @FindBy(className="ARG i-2-flag flag")
-    public IImage imageARGi2flagflag;
-
-    @FindBy(linkText="FIFA Ballon d'Or")
-    public ILink linkFIFABallondOr1;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelFIFAWomensWorldPlayeroftheYear;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div[@class='bo-hpfifa-row']/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='picture-wrap']/img")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName11;
 
-    @FindBy(css="[title='FIFA Women's World Player of the Year']")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName12;
 
-    @FindBy(linkText="Carli LLOYD")
-    public ILabel labelCarliLLOYD;
-
-    @FindBy(className="USA i-2-flag flag")
-    public IImage imageUSAi2flagflag;
-
-    @FindBy(linkText="FIFA Women's World Player of the Year")
-    public ILink linkFIFAWomensWorldPlayeroftheYear;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelMensWorldCoach;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div[@class='bo-hpfifa-row']/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='picture-wrap']/img")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName13;
 
-    @FindBy(css="[title='Men's World Coach']")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName14;
 
-    @FindBy(linkText="LUIS ENRIQUE")
-    public ILabel labelLUISENRIQUE;
-
-    @FindBy(className="ESP i-2-flag flag")
-    public IImage imageESPi2flagflag;
-
-    @FindBy(linkText="Men's World Coach")
-    public ILink linkMensWorldCoach;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelWomensWorldCoach;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div[@class='bo-hpfifa-row']/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='picture-wrap']/img")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName15;
 
-    @FindBy(css="[title='Women's World Coach']")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName16;
 
-    @FindBy(linkText="Jill ELLIS")
-    public ILabel labelJillELLIS;
-
-    @FindBy(className="USA i-2-flag flag")
-    public IImage imageUSAi2flagflag1;
-
-    @FindBy(linkText="Women's World Coach")
-    public ILink linkWomensWorldCoach;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelFairPlayAward;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div[@class='bo-hpfifa-row']/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='picture-wrap']/img")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName17;
 
-    @FindBy(css="[title='Fair Play Award']")
+    @FindBy(xpath="//div[@class='react-root']/div/main/div/div/div/img")
     public IImage imageNoName18;
 
-    @FindBy(linkText="All football organisations supporting refugees")
-    public ILabel labelAllfootballorganisationssupportingrefugees;
+    @FindBy(linkText="Features and Pricing")
+    public ILabel labelFeaturesandPricing;
 
-    @FindBy(linkText="Fair Play Award")
-    public ILink linkFairPlayAward;
+    @FindBy(linkText="<!-- react-text: 401 -->All Cloud Manager accounts start with a 30-day free trial of Cloud Manager Standard. Cloud Manager Premium is only available with <!-- /react-text -->MongoDB Professional<!-- react-text: 403 --> or <!-- /react-text -->MongoDB Enterprise Advanced.")
+    public ITextArea textAreareacttext401AllCloudManageraccountsstartwitha30dayfreetrialofCloudManagerStandardCloudManagerPremiumisonlyavailablewithreacttextMongoDBProfessionalreacttext403orreacttextMongoDBEnterpriseAdvanced;
 
-    @FindBy(className="dcm-title")
-    public ILabel labelPusksAward;
+    @FindBy(linkText="MongoDB Professional")
+    public ILink linkMongoDBProfessional1;
 
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div[@class='bo-hpfifa-row']/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='picture-wrap']/img")
+    @FindBy(linkText="MongoDB Enterprise Advanced.")
+    public ILink linkMongoDBEnterpriseAdvanced1;
+/*
+    @FindBy(className="table table-striped")
+    public ITable<> tableCloudManagerFreeOStartyourfreetrialAvailableforfreewhenyour30daytrialexpiresCloudManagerStandard39reacttext424PerServerreacttextreacttext426PerMonthreacttextStartyourfreetrialreacttext43030dayfreetrialreacttextContactusreacttext432forannualpricingreacttextCloudManagerPremiumTalktousAvailablewithMongoDBEnterpriseAdvancedampProfessionalBackupUnlimitedRestoresBackupPricingreacttext4521stGBfreeperreplicasetthen250GBmoreacttextContactusreacttext454forannualpricingreacttextComprehensiveMonitoringDataRetention24hrsFullhistoricaldataFullhistoricaldataGranularity5minute2minute2minuteCustomAlertingAPMIntegrationAutomationDatabaseCreationDatabaseModificationZeroDowntimeUpgradesandDowngradesAutoProvisioningonAWSRESTfulAPIQueryOptimizationVisualQueryProfilerIndexSuggestionsAutomatedRollingIndexBuilds;
+*/
+    @FindBy(className="font--center")
+    public ILabel labelFrequentlyAskedQuestions;
+
+    @FindBy(className="component-accordion__toggle  component-accordion__toggle--active")
+    public ILabel labelWhathappenswhenmy30dayfreetrialexpires;
+
+    @FindBy(linkText="Please add a credit card to your account prior to the expiration date to ensure that your service is not interrupted.")
+    public ITextArea textAreaPleaseaddacreditcardtoyouraccountpriortotheexpirationdatetoensurethatyourserviceisnotinterrupted;
+
+    @FindBy(linkText="Your backup will not be affected when your trial period ends.")
+    public ITextArea textAreaYourbackupwillnotbeaffectedwhenyourtrialperiodends;
+
+    @FindBy(linkText="If you decline to purchase a monthly or yearly subscription, you will no longer have access to Cloud ManagerвЂ™s automated deployment and upgrade features. You will also no longer have access to our APIs. You will still be able to use Cloud Manager to monitor your MongoDB deployments. With our free tier, you will receive 24 hrs of data retention and 5-minute granularity.")
+    public ITextArea textAreaIfyoudeclinetopurchaseamonthlyoryearlysubscriptionyouwillnolongerhaveaccesstoCloudManagersautomateddeploymentandupgradefeaturesYouwillalsonolongerhaveaccesstoourAPIsYouwillstillbeabletouseCloudManagertomonitoryourMongoDBdeploymentsWithourfreetieryouwillreceive24hrsofdataretentionand5minutegranularity;
+
+    @FindBy(className="component-accordion__toggle  component-accordion__toggle--last")
+    public ILabel labelHowdoesCloudManagerwork;
+
+    @FindBy(className="font--light-green")
+    public ILabel labelAbout;
+
+    @FindBy(linkText="About MongoDB, Inc.")
+    public ILink linkAboutMongoDBInc;
+
+    @FindBy(linkText="About MongoDB, Inc.")
+    public ITextArea textAreaAboutMongoDBInc;
+
+    @FindBy(linkText="Careers")
+    public ILink linkCareers1;
+
+    @FindBy(linkText="Careers")
+    public ITextArea textAreaCareers;
+
+    @FindBy(linkText="Contact Us")
+    public ILink linkContactUs1;
+
+    @FindBy(linkText="Contact Us")
+    public ITextArea textAreaContactUs;
+
+    @FindBy(linkText="Legal Notices")
+    public ILink linkLegalNotices;
+
+    @FindBy(linkText="Legal Notices")
+    public ITextArea textAreaLegalNotices;
+
+    @FindBy(linkText="Security Information")
+    public ILink linkSecurityInformation;
+
+    @FindBy(linkText="Security Information")
+    public ITextArea textAreaSecurityInformation;
+
+    @FindBy(linkText="Office Locations")
+    public ILink linkOfficeLocations1;
+
+    @FindBy(linkText="Office Locations")
+    public ITextArea textAreaOfficeLocations;
+
+    @FindBy(className="font--light-green")
+    public ILabel labelLearnMore;
+
+    @FindBy(linkText="NoSQL Database Explained")
+    public ILink linkNoSQLDatabaseExplained1;
+
+    @FindBy(linkText="NoSQL Database Explained")
+    public ITextArea textAreaNoSQLDatabaseExplained;
+
+    @FindBy(linkText="MongoDB Architecture Guide")
+    public ILink linkMongoDBArchitectureGuide;
+
+    @FindBy(linkText="MongoDB Architecture Guide")
+    public ITextArea textAreaMongoDBArchitectureGuide;
+
+    @FindBy(linkText="MongoDB Enterprise Advanced")
+    public ILink linkMongoDBEnterpriseAdvanced2;
+
+    @FindBy(linkText="MongoDB Enterprise Advanced")
+    public ITextArea textAreaMongoDBEnterpriseAdvanced;
+
+    @FindBy(linkText="MongoDB Cloud Manager")
+    public ILink linkMongoDBCloudManager;
+
+    @FindBy(linkText="MongoDB Cloud Manager")
+    public ITextArea textAreaMongoDBCloudManager;
+
+    @FindBy(linkText="MongoDB Engineering Blog")
+    public ILink linkMongoDBEngineeringBlog;
+
+    @FindBy(linkText="MongoDB Engineering Blog")
+    public ITextArea textAreaMongoDBEngineeringBlog;
+
+    @FindBy(linkText="FAQ")
+    public ILink linkFAQ;
+
+    @FindBy(linkText="FAQ")
+    public ITextArea textAreaFAQ;
+
+    @FindBy(className="font--light-green")
+    public ILabel labelMongoDBUniversity;
+
+    @FindBy(linkText="View Course Catalog")
+    public ILink linkViewCourseCatalog;
+
+    @FindBy(linkText="View Course Catalog")
+    public ITextArea textAreaViewCourseCatalog;
+
+    @FindBy(linkText="View Course Schedule")
+    public ILink linkViewCourseSchedule;
+
+    @FindBy(linkText="View Course Schedule")
+    public ITextArea textAreaViewCourseSchedule;
+
+    @FindBy(linkText="Public Training")
+    public ILink linkPublicTraining;
+
+    @FindBy(linkText="Public Training")
+    public ITextArea textAreaPublicTraining;
+
+    @FindBy(linkText="Certification")
+    public ILink linkCertification;
+
+    @FindBy(linkText="Certification")
+    public ITextArea textAreaCertification;
+
+    @FindBy(className="font--light-green")
+    public ILabel labelDocs;
+
+    @FindBy(linkText="MongoDB Manual")
+    public ILink linkMongoDBManual;
+
+    @FindBy(linkText="MongoDB Manual")
+    public ITextArea textAreaMongoDBManual;
+
+    @FindBy(linkText="Installation")
+    public ILink linkInstallation;
+
+    @FindBy(linkText="Installation")
+    public ITextArea textAreaInstallation;
+
+    @FindBy(linkText="FAQ")
+    public ILink linkFAQ1;
+
+    @FindBy(linkText="FAQ")
+    public ITextArea textAreaFAQ1;
+
+    @FindBy(className="font--light-green")
+    public ILabel labelPopularTopics;
+
+    @FindBy(linkText="AWS Backup Tools")
+    public ILink linkAWSBackupTools;
+
+    @FindBy(linkText="Database Security")
+    public ILink linkDatabaseSecurity;
+
+    @FindBy(linkText="Cloud Based Database")
+    public ILink linkCloudBasedDatabase;
+
+    @FindBy(linkText="When To Use NoSQL Database")
+    public ILink linkWhenToUseNoSQLDatabase;
+
+    @FindBy(linkText="Gartner Magic Quadrant")
+    public ILink linkGartnerMagicQuadrant;
+
+    @FindBy(linkText="Simplify Database Operation")
+    public ILink linkSimplifyDatabaseOperation;
+
+    @FindBy(linkText="Visualize Database Performance")
+    public ILink linkVisualizeDatabasePerformance;
+
+    @FindBy(linkText="Enterprise Data Center")
+    public ILink linkEnterpriseDataCenter;
+
+    @FindBy(linkText="Database Schema Design")
+    public ILink linkDatabaseSchemaDesign;
+
+    @FindBy(linkText="<!-- react-text: 623 -->Copyright В© <!-- /react-text --><!-- react-text: 624 -->2016<!-- /react-text --><!-- react-text: 625 --> MongoDB, Inc.<!-- /react-text --><!-- react-text: 627 -->Mongo, MongoDB, and the MongoDB leaf logo are registered trademarks of MongoDB, Inc.<!-- /react-text -->")
+    public ITextArea textAreareacttext623Copyrightreacttextreacttext6242016reacttextreacttext625MongoDBIncreacttextreacttext627MongoMongoDBandtheMongoDBleaflogoareregisteredtrademarksofMongoDBIncreacttext;
+
+    @FindBy(linkText="Follow Us")
+    public ILabel labelFollowUs;
+
+    @FindBy(partialLinkText="Github")
+    public ILink linkNoName1;
+
+    @FindBy(linkText="Github")
+    public ITextArea textAreaGithub;
+
+    @FindBy(partialLinkText="Twitter")
+    public ILink linkNoName2;
+
+    @FindBy(linkText="Twitter")
+    public ITextArea textAreaTwitter;
+
+    @FindBy(partialLinkText="Facebook")
+    public ILink linkNoName3;
+
+    @FindBy(linkText="Facebook")
+    public ITextArea textAreaFacebook;
+
+    @FindBy(partialLinkText="Youtube")
+    public ILink linkNoName4;
+
+    @FindBy(linkText="Youtube")
+    public ITextArea textAreaYoutube;
+
+    @FindBy(id="db_pixel_ad")
+    public IImage imageDbpixelad;
+
+    @FindBy(id="db_pixel_rt")
+    public IImage imageDbpixelrt;
+
+    @FindBy(xpath="//img")
     public IImage imageNoName19;
 
-    @FindBy(css="[title='PuskГЎs Award']")
+    @FindBy(xpath="//img")
     public IImage imageNoName20;
 
-    @FindBy(linkText="Lira WENDELL")
-    public ILabel labelLiraWENDELL;
-
-    @FindBy(className="BRA i-2-flag flag")
-    public IImage imageBRAi2flagflag;
-
-    @FindBy(linkText="PuskГЎs Award")
-    public ILink linkPusksAward;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelFIFAFIFProWorldXI;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div[@class='bo-hpfifa-row']/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='picture-wrap']/img")
+    @FindBy(xpath="//img")
     public IImage imageNoName21;
 
-    @FindBy(css="[title='FIFA FIFPro World XI']")
+    @FindBy(xpath="//img")
     public IImage imageNoName22;
 
-    @FindBy(linkText="FIFA FIFPro World XI")
-    public ILink linkFIFAFIFProWorldXI;
-
-    @FindBy(className="title")
-    public ILabel labelFollowuson;
-
-    @FindBy(className="social-channel-link")
-    public ILink link3113879likes;
-
-    @FindBy(className="social-channel-link")
-    public ILink link8813434followers;
-
-    @FindBy(className="social-channel-link")
-    public ILink link1446415subscribers;
-
-    @FindBy(className="title")
-    public ILabel labelLiveScores;
-
-    @FindBy(linkText=" UEFA EURO 2016 Latest Fixtures and ResultsLive now")
-    public ILink linkUEFAEURO2016LatestFixturesandResultsLivenow;
-
-    @FindBy(className="t-i-3-logo")
-    public IImage imageTi3logo;
-
-    @FindBy(className="t-i-3-logoPh")
-    public IImage imageTi3logoPh;
-
-    @FindBy(className="ch-title")
-    public ILabel labelUEFAEURO20161;
-
-    @FindBy(className="dcm-newsitemlink")
-    public ILink linkgoogleoffindexCopaAmricaCentenariogoogleonindexArgentinastayperfectChileintolasteightgoogleoffindexWednesday15June2016googleonindex;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelArgentinastayperfectChileintolasteight1;
-
-    @FindBy(linkText=" Uzbekistan Uzbekistan Professional Football League 2016      Latest Fixtures and ResultsLive now")
-    public ILink linkUzbekistanUzbekistanProfessionalFootballLeague2016LatestFixturesandResultsLivenow;
-
-    @FindBy(className="t-i-3-logo")
-    public IImage imageTi3logo1;
-
-    @FindBy(className="t-i-3-logoPh")
-    public IImage imageTi3logoPh1;
-
-    @FindBy(className="flag UZB")
-    public IImage imageFlagUZB;
-
-    @FindBy(className="ch-title")
-    public ILabel labelUzbekistanProfessionalFootballLeague2016;
-
-    @FindBy(className="dcm-newsitemlink")
-    public ILink linkgoogleoffindexRussia2018googleonindexKharbinWewanttoputasmileonSyrianfacesgoogleoffindexWednesday15June2016googleonindex;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelKharbinWewanttoputasmileonSyrianfaces1;
-
-    @FindBy(linkText=" China PR Chinese Super League 2016      Latest Fixtures and ResultsLive now")
-    public ILink linkChinaPRChineseSuperLeague2016LatestFixturesandResultsLivenow;
-
-    @FindBy(className="t-i-3-logo")
-    public IImage imageTi3logo2;
-
-    @FindBy(className="t-i-3-logoPh")
-    public IImage imageTi3logoPh2;
-
-    @FindBy(className="flag CHN")
-    public IImage imageFlagCHN;
-
-    @FindBy(className="ch-title")
-    public ILabel labelChineseSuperLeague2016;
-
-    @FindBy(className="dcm-newsitemlink")
-    public ILink linkgoogleoffindexFIFAPresidentgoogleonindexChineseFAdelegationvisitsFIFAPresidentgoogleoffindexThursday9June2016googleonindex;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelChineseFAdelegationvisitsFIFAPresident;
-
-    @FindBy(linkText="More ")
-    public ILink linkMore;
-
-    @FindBy(linkText="All News")
-    public ILink linkAllNews1;
-
-    @FindBy(linkText="All Photos")
-    public ILink linkAllPhotos1;
-
-    @FindBy(className="title")
-    public ILabel labelFIFATournaments;
-
-    @FindBy(linkText=" ")
-    public ILink linkNoName23;
-
-    @FindBy(linkText=" ")
-    public ILink linkNoName24;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName25;
-
-    @FindBy(css="[title='2014 FIFA World Cup Brazil в„ў']")
+    @FindBy(xpath="//img")
     public IImage imageNoName23;
 
-    @FindBy(linkText="2014 FIFA World Cup Brazil в„ў")
-    public ILabel label2014FIFAWorldCupBrazil;
-
-    @FindBy(linkText="2014 FIFA World Cup Brazil в„ў")
-    public ILink link2014FIFAWorldCupBrazil;
-
-    @FindBy(linkText="News")
-    public ILink linkNews1;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName26;
-
-    @FindBy(css="[title='FIFA U-20 Women's World Cup Canada 2014']")
+    @FindBy(xpath="//img")
     public IImage imageNoName24;
 
-    @FindBy(linkText="FIFA U-20 Women's World Cup Canada 2014")
-    public ILabel labelFIFAU20WomensWorldCupCanada2014;
-
-    @FindBy(linkText="FIFA U-20 Women's World Cup Canada 2014")
-    public ILink linkFIFAU20WomensWorldCupCanada2014;
-
-    @FindBy(linkText="News")
-    public ILink linkNews2;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches1;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName27;
-
-    @FindBy(css="[title='Youth Olympic Football Tournaments Nanjing 2014 - Boys']")
+    @FindBy(xpath="//img")
     public IImage imageNoName25;
 
-    @FindBy(linkText="Youth Olympic Football Tournaments Nanjing 2014 - Boys")
-    public ILabel labelYouthOlympicFootballTournamentsNanjing2014Boys;
-
-    @FindBy(linkText="Youth Olympic Football Tournaments Nanjing 2014 - Boys")
-    public ILink linkYouthOlympicFootballTournamentsNanjing2014Boys;
-
-    @FindBy(linkText="News")
-    public ILink linkNews3;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches2;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName28;
-
-    @FindBy(css="[title='Youth Olympic Football Tournaments Nanjing 2014 - Girls']")
+    @FindBy(xpath="//img")
     public IImage imageNoName26;
 
-    @FindBy(linkText="Youth Olympic Football Tournaments Nanjing 2014 - Girls")
-    public ILabel labelYouthOlympicFootballTournamentsNanjing2014Girls;
-
-    @FindBy(linkText="Youth Olympic Football Tournaments Nanjing 2014 - Girls")
-    public ILink linkYouthOlympicFootballTournamentsNanjing2014Girls;
-
-    @FindBy(linkText="News")
-    public ILink linkNews4;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches3;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName29;
-
-    @FindBy(css="[title='FIFA Club World Cup Morocco 2014']")
+    @FindBy(xpath="//img")
     public IImage imageNoName27;
-
-    @FindBy(linkText="FIFA Club World Cup Morocco 2014")
-    public ILabel labelFIFAClubWorldCupMorocco2014;
-
-    @FindBy(linkText="FIFA Club World Cup Morocco 2014")
-    public ILink linkFIFAClubWorldCupMorocco2014;
-
-    @FindBy(linkText="News")
-    public ILink linkNews5;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches4;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName30;
-
-    @FindBy(css="[title='FIFA U-20 World Cup New Zealand 2015']")
-    public IImage imageNoName28;
-
-    @FindBy(linkText="FIFA U-20 World Cup New Zealand 2015")
-    public ILabel labelFIFAU20WorldCupNewZealand2015;
-
-    @FindBy(linkText="FIFA U-20 World Cup New Zealand 2015")
-    public ILink linkFIFAU20WorldCupNewZealand2015;
-
-    @FindBy(linkText="News")
-    public ILink linkNews6;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches5;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName31;
-
-    @FindBy(css="[title='FIFA Women's World Cup Canada 2015']")
-    public IImage imageNoName29;
-
-    @FindBy(linkText="FIFA Women's World Cup Canada 2015")
-    public ILabel labelFIFAWomensWorldCupCanada2015;
-
-    @FindBy(linkText="FIFA Women's World Cup Canada 2015")
-    public ILink linkFIFAWomensWorldCupCanada2015;
-
-    @FindBy(linkText="News")
-    public ILink linkNews7;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches6;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName32;
-
-    @FindBy(css="[title='FIFA Beach Soccer World Cup Portugal 2015']")
-    public IImage imageNoName30;
-
-    @FindBy(linkText="FIFA Beach Soccer World Cup Portugal 2015")
-    public ILabel labelFIFABeachSoccerWorldCupPortugal2015;
-
-    @FindBy(linkText="FIFA Beach Soccer World Cup Portugal 2015")
-    public ILink linkFIFABeachSoccerWorldCupPortugal2015;
-
-    @FindBy(linkText="News")
-    public ILink linkNews8;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches7;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName33;
-
-    @FindBy(css="[title='FIFA U-17 World Cup Chile 2015']")
-    public IImage imageNoName31;
-
-    @FindBy(linkText="FIFA U-17 World Cup Chile 2015")
-    public ILabel labelFIFAU17WorldCupChile2015;
-
-    @FindBy(linkText="FIFA U-17 World Cup Chile 2015")
-    public ILink linkFIFAU17WorldCupChile2015;
-
-    @FindBy(linkText="News")
-    public ILink linkNews9;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches8;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName34;
-
-    @FindBy(css="[title='FIFA Club World Cup Japan 2015']")
-    public IImage imageNoName32;
-
-    @FindBy(linkText="FIFA Club World Cup Japan 2015")
-    public ILabel labelFIFAClubWorldCupJapan2015;
-
-    @FindBy(linkText="FIFA Club World Cup Japan 2015")
-    public ILink linkFIFAClubWorldCupJapan2015;
-
-    @FindBy(linkText="News")
-    public ILink linkNews10;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches9;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName35;
-
-    @FindBy(css="[title='Olympic Football Tournaments Rio 2016 - Women']")
-    public IImage imageNoName33;
-
-    @FindBy(linkText="Olympic Football Tournaments Rio 2016 - Women")
-    public ILabel labelOlympicFootballTournamentsRio2016Women;
-
-    @FindBy(linkText="Olympic Football Tournaments Rio 2016 - Women")
-    public ILink linkOlympicFootballTournamentsRio2016Women;
-
-    @FindBy(linkText="News")
-    public ILink linkNews11;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches10;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName36;
-
-    @FindBy(css="[title='Olympic Football Tournaments Rio 2016 - Men']")
-    public IImage imageNoName34;
-
-    @FindBy(linkText="Olympic Football Tournaments Rio 2016 - Men")
-    public ILabel labelOlympicFootballTournamentsRio2016Men;
-
-    @FindBy(linkText="Olympic Football Tournaments Rio 2016 - Men")
-    public ILink linkOlympicFootballTournamentsRio2016Men;
-
-    @FindBy(linkText="News")
-    public ILink linkNews12;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches11;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName37;
-
-    @FindBy(css="[title='FIFA World Cupв„ў Qualifiers']")
-    public IImage imageNoName35;
-
-    @FindBy(linkText="FIFA World Cupв„ў Qualifiers")
-    public ILabel labelFIFAWorldCupQualifiers;
-
-    @FindBy(linkText="FIFA World Cupв„ў Qualifiers")
-    public ILink linkFIFAWorldCupQualifiers;
-
-    @FindBy(linkText="News")
-    public ILink linkNews13;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches12;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName38;
-
-    @FindBy(css="[title='FIFA Futsal World Cup Colombia 2016']")
-    public IImage imageNoName36;
-
-    @FindBy(linkText="FIFA Futsal World Cup Colombia 2016")
-    public ILabel labelFIFAFutsalWorldCupColombia2016;
-
-    @FindBy(linkText="FIFA Futsal World Cup Colombia 2016")
-    public ILink linkFIFAFutsalWorldCupColombia2016;
-
-    @FindBy(linkText="News")
-    public ILink linkNews14;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches13;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName39;
-
-    @FindBy(css="[title='FIFA U-17 Women's World Cup Jordan 2016']")
-    public IImage imageNoName37;
-
-    @FindBy(linkText="FIFA U-17 Women's World Cup Jordan 2016")
-    public ILabel labelFIFAU17WomensWorldCupJordan2016;
-
-    @FindBy(linkText="FIFA U-17 Women's World Cup Jordan 2016")
-    public ILink linkFIFAU17WomensWorldCupJordan2016;
-
-    @FindBy(linkText="News")
-    public ILink linkNews15;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches14;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName40;
-
-    @FindBy(css="[title='FIFA U-20 Women's World Cup Papua New Guinea 2016']")
-    public IImage imageNoName38;
-
-    @FindBy(linkText="FIFA U-20 Women's World Cup Papua New Guinea 2016")
-    public ILabel labelFIFAU20WomensWorldCupPapuaNewGuinea2016;
-
-    @FindBy(linkText="FIFA U-20 Women's World Cup Papua New Guinea 2016")
-    public ILink linkFIFAU20WomensWorldCupPapuaNewGuinea2016;
-
-    @FindBy(linkText="News")
-    public ILink linkNews16;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches15;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName41;
-
-    @FindBy(css="[title='FIFA Club World Cup Japan 2016']")
-    public IImage imageNoName39;
-
-    @FindBy(linkText="FIFA Club World Cup Japan 2016")
-    public ILabel labelFIFAClubWorldCupJapan2016;
-
-    @FindBy(linkText="FIFA Club World Cup Japan 2016")
-    public ILink linkFIFAClubWorldCupJapan2016;
-
-    @FindBy(linkText="News")
-    public ILink linkNews17;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName42;
-
-    @FindBy(css="[title='2018 FIFA World Cup Russia (TM)']")
-    public IImage imageNoName40;
-
-    @FindBy(linkText="2018 FIFA World Cup Russia (TM)")
-    public ILabel label2018FIFAWorldCupRussiaTM;
-
-    @FindBy(linkText="2018 FIFA World Cup Russia (TM)")
-    public ILink link2018FIFAWorldCupRussiaTM;
-
-    @FindBy(linkText="News")
-    public ILink linkNews18;
-
-    @FindBy(linkText="Matches")
-    public ILink linkMatches16;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='noclick']/div/div[@class='trn-item-logo']/a")
-    public ILink linkNoName43;
-
-    @FindBy(css="[title='2022 FIFA World Cup Qatar (TM)']")
-    public IImage imageNoName41;
-
-    @FindBy(linkText="2022 FIFA World Cup Qatar (TM)")
-    public ILabel label2022FIFAWorldCupQatarTM;
-
-    @FindBy(linkText="2022 FIFA World Cup Qatar (TM)")
-    public ILink link2022FIFAWorldCupQatarTM;
-
-    @FindBy(linkText="News")
-    public ILink linkNews19;
-
-    @FindBy(className="title")
-    public ILabel labelAboutFIFA;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelMediaStatements;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName44;
-
-    @FindBy(className="i-lnd-4 dcm-lazy-lazy")
-    public IImage imageIlnd4dcmlazylazy1;
-
-    @FindBy(linkText="The Official Mascot of the FIFA U-20 WomenвЂ™s World Cup 2016 was launched and presented to the public today in front of thousands of football fans at the Sir John Guise Stadium in Port Moresby.&nbsp;")
-    public ITextArea textAreaTheOfficialMascotoftheFIFAU20WomensWorldCup2016waslaunchedandpresentedtothepublictodayinfrontofthousandsoffootballfansattheSirJohnGuiseStadiuminPortMoresbynbsp;
-
-    @FindBy(linkText="Media News")
-    public ILink linkMediaNews;
-
-    @FindBy(linkText="Media Channel")
-    public ILink linkMediaChannel;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelFIFA1904;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName45;
-
-    @FindBy(className="i-lnd-4 dcm-lazy-lazy")
-    public IImage imageIlnd4dcmlazylazy2;
-
-    @FindBy(linkText="FIFA 1904 is a monthly magazine which is published as both a print edition and as a free online publication. The 68-page magazine contains in-depth stories and interviews about football from around the world, with a special focus on FIFA's development projects and activities, competitions, events and member associations. The print version is provided for free to FIFA's confederations and member associations, while the online version is available to all football fans right here on FIFA.com. ")
-    public ITextArea textAreaFIFA1904isamonthlymagazinewhichispublishedasbothaprinteditionandasafreeonlinepublicationThe68pagemagazinecontainsindepthstoriesandinterviewsaboutfootballfromaroundtheworldwithaspecialfocusonFIFAsdevelopmentprojectsandactivitiescompetitionseventsandmemberassociationsTheprintversionisprovidedforfreetoFIFAsconfederationsandmemberassociationswhiletheonlineversionisavailabletoallfootballfansrighthereonFIFAcom;
-
-    @FindBy(linkText="FIFA 1904")
-    public ILink linkFIFA1904;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelLatestNews;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName46;
-
-    @FindBy(className="i-lnd-4 dcm-lazy-lazy")
-    public IImage imageIlnd4dcmlazylazy3;
-
-    @FindBy(linkText="All News")
-    public ILink linkAllNews2;
-
-    @FindBy(className="title")
-    public ILabel labelWhatwestandfor;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName47;
-
-    @FindBy(className="i-lnd-4")
-    public IImage imageIlnd45;
-
-    @FindBy(linkText="FIFAвЂ™s mission is develop football everywhere and for all, to touch the world through its inspiring tournaments and to build a better future through the power of the game.")
-    public ITextArea textAreaFIFAsmissionisdevelopfootballeverywhereandforalltotouchtheworldthroughitsinspiringtournamentsandtobuildabetterfuturethroughthepowerofthegame;
-
-    @FindBy(linkText="Explore FIFA is a series of short animated films that bring you into our world with a visual and easy-to-understand explanation of how we go about carrying out this mission.")
-    public ITextArea textAreaExploreFIFAisaseriesofshortanimatedfilmsthatbringyouintoourworldwithavisualandeasytounderstandexplanationofhowwegoaboutcarryingoutthismission;
-
-    @FindBy(linkText="What we stand for")
-    public ILink linkWhatwestandfor;
-
-    @FindBy(className="title associations-items-wrap clearfix")
-    public ILabel labelAssociations;
-
-    @FindBy(className="title")
-    public ILabel labelFocuson;
-
-    @FindBy(className="ma-logo")
-    public IImage imageMalogo;
-
-    @FindBy(className="ma-ddl")
-    public ICheckBox checkBoxAfghanistanAlbaniaAlgeriaAmericanSamoaAndorraAngolaAnguillaAntiguaandBarbudaArgentinaArmeniaArubaAustraliaAustriaAzerbaijanBahamasBahrainBangladeshBarbadosBelarusBelgiumBelizeBeninBermudaBhutanBoliviaBosniaandHerzegovinaBotswanaBrazilBritishVirginIslandsBruneiDarussalamBulgariaBurkinaFasoBurundiCambodiaCameroonCanadaCapeVerdeIslandsCaymanIslandsCentralAfricanRepublicChadChileChinaPRChineseTaipeiColombiaComorosCongoCongoDRCookIslandsCostaRicaCtedIvoireCroatiaCubaCuracaoCyprusCzechRepublicDenmarkDjiboutiDominicaDominicanRepublicEcuadorEgyptElSalvadorEnglandEquatorialGuineaEritreaEstoniaEthiopiaFaroeIslandsFijiFinlandFranceFYRMacedoniaGabonGambiaGeorgiaGermanyGhanaGreeceGrenadaGuamGuatemalaGuineaGuineaBissauGuyanaHaitiHondurasHongKongHungaryIcelandIndiaIndonesiaIranIraqIsraelItalyJamaicaJapanJordanKazakhstanKenyaKoreaDPRKoreaRepublicKuwaitKyrgyzstanLaosLatviaLebanonLesothoLiberiaLibyaLiechtensteinLithuaniaLuxembourgMacauMadagascarMalawiMalaysiaMaldivesMaliMaltaMauritaniaMauritiusMexicoMoldovaMongoliaMontenegroMontserratMoroccoMozambiqueMyanmarNamibiaNepalNetherlandsNewCaledoniaNewZealandNicaraguaNigerNigeriaNorthernIrelandNorwayOmanPakistanPalestinePanamaPapuaNewGuineaParaguayPeruPhilippinesPolandPortugalPuertoRicoQatarRepublicofIrelandRomaniaRussiaRwandaSamoaSanMarinoSaoTomeePrincipeSaudiArabiaScotlandSenegalSerbiaSeychellesSierraLeoneSingaporeSlovakiaSloveniaSolomonIslandsSomaliaSouthAfricaSouthSudanSpainSriLankaStKittsandNevisStLuciaStVincentandtheGrenadinesSudanSurinameSwazilandSwedenSwitzerlandSyriaTahitiTajikistanTanzaniaThailandTimorLesteTogoTongaTrinidadandTobagoTunisiaTurkeyTurkmenistanTurksandCaicosIslandsUgandaUkraineUnitedArabEmiratesUruguayUSVirginIslandsUSAUzbekistanVanuatuVenezuelaVietnamWalesYemenZambiaZimbabwe;
-
-    @FindBy(className="ma-logo")
-    public IImage imageMalogo1;
-
-    @FindBy(linkText="Latest results")
-    public ILabel labelLatestresults;
-
-    @FindBy(className="ENG i-4-flag flag")
-    public IImage imageENGi4flagflag;
-
-    @FindBy(className="RUS i-4-flag flag")
-    public IImage imageRUSi4flagflag;
-
-    @FindBy(className="SRB i-4-flag flag")
-    public IImage imageSRBi4flagflag;
-
-    @FindBy(className="RUS i-4-flag flag")
-    public IImage imageRUSi4flagflag1;
-
-    @FindBy(className="CZE i-4-flag flag")
-    public IImage imageCZEi4flagflag;
-
-    @FindBy(className="RUS i-4-flag flag")
-    public IImage imageRUSi4flagflag2;
-
-    @FindBy(linkText="Latest results")
-    public ILink linkLatestresults;
-
-    @FindBy(className="title")
-    public ILabel labelFIFACocaColaWorldRanking;
-/*
-    @FindBy(className="table tbl-ranking table-striped")
-    public ITable<> tableRankTeamPointsPositions1Argentina150302Belgium138403Colombia132814Germany131015Chile129326Spain12670LASTUPDATEThursday02June2016;
-*/
-    @FindBy(linkText="Ranking Table")
-    public ILink linkRankingTable;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName48;
-
-    @FindBy(className="i-lnd-4")
-    public IImage imageIlnd46;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelNorthernIrelandcontinuingtobreaknewground;
-
-    @FindBy(linkText="Northern Ireland continuing to break new ground")
-    public ILink linkNorthernIrelandcontinuingtobreaknewground;
-
-    @FindBy(className="title")
-    public ILabel labelTheFIFAcomClub;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelNews;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName49;
-
-    @FindBy(className="i-lnd-4 dcm-lazy-lazy")
-    public IImage imageIlnd4dcmlazylazy4;
-
-    @FindBy(linkText="News")
-    public ILink linkNews20;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelFIFAPredictor;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName50;
-
-    @FindBy(className="i-lnd-4 dcm-lazy-lazy")
-    public IImage imageIlnd4dcmlazylazy5;
-
-    @FindBy(linkText="FIFA Predictor")
-    public ILink linkFIFAPredictor2;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelFIFAUltimateTrivia;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName51;
-
-    @FindBy(className="i-lnd-4 dcm-lazy-lazy")
-    public IImage imageIlnd4dcmlazylazy6;
-
-    @FindBy(linkText="FIFA Ultimate Trivia")
-    public ILink linkFIFAUltimateTrivia1;
-
-    @FindBy(className="title")
-    public ILabel labelTheOfficialOnlineStore;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a")
-    public ILink linkNoName52;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a/img")
-    public IImage imageNoName42;
-
-    @FindBy(linkText="Germany 2016 Home Soccer Jersey w/ Winners Badge")
-    public ILabel labelGermany2016HomeSoccerJerseywWinnersBadge1;
-
-    @FindBy(linkText="Germany 2016 Home Soccer Jersey w/ Winners Badge")
-    public ILink linkGermany2016HomeSoccerJerseywWinnersBadge1;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a")
-    public ILink linkNoName53;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a/img")
-    public IImage imageNoName43;
-
-    @FindBy(linkText="Germany 2016 Youth Away Soccer Jersey w/ Winners Badge")
-    public ILabel labelGermany2016YouthAwaySoccerJerseywWinnersBadge1;
-
-    @FindBy(linkText="Germany 2016 Youth Away Soccer Jersey w/ Winners Badge")
-    public ILink linkGermany2016YouthAwaySoccerJerseywWinnersBadge1;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a")
-    public ILink linkNoName54;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a/img")
-    public IImage imageNoName44;
-
-    @FindBy(linkText="Germany 2016 Women's Home Soccer Jersey w/ Winners Badge")
-    public ILabel labelGermany2016WomensHomeSoccerJerseywWinnersBadge1;
-
-    @FindBy(linkText="Germany 2016 Women's Home Soccer Jersey w/ Winners Badge")
-    public ILink linkGermany2016WomensHomeSoccerJerseywWinnersBadge1;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a")
-    public ILink linkNoName55;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div/div[@class='slider-wrap']/ul/li[@class='shop-item']/div[@class='shop-item-thumb']/a/img")
-    public IImage imageNoName45;
-
-    @FindBy(linkText="Germany 2016 LS Home Keeper Jersey w/ Winners Badge")
-    public ILabel labelGermany2016LSHomeKeeperJerseywWinnersBadge1;
-
-    @FindBy(linkText="Germany 2016 LS Home Keeper Jersey w/ Winners Badge")
-    public ILink linkGermany2016LSHomeKeeperJerseywWinnersBadge1;
-
-    @FindBy(linkText="Shop Now")
-    public ILink linkShopNow1;
-
-    @FindBy(className="title")
-    public ILabel labelLatestComments;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div/div[@class='parentcomment']/div[@class='avatarComment']/a")
-    public ILink linkNoName56;
-
-    @FindBy(className="avatarContainer80")
-    public IImage imageAvatarContainer80;
-
-    @FindBy(linkText="Dunga sacked as Brazil boss")
-    public ILink linkDungasackedasBrazilboss;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div[@class='col-xs-6']/div/div[@class='parentcomment']/div[@class='avatarComment']/a")
-    public ILink linkNoName57;
-
-    @FindBy(className="avatarContainer80")
-    public IImage imageAvatarContainer801;
-
-    @FindBy(linkText="ArgentinaвЂ™s other Gala winner")
-    public ILink linkArgentinasotherGalawinner;
-
-    @FindBy(className="title")
-    public ILabel labelClassicFootball;
-
-    @FindBy(className="dcm-list-title")
-    public ILabel labelPlayers;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName58;
-
-    @FindBy(className="i-lnd-3 dcm-lazy-lazy")
-    public IImage imageIlnd3dcmlazylazy;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelLeonelSancheztheelegantleftfooterwhopackedapunch;
-
-    @FindBy(linkText="Leonel Sanchez, the elegant left-footer who packed a punch")
-    public ILink linkLeonelSancheztheelegantleftfooterwhopackedapunch;
-
-    @FindBy(linkText="On 25 April 1936, one of the most important figures in South American football history, the Chilean Leonel Sanchez, was born. FIFA.com pays tribute to the tough, yet silky left-footer who starred for Universidad de Chile and his country.&nbsp;")
-    public ITextArea textAreaOn25April1936oneofthemostimportantfiguresinSouthAmericanfootballhistorytheChileanLeonelSanchezwasbornFIFAcompaystributetothetoughyetsilkyleftfooterwhostarredforUniversidaddeChileandhiscountrynbsp;
-
-    @FindBy(className="dcm-list-title")
-    public ILabel labelWorldCupMatches;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName59;
-
-    @FindBy(className="i-lnd-3 dcm-lazy-lazy")
-    public IImage imageIlnd3dcmlazylazy1;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelSizzlingBrazilstuntheAzteca;
-
-    @FindBy(linkText="Sizzling Brazil stun the Azteca")
-    public ILink linkSizzlingBrazilstuntheAzteca;
-
-    @FindBy(className="dcm-list-title")
-    public ILabel labelVideos;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName60;
-
-    @FindBy(className="i-lnd-3 dcm-lazy-lazy")
-    public IImage imageIlnd3dcmlazylazy2;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelInterviewwithAlanKennedyandPhilNeal;
-
-    @FindBy(linkText="Interview with Alan Kennedy and Phil Neal")
-    public ILink linkInterviewwithAlanKennedyandPhilNeal;
-
-    @FindBy(className="dcm-list-title")
-    public ILabel labelWorldCupQualifiers;
-
-    @FindBy(className="dcm-internal")
-    public ILink linkNoName61;
-
-    @FindBy(className="i-lnd-3")
-    public IImage imageIlnd3;
-
-    @FindBy(className="dcm-title")
-    public ILabel labelIraqmakehistorybyseeingoffSyria;
-
-    @FindBy(linkText="Iraq make history by seeing off Syria")
-    public ILink linkIraqmakehistorybyseeingoffSyria;
-
-    @FindBy(xpath="//div[@id='wrap']/div[@id='content-wrap']/div[@class='container']/div/div/div[@class='col-xs-3']/div/div[@class='dcm-summarysection']/p")
-    public ITextArea textAreaNoName;
-
-    @FindBy(linkText="We remember the game that sealed IraqвЂ™s maiden appearance at the FIFA World Cup on 29 November 1985, with legendary former forward Ahmed Radhi recalling his memories from the two-legged win over Syria.")
-    public ITextArea textAreaWerememberthegamethatsealedIraqsmaidenappearanceattheFIFAWorldCupon29November1985withlegendaryformerforwardAhmedRadhirecallinghismemoriesfromthetwoleggedwinoverSyria;
-
-    @FindBy(linkText="Players")
-    public ILink linkPlayers;
-
-    @FindBy(linkText="World Cup Matches")
-    public ILink linkWorldCupMatches;
-
-    @FindBy(linkText="Videos")
-    public ILink linkVideos1;
-
-    @FindBy(linkText="World Cup Qualifiers")
-    public ILink linkWorldCupQualifiers;
-
-    @FindBy(linkText="FIFA Partners")
-    public ILabel labelFIFAPartners;
-
-    @FindBy(linkText=" ")
-    public ILink linkNoName62;
-
-    @FindBy(linkText=" ")
-    public ILink linkNoName63;
-
-    @FindBy(linkText=" ")
-    public ILink linkNoName64;
-
-    @FindBy(linkText=" ")
-    public ILink linkNoName65;
-
-    @FindBy(linkText=" ")
-    public ILink linkNoName66;
-
-    @FindBy(linkText=" ")
-    public ILink linkNoName67;
-
-    @FindBy(linkText="About FIFA")
-    public ILabel labelAboutFIFA1;
-
-    @FindBy(linkText="FIFA Statutes")
-    public ILink linkFIFAStatutes;
-
-    @FindBy(linkText="Laws of the Game")
-    public ILink linkLawsoftheGame;
-
-    @FindBy(linkText="Match Agents List")
-    public ILink linkMatchAgentsList;
-
-    @FindBy(linkText="Code of Ethics")
-    public ILink linkCodeofEthics;
-
-    @FindBy(linkText="International Match Calendar 2014-2018")
-    public ILink linkInternationalMatchCalendar20142018;
-
-    @FindBy(linkText="International Match Calendar 2018-2024")
-    public ILink linkInternationalMatchCalendar20182024;
-
-    @FindBy(linkText="Women's Football International Calendar")
-    public ILink linkWomensFootballInternationalCalendar;
-
-    @FindBy(linkText="FIFA Financial reports")
-    public ILink linkFIFAFinancialreports;
-
-    @FindBy(linkText="FIFA Committees")
-    public ILink linkFIFACommittees;
-
-    @FindBy(linkText="FIFA Master Course")
-    public ILink linkFIFAMasterCourse;
-
-    @FindBy(linkText="Futsal")
-    public ILink linkFutsal;
-
-    @FindBy(linkText="Calendar (FIFA events and meetings)")
-    public ILink linkCalendarFIFAeventsandmeetings;
-
-    @FindBy(linkText="Official Documents")
-    public ILink linkOfficialDocuments;
-
-    @FindBy(linkText="Legal and Disciplinary")
-    public ILink linkLegalandDisciplinary;
-
-    @FindBy(linkText="Reporting Mechanism")
-    public ILink linkReportingMechanism;
-
-    @FindBy(linkText="Marketing")
-    public ILink linkMarketing;
-
-    @FindBy(linkText="Medical")
-    public ILink linkMedical;
-
-    @FindBy(linkText="Refereeing")
-    public ILink linkRefereeing;
-
-    @FindBy(linkText="Confederations")
-    public ILink linkConfederations;
-
-    @FindBy(linkText="Sustainability")
-    public ILink linkSustainability2;
-
-    @FindBy(linkText="Quality Turf and Footballs")
-    public ILink linkQualityTurfandFootballs;
-
-    @FindBy(linkText="Activity Reports")
-    public ILink linkActivityReports;
-
-    @FindBy(linkText="Men's Tournaments")
-    public ILabel labelMensTournaments;
-
-    @FindBy(linkText="FIFA World Cupв„ў")
-    public ILink linkFIFAWorldCup2;
-
-    @FindBy(linkText="FIFA U-20 World Cup")
-    public ILink linkFIFAU20WorldCup;
-
-    @FindBy(linkText="FIFA U-17 World Cup")
-    public ILink linkFIFAU17WorldCup;
-
-    @FindBy(linkText="FIFA Confederations Cup")
-    public ILink linkFIFAConfederationsCup;
-
-    @FindBy(linkText="FIFA Club World Cup")
-    public ILink linkFIFAClubWorldCup;
-
-    @FindBy(linkText="FIFA Futsal World Cup")
-    public ILink linkFIFAFutsalWorldCup;
-
-    @FindBy(linkText="FIFA Beach Soccer World Cup")
-    public ILink linkFIFABeachSoccerWorldCup;
-
-    @FindBy(linkText="Men's Olympic Football Tournament")
-    public ILink linkMensOlympicFootballTournament;
-
-    @FindBy(linkText="FIFA Interactive World Cup")
-    public ILink linkFIFAInteractiveWorldCup;
-
-    @FindBy(linkText="Youth Olympic Football Tournament")
-    public ILink linkYouthOlympicFootballTournament;
-
-    @FindBy(linkText="Blue Stars/FIFA Youth Cup")
-    public ILink linkBlueStarsFIFAYouthCup;
-
-    @FindBy(linkText="Women's Tournaments")
-    public ILabel labelWomensTournaments;
-
-    @FindBy(linkText="FIFA Women's World Cupв„ў")
-    public ILink linkFIFAWomensWorldCup;
-
-    @FindBy(linkText="FIFA U-20 Women's World Cup")
-    public ILink linkFIFAU20WomensWorldCup;
-
-    @FindBy(linkText="FIFA U-17 Women's World Cup")
-    public ILink linkFIFAU17WomensWorldCup;
-
-    @FindBy(linkText="Women's Olympic Football Tournament")
-    public ILink linkWomensOlympicFootballTournament;
-
-    @FindBy(linkText="Youth Olympic Football Tournament")
-    public ILink linkYouthOlympicFootballTournament1;
-
-    @FindBy(linkText="English")
-    public ILink linkEnglish1;
-
-    @FindBy(linkText="Deutsch")
-    public ILink linkDeutsch1;
-
-    @FindBy(linkText="FranГ§ais")
-    public ILink linkFranais1;
-
-    @FindBy(linkText="EspaГ±ol")
-    public ILink linkEspaol1;
-
-    @FindBy(linkText="PortuguГЄs")
-    public ILink linkPortugus1;
-
-    @FindBy(linkText="Ш№Ш±ШЁЩЉ")
-    public ILink linkNoName68;
-
-    @FindBy(linkText="Р СѓСЃСЃРєРёР№")
-    public ILink linkNoName69;
-
-    @FindBy(linkText="ж—Ґжњ¬иЄћ")
-    public ILink linkNoName70;
-
-    @FindBy(linkText="Korean")
-    public ILink linkKorean1;
-
-    @FindBy(linkText="Widgets")
-    public ILink linkWidgets;
-
-    @FindBy(linkText="Mobile Apps")
-    public ILink linkMobileApps;
-
-    @FindBy(linkText="Mobile Version")
-    public ILink linkMobileVersion;
-
-    @FindBy(linkText="Contact FIFA")
-    public ILink linkContactFIFA;
-
-    @FindBy(linkText="Downloads")
-    public ILink linkDownloads;
-
-    @FindBy(linkText="Privacy Policy")
-    public ILink linkPrivacyPolicy;
-
-    @FindBy(linkText="Terms of Service")
-    public ILink linkTermsofService;
-
-    @FindBy(className="footer-share-link")
-    public ILink linkAllSocialChannels;
-
-    @FindBy(className="ico-24-twitter")
-    public ILink linkNoName71;
-
-    @FindBy(className="ico-24-facebook")
-    public ILink linkNoName72;
-
-    @FindBy(className="ico-24-instagram")
-    public ILink linkNoName73;
-
-    @FindBy(className="ico-24-youtube")
-    public ILink linkNoName74;
-
-    @FindBy(className="ico-24-linkedin")
-    public ILink linkNoName75;
 }

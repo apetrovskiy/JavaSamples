@@ -17,14 +17,16 @@ public class InitTests extends TestNGBase {
         JDISettings.logger.info("Starting tests");
         JDISettings.driverFactory.setDriverPath("C:\\Selenium");
         WebSite.init(SomeSite.class);
+        SomeSite.homePage.open();
         JDISettings.logger.info("Tests have been initialized");
     }
-
+    /*
     @BeforeMethod
     public void setUp()
     {
         SomeSite.homePage.open();
     }
+    */
 
     @AfterMethod
     public static void tearDown() {
