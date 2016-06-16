@@ -123,3 +123,4 @@ UpgradeLog*.XML
 /Pragmatic Unit/chapter02beans/build/
 /PowerMock/chapter01/nbproject/private/
 /PowerMock/chapter01_/nbproject/private/
+/testJdi020_testGenerated/.idea/libraries
