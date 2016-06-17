@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
 import java.text.MessageFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -58,10 +60,26 @@ public class HomePageTest extends InitTests {
 
             Arrays.stream(homePage.getClass().getFields()).filter(member -> member.isAnnotationPresent(FindBy.class)).forEach(member -> {
                 IElement element = null;
+                String locatorType;
+                String locatorValue;
                 try {
                     elementFound = "0";
                     elementDisplayed = "0";
                     element = (IElement) member.get(homePage);
+                    // System.out.println(member.getType().getName());
+                    //
+                    /*
+                    String css = member.getAnnotation(FindBy.class).css();
+                    String className = member.getAnnotation(FindBy.class).className();
+
+
+                    String className = member.getAnnotation(FindBy.class).className();
+                    String className = member.getAnnotation(FindBy.class).className();
+                    String className = member.getAnnotation(FindBy.class).className();
+                    String className = member.getAnnotation(FindBy.class).className();
+                    */
+                    // if (isNullOrEmpty(annotation.c))
+                    //
                     foundElementsNumber++;
                     elementFound = "1";
                     if (element.isDisplayed()) {
@@ -106,5 +124,28 @@ public class HomePageTest extends InitTests {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    boolean isNullOrEmpty(String value)
+    {
+        if (value != null)
+            return value.length() == 0;
+        else
+            return true;
+    }
+
+    String getAnnotationParameterValue(IElement element)
+    {
+        FindBy annotation = element.getClass().getAnnotationsByType(FindBy.class);
+
+
+        String css = member.getAnnotation(FindBy.class).css();
+        String className = member.getAnnotation(FindBy.class).className();
+
+
+        String className = member.getAnnotation(FindBy.class).className();
+        String className = member.getAnnotation(FindBy.class).className();
+        String className = member.getAnnotation(FindBy.class).className();
+        String className = member.getAnnotation(FindBy.class).className();
     }
 }
