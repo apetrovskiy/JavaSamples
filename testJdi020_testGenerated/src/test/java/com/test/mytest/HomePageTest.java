@@ -1,22 +1,15 @@
 package com.test.mytest;
 
-import com.epam.commons.LinqUtils;
 import com.epam.jdi.uitests.core.interfaces.base.IElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.annotation.Annotation;
-import java.lang.reflect.Field;
-import java.text.MessageFormat;
+import java.time.Instant;
 import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.stream.Collectors;
 
 import static com.test.mytest.SomeSite.homePage;
-import static java.util.Arrays.asList;
 
 /**
  * Created by Alexander_Petrovskiy on 6/3/2016.
@@ -28,8 +21,7 @@ public class HomePageTest extends InitTests {
     int displayedElementsNumber = 0;
     String elementFound = "0";
     String elementDisplayed = "0";
-    Date previousTime;
-    Date currentTime;
+    Instant time = Instant.now();
     //Delimiter used in CSV file
     final String COMMA_DELIMITER = ",";
     final String NEW_LINE_SEPARATOR = "\n";
@@ -89,7 +81,7 @@ public class HomePageTest extends InitTests {
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 }
-                writeData(fileWriter, "type", "path", elementFound, elementDisplayed);
+                writeData(fileWriter, getLocatorType(member.getAnnotation(FindBy.class)), getLocatorPath(member.getAnnotation(FindBy.class)), elementFound, elementDisplayed);
 
             });
 
@@ -113,17 +105,61 @@ public class HomePageTest extends InitTests {
 
     void writeData(FileWriter fileWriter, String locatorType, String locatorPath, String elementFound, String elementDisplayed) {
         try {
-            fileWriter.append("locator info");
+            fileWriter.append(locatorType);
             fileWriter.append(COMMA_DELIMITER);
-            fileWriter.append("locator path");
+            fileWriter.append(locatorPath);
             fileWriter.append(COMMA_DELIMITER);
             fileWriter.append(elementFound);
             fileWriter.append(COMMA_DELIMITER);
             fileWriter.append(elementDisplayed);
+            fileWriter.append(COMMA_DELIMITER);
+            Instant newTime = Instant.now();
+            fileWriter.append(Long.toString(java.time.Duration.between(time, newTime).toMillis()));
+            time = newTime;
             fileWriter.append(NEW_LINE_SEPARATOR);
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    String getLocatorType(org.openqa.selenium.support.FindBy annotation) {
+        if (!isNullOrEmpty(annotation.className()))
+            return "className";
+        if (!isNullOrEmpty(annotation.css()))
+            return "css";
+        if (!isNullOrEmpty(annotation.id()))
+            return "id";
+        if (!isNullOrEmpty(annotation.linkText()))
+            return "linkText";
+        if (!isNullOrEmpty(annotation.partialLinkText()))
+            return "partialLinkText";
+        if (!isNullOrEmpty(annotation.name()))
+            return "name";
+        if (!isNullOrEmpty(annotation.tagName()))
+            return "tagName";
+        if (!isNullOrEmpty(annotation.xpath()))
+            return "xpath";
+        return "";
+    }
+
+    String getLocatorPath(org.openqa.selenium.support.FindBy annotation) {
+        if (!isNullOrEmpty(annotation.className()))
+            return annotation.className();
+        if (!isNullOrEmpty(annotation.css()))
+            return annotation.css();
+        if (!isNullOrEmpty(annotation.id()))
+            return annotation.id();
+        if (!isNullOrEmpty(annotation.linkText()))
+            return annotation.linkText();
+        if (!isNullOrEmpty(annotation.partialLinkText()))
+            return annotation.partialLinkText();
+        if (!isNullOrEmpty(annotation.name()))
+            return annotation.name();
+        if (!isNullOrEmpty(annotation.tagName()))
+            return annotation.tagName();
+        if (!isNullOrEmpty(annotation.xpath()))
+            return annotation.xpath();
+        return "";
     }
 
     boolean isNullOrEmpty(String value)
@@ -133,7 +169,7 @@ public class HomePageTest extends InitTests {
         else
             return true;
     }
-
+    /*
     String getAnnotationParameterValue(IElement element)
     {
         FindBy annotation = element.getClass().getAnnotationsByType(FindBy.class);
@@ -147,5 +183,5 @@ public class HomePageTest extends InitTests {
         String className = member.getAnnotation(FindBy.class).className();
         String className = member.getAnnotation(FindBy.class).className();
         String className = member.getAnnotation(FindBy.class).className();
-    }
+    }*/
 }

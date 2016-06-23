@@ -534,6 +534,12 @@ public class HomePage extends WebPage {
     @FindBy(linkText="Office Locations")
     public ITextArea textAreaOfficeLocations;
 
+    @FindBy(linkText="Code of Conduct")
+    public ILink linkCodeofConduct;
+
+    @FindBy(linkText="Code of Conduct")
+    public ITextArea textAreaCodeofConduct;
+
     @FindBy(className="font--light-green")
     public ILabel labelLearnMore;
 
@@ -624,35 +630,35 @@ public class HomePage extends WebPage {
     @FindBy(className="font--light-green")
     public ILabel labelPopularTopics;
 
-    @FindBy(linkText="AWS Backup Tools")
-    public ILink linkAWSBackupTools;
+    @FindBy(linkText="Gartner NoSQL Database")
+    public ILink linkGartnerNoSQLDatabase;
 
-    @FindBy(linkText="Database Security")
-    public ILink linkDatabaseSecurity;
+    @FindBy(linkText="Fully Managed MongoDB")
+    public ILink linkFullyManagedMongoDB;
+
+    @FindBy(linkText="Database Performance Tuning")
+    public ILink linkDatabasePerformanceTuning;
+
+    @FindBy(linkText="NoSQL Database Gartner Magic Quadrant")
+    public ILink linkNoSQLDatabaseGartnerMagicQuadrant;
 
     @FindBy(linkText="Cloud Based Database")
     public ILink linkCloudBasedDatabase;
 
-    @FindBy(linkText="When To Use NoSQL Database")
-    public ILink linkWhenToUseNoSQLDatabase;
+    @FindBy(linkText="AWS Backup")
+    public ILink linkAWSBackup;
 
-    @FindBy(linkText="Gartner Magic Quadrant")
-    public ILink linkGartnerMagicQuadrant;
+    @FindBy(linkText="NoSQL Database Implementation Considerations")
+    public ILink linkNoSQLDatabaseImplementationConsiderations;
 
-    @FindBy(linkText="Simplify Database Operation")
-    public ILink linkSimplifyDatabaseOperation;
+    @FindBy(linkText="Database Automation")
+    public ILink linkDatabaseAutomation;
 
-    @FindBy(linkText="Visualize Database Performance")
-    public ILink linkVisualizeDatabasePerformance;
+    @FindBy(linkText="Database Backup Solution")
+    public ILink linkDatabaseBackupSolution;
 
-    @FindBy(linkText="Enterprise Data Center")
-    public ILink linkEnterpriseDataCenter;
-
-    @FindBy(linkText="Database Schema Design")
-    public ILink linkDatabaseSchemaDesign;
-
-    @FindBy(linkText="<!-- react-text: 623 -->Copyright В© <!-- /react-text --><!-- react-text: 624 -->2016<!-- /react-text --><!-- react-text: 625 --> MongoDB, Inc.<!-- /react-text --><!-- react-text: 627 -->Mongo, MongoDB, and the MongoDB leaf logo are registered trademarks of MongoDB, Inc.<!-- /react-text -->")
-    public ITextArea textAreareacttext623Copyrightreacttextreacttext6242016reacttextreacttext625MongoDBIncreacttextreacttext627MongoMongoDBandtheMongoDBleaflogoareregisteredtrademarksofMongoDBIncreacttext;
+    @FindBy(linkText="<!-- react-text: 626 -->Copyright В© <!-- /react-text --><!-- react-text: 627 -->2016<!-- /react-text --><!-- react-text: 628 --> MongoDB, Inc.<!-- /react-text --><!-- react-text: 630 -->Mongo, MongoDB, and the MongoDB leaf logo are registered trademarks of MongoDB, Inc.<!-- /react-text -->")
+    public ITextArea textAreareacttext626Copyrightreacttextreacttext6272016reacttextreacttext628MongoDBIncreacttextreacttext630MongoMongoDBandtheMongoDBleaflogoareregisteredtrademarksofMongoDBIncreacttext;
 
     @FindBy(linkText="Follow Us")
     public ILabel labelFollowUs;
@@ -689,28 +695,4 @@ public class HomePage extends WebPage {
 
     @FindBy(xpath="//img")
     public IImage imageNoName19;
-
-    @FindBy(xpath="//img")
-    public IImage imageNoName20;
-
-    @FindBy(xpath="//img")
-    public IImage imageNoName21;
-
-    @FindBy(xpath="//img")
-    public IImage imageNoName22;
-
-    @FindBy(xpath="//img")
-    public IImage imageNoName23;
-
-    @FindBy(xpath="//img")
-    public IImage imageNoName24;
-
-    @FindBy(xpath="//img")
-    public IImage imageNoName25;
-
-    @FindBy(xpath="//img")
-    public IImage imageNoName26;
-
-    @FindBy(xpath="//img")
-    public IImage imageNoName27;
 }
